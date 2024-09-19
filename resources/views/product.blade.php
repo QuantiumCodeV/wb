@@ -6,13 +6,13 @@
     <style>
         :root {
 
-            --image-path: url('<?php echo asset("/assets/foot_nav.png")?>');
+            --image-path: url('<?php echo asset("/assets/foot_nav.png") ?>');
 
-            --image-path2: url('<?php echo asset("/assets/dd_icon.png")?>');
+            --image-path2: url('<?php echo asset("/assets/dd_icon.png") ?>');
 
-            --image-path5: url('<?php echo asset("/assets/ico_jia.png")?>');
+            --image-path5: url('<?php echo asset("/assets/ico_jia.png") ?>');
 
-            --image-path6: url('<?php echo asset("/assets/ico_jian.png")?>');
+            --image-path6: url('<?php echo asset("/assets/ico_jian.png") ?>');
 
         }
     </style>
@@ -5519,12 +5519,12 @@
             white-space: nowrap;
         }
     </style>
-    <link type="text/css" rel="stylesheet" href="<?php echo asset("assets/style_002.css")?>">
+    <link type="text/css" rel="stylesheet" href="<?php echo asset("assets/style_002.css") ?>">
 
-    <script type="text/javascript" src="<?php echo asset("assets/jquery.js")?>"></script>
-    <script type="text/javascript" src="<?php echo asset("assets/global.js")?>"></script>
-    <script type="text/javascript" src="<?php echo asset("assets/arttpl.js")?>"></script>
-    <link href="<?php echo asset("assets/layer.css")?>" type="text/css" rel="styleSheet" id="layermcss">
+    <script type="text/javascript" src="<?php echo asset("assets/jquery.js") ?>"></script>
+    <script type="text/javascript" src="<?php echo asset("assets/global.js") ?>"></script>
+    <script type="text/javascript" src="<?php echo asset("assets/arttpl.js") ?>"></script>
+    <link href="<?php echo asset("assets/layer.css") ?>" type="text/css" rel="styleSheet" id="layermcss">
 </head>
 
 <body>
@@ -5543,10 +5543,10 @@
 
         <div class="top_menu" id="top_menu">
             <ul>
-                <li><a href="<?php  echo route("index") ?>"><i class="top_tb1"></i><span>Главная</span></a></li>
+                <li><a href="<?php echo route("index") ?>"><i class="top_tb1"></i><span>Главная</span></a></li>
                 <li><a href="https://wbbff.cc/index.php/category"><i class="top_tb2"></i><span>Каталог</span></a></li>
-                <li><a href="<?php  echo route("cart") ?>"><i class="top_tb3"></i><span>Корзина</span></a></li>
-                <li><a href="<?php  echo route("profile") ?>"><i class="top_tb4"></i><span>Профиль</span></a></li>
+                <li><a href="<?php echo route("cart") ?>"><i class="top_tb3"></i><span>Корзина</span></a></li>
+                <li><a href="<?php echo route("profile") ?>"><i class="top_tb4"></i><span>Профиль</span></a></li>
             </ul>
             <div class="clear"></div>
         </div>
@@ -5558,8 +5558,8 @@
                     @foreach ($product->images as $image)
 
 
-                        <div class="swiper-slide swiper-slide-active" style="width: 640px;"><img
-                                src="<?php    echo asset("storage/" . $image)?>"></div>
+                    <div class="swiper-slide swiper-slide-active" style="width: 640px;"><img
+                            src="<?php echo asset("storage/" . $image) ?>"></div>
 
                     @endforeach
                 </div>
@@ -5573,7 +5573,7 @@
             </div>
             <div class="foot_jtbg"></div>
             <div class="foot_sc">
-                <a href="<?php  echo route("cart") ?>"></a>
+                <a href="<?php echo route("cart") ?>"></a>
             </div>
             <div class="foot_scbg"></div>
             <div class="foot_fx">
@@ -5854,22 +5854,22 @@
             </div>
             <div id="js_commenthtml">
                 <script type="text/html" id="js_commenttpl">
-                <div class="pj_box" style="margin-top:5px">
-                    <div class="pingjia font14" style="padding-bottom:0;padding-top:15px">
-                       
+                    <div class="pj_box" style="margin-top:5px">
+                        <div class="pingjia font14" style="padding-bottom:0;padding-top:15px">
+
+                        </div>
+                        <ul class="plmain_ul" style="height:20px; line-height:20px; padding:15px 0 10px; border-bottom:0">
+                            <li class="fl c999 font12"></li>
+                            <li class="fr mal10 c999 font12">
+                                <div class=""></div>
+                            </li>
+                        </ul>
+                        <div class="clear"></div>
                     </div>
-                    <ul class="plmain_ul" style="height:20px; line-height:20px; padding:15px 0 10px; border-bottom:0">
-                        <li class="fl c999 font12"></li>
-                        <li class="fr mal10 c999 font12">
-                            <div class=""></div>
-                        </li>
-                    </ul>
-                    <div class="clear"></div>
-                </div>
-                <div class="fenye mat10">
-                    <div class="clear"></div>
-                </div>
-            </script>
+                    <div class="fenye mat10">
+                        <div class="clear"></div>
+                    </div>
+                </script>
             </div>
         </div>
         <!--评论 End-->
@@ -5877,18 +5877,17 @@
         <div class="promain js_menuhtml" style="display:none;">
             <div id="js_askhtml">
                 <script type="text/html" id="js_asktpl">
+                    <div class="wd_box">
+                        <div></div>
+                        <div class="cbbb font12"></div>
+                        <div class="mat5 cred">отвечать：</div>
+                        <div class="cbbb font12"></div>
+                    </div>
 
-                <div class="wd_box">
-                    <div></div>
-                    <div class="cbbb font12"></div>
-                    <div class="mat5 cred">отвечать：</div>
-                    <div class="cbbb font12"></div>
-                </div>
-              
-                <div class="fenye mat10">
-                    <div class="clear"></div>
-                </div>
-            </script>
+                    <div class="fenye mat10">
+                        <div class="clear"></div>
+                    </div>
+                </script>
             </div>
             <div class="ask_form">我要咨询 <div class="mat10 mar10">
                     <textarea name="ask_text" style="width:100%;height:80px;resize:none"></textarea>
@@ -5902,7 +5901,7 @@
     <div class="pro_foot">
 
         <div class="pro_foot_left">
-            <div class="sy"><a href="<?php  echo route("index") ?>"><i></i></a></div>
+            <div class="sy"><a href="<?php echo route("index") ?>"><i></i></a></div>
             <div class="sc"><a href="javascript:collect_btn();"><i class=""></i></a></div>
             <!-- <div class="qq"><a href="javascript:kefu_btn();"><i></i>Поддержка</a></div> -->
         </div>
@@ -5943,7 +5942,7 @@
                     <tbody>
                         <tr>
                             <td width="52"><span class="tc_img"><img
-                                        src="http://127.0.0.1:8000/storage/images/0ZVxFYpV91bJ92WH50uSiGmbaLs3EPlZuoCpqjd6.png"></span>
+                                        src="<?php echo asset("storage/" . $product->images[0]) ?>"></span>
                             </td>
                             <td valign="top">
 
@@ -5975,9 +5974,9 @@
 
             <div id="ccc">
 
-                <a href="javascript:buy_btn('add', '214');" type="add" style="display: none;" show="0">В корзину</a>
+                <a href="javascript:buy_btn('add', '{{ $product->id }}');" type="add" style="display: none;" show="0">В корзину</a>
                 <!--<a id="eee" href="javascript:buy_btn('buy', '214');" type="buy" class="gm">Kупить</a>-->
-                <a href="javascript:buy_btn('buy', '214');" type="buy" class="gm" style="display: block; width: 100%;"
+                <a href="javascript:buy_btn('buy', '{{ $product->id }}');" type="buy" class="gm" style="display: block; width: 100%;"
                     show="1">Kупить сейчас</a>
                 <div class="clear"></div>
             </div>
@@ -5988,16 +5987,16 @@
         <div class="close_btn" onclick="app_page_close();"></div>
         <div style="position:relative">
             <div class="share_box" id="share_html">
-                <div class="share_img"><img src="<?php echo asset("storage/" . $product->images[0])?>">
+                <div class="share_img"><img src="<?php echo asset("storage/" . $product->images[0]) ?>">
                 </div>
                 <div class="share_pro">
-                    <img src="<?php echo asset("assets/ee4c961b8c946be89009eee77323ae1e.png")?>">
+                    <img src="<?php echo asset("assets/ee4c961b8c946be89009eee77323ae1e.png") ?>">
                     <div class="share_name">{{ $product->name }}</div>
                     <div class="mat5 cred font16">₽{{$product->price}}</div>
                     <div class="clear"></div>
                 </div>
             </div>
-            <img src="<?php echo asset("assets/214.html")?>" id="share_img"
+            <img src="<?php echo asset("assets/214.html") ?>" id="share_img"
                 style="position:absolute;top:0;left:0;display:none">
         </div>
     </div>
@@ -6008,14 +6007,14 @@
         <div class="lq_box">
         </div>
     </div>
-    <link type="text/css" rel="stylesheet" href="<?php echo asset("assets/swiper.min.css")?>">
-    <script type="text/javascript" src="<?php echo asset("assets/swiper.jquery.min.js")?>"></script>
-    <script type="text/javascript" src="<?php echo asset("assets/ckplayer.js")?>"></script>
-    <script type="text/javascript" src="<?php echo asset("assets/html2canvas.js")?>"></script>
-    <script type="text/javascript" src="<?php echo asset("assets/wxsdk.js")?>"></script>
-    <script type="text/javascript" src="<?php echo asset("assets/wxapi.js")?>"></script>
+    <link type="text/css" rel="stylesheet" href="<?php echo asset("assets/swiper.min.css") ?>">
+    <script type="text/javascript" src="<?php echo asset("assets/swiper.jquery.min.js") ?>"></script>
+    <script type="text/javascript" src="<?php echo asset("assets/ckplayer.js") ?>"></script>
+    <script type="text/javascript" src="<?php echo asset("assets/html2canvas.js") ?>"></script>
+    <script type="text/javascript" src="<?php echo asset("assets/wxsdk.js") ?>"></script>
+    <script type="text/javascript" src="<?php echo asset("assets/wxapi.js") ?>"></script>
     <script type="text/javascript">
-        window.onload = function () {
+        window.onload = function() {
 
 
             // 	$('#aaa').attr('style','display:none;')
@@ -6044,7 +6043,7 @@
 
         }
         template.config('escape', false);
-        $(function () {
+        $(function() {
 
             $(".main_xq img").removeAttr("height").removeAttr("width");
             pe_jstime("#huodong_time", '1724153863', 'html');
@@ -6058,7 +6057,7 @@
             });
             //规格选择
             prodata_check();
-            $(".js_ruledata").click(function () {
+            $(".js_ruledata").click(function() {
                 if ($(this).hasClass("prodata_lock")) return;
                 if ($(this).hasClass("prodata_sel")) {
                     $(this).removeClass("prodata_sel");
@@ -6070,7 +6069,7 @@
             });
             //顶部菜单跟随滚动
             var pagetop = $(".pagetop").offset().top;
-            $(window).scroll(function () {
+            $(window).scroll(function() {
                 if ($(document).scrollTop() > pagetop) {
                     $(".pagetop").show();
                 } else {
@@ -6083,7 +6082,7 @@
             variable: 'player', //该属性必需设置，值等于下面的new chplayer()的对象
             flashplayer: false, //如果强制使用flashplayer则设置成true
             poster: "https://wbbff.cc/attachment/2023-11/2023111218541916957o.png",
-            video: "<?php  echo route("index") ?>" //视频地址
+            video: "<?php echo route("index") ?>" //视频地址
         };
 
 
@@ -6092,19 +6091,19 @@
         function collect_btn() {
             $.ajax({
                 type: "POST",
-                url: "<?php echo route("product.favorite.add", $product->id)?>",
+                url: "<?php echo route("product.favorite.add", $product->id) ?>",
                 data: {
-                    _token: "<?php echo csrf_token()?>",
-                    product_id: "<?php echo $product->id?>"
+                    _token: "<?php echo csrf_token() ?>",
+                    product_id: "<?php echo $product->id ?>"
                 },
-                success: function (json) {
+                success: function(json) {
                     if (json.success == "Product added to favorites") {
                         $(".sc i").addClass('sel');
                     } else {
                         $.alert(json.message);
                     }
                 },
-                error: function (XMLHttpRequest, textStatus, errorThrown) {
+                error: function(XMLHttpRequest, textStatus, errorThrown) {
                     $.alert("服务器错误");
                 }
 
@@ -6114,8 +6113,8 @@
 
         //分享商品
         function share_btn() {
-            app_page('page_share', function () {
-                setTimeout(function () {
+            app_page('page_share', function() {
+                setTimeout(function() {
                     div_toimg("share_html", "share_img");
                 }, 500)
             });
@@ -6123,7 +6122,7 @@
 
         //领取优惠券
         function quan_btn(id) {
-            app_submit("https://wbbff.cc/index.php?mod=quan&act=" + id, function (json) {
+            app_submit("https://wbbff.cc/index.php?mod=quan&act=" + id, function(json) {
                 if (json.result) {
                     $("#quan_" + id).addClass("sel").find("a").text("已领取");
                 }
@@ -6150,7 +6149,7 @@
                 app_tip("选择产品规格");
                 return;
             }
-            app_getinfo("<?php echo route("cart") ?>" + act + "&id=" + id + "&guid=" + $(":input[name='product_guid']").val() + "&num=" + $(":input[name='product_num']").val(), function (json) {
+            app_getinfo("<?php echo route("cart") ?>" + act + "&id=" + id + "&guid=" + $(":input[name='product_guid']").val() + "&num=" + $(":input[name='product_num']").val(), function(json) {
                 if (json.result == true) {
                     if (act == 'buy') {
                         app_page_close();
@@ -6165,13 +6164,13 @@
         }
         //打开购买选项
         function buy_open(act) {
-            if (typeof (act) != 'undefined' && '1' == false) {
+            if (typeof(act) != 'undefined' && '1' == false) {
                 app_tip("cначала войти");
                 app_open("<?php echo route("auth.login") ?>", 500);
                 return;
             }
             $(".buy_btn a").hide().attr("show", 0);
-            if (typeof (act) != 'undefined') {
+            if (typeof(act) != 'undefined') {
                 $(".buy_btn a[type='" + act + "']").show().attr("show", 1);
             } else {
                 $(".buy_btn a").show().attr("show", 1);
@@ -6184,7 +6183,7 @@
             app_page('page_buy');
         }
 
-        wx.ready(function () {
+        wx.ready(function() {
             wx_share({
                 name: "Wanb / Проектор Wanbo T2 Max New (белый)",
                 desc: "抢购价：19980 руб.",
@@ -6197,25 +6196,24 @@
         })
     </script>
 
-    <link rel="stylesheet" href="<?php echo asset("assets/weui.min.css")?>">
-    <link rel="stylesheet" href="<?php echo asset("assets/jquery-weui.min.css")?>">
-    <script src="<?php echo asset("assets/jquery-weui.js")?>"></script>
-    <script type="text/javascript" src="<?php echo asset("assets/layer.js")?>"></script>
-    <script type="text/javascript" src="<?php echo asset("assets/app.js")?>"></script>
-    <script type="text/javascript" src="<?php echo asset("assets/jquery.scrollLoading.js")?>"></script>
+    <link rel="stylesheet" href="<?php echo asset("assets/weui.min.css") ?>">
+    <link rel="stylesheet" href="<?php echo asset("assets/jquery-weui.min.css") ?>">
+    <script src="<?php echo asset("assets/jquery-weui.js") ?>"></script>
+    <script type="text/javascript" src="<?php echo asset("assets/layer.js") ?>"></script>
+    <script type="text/javascript" src="<?php echo asset("assets/app.js") ?>"></script>
+    <script type="text/javascript" src="<?php echo asset("assets/jquery.scrollLoading.js") ?>"></script>
     <script type="text/javascript">
-        $(function () {
+        $(function() {
             $("img.js_imgload").scrollLoading();
         });
         //顶部菜单点击
         function top_menu() {
             if ($("#top_menu").is(":hidden")) {
                 $("#top_menu").show();
-            }
-            else {
+            } else {
                 $("#top_menu").hide();
             }
-            $("#top_menu a").live("click", function () {
+            $("#top_menu a").live("click", function() {
                 $("#top_menu").hide();
             })
         }
