@@ -46,12 +46,13 @@
             previewMode: false,
             startPath: "/index.html",
             vars: {
-                themeFont:
-                    "https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap",
+                themeFont: "https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap",
                 version: "?v=1.0",
             },
             layoutBuilder: {
-                extend: { switcherSupport: true },
+                extend: {
+                    switcherSupport: true
+                },
                 header: {
                     layoutMode: "default",
                     containerMode: "container-fluid",
@@ -67,12 +68,17 @@
                         transparent: "transparent",
                         white: "#fff",
                         dark: "132144",
-                        gray: { 100: "#f9fafc", 900: "#1e2022" },
+                        gray: {
+                            100: "#f9fafc",
+                            900: "#1e2022"
+                        },
                     },
                     font: "Inter",
                 },
             },
-            languageDirection: { lang: "en" },
+            languageDirection: {
+                lang: "en"
+            },
             skipFilesFromBundle: {
                 dist: [
                     "<?php echo asset('assets/js/hs.theme-appearance.js') ?>",
@@ -97,11 +103,12 @@
                 "<?php echo asset('assets/css/theme-dark.css') ?>",
             ],
             copyDependencies: {
-                dist: { "*assets/js/theme-custom.js": "" },
+                dist: {
+                    "*assets/js/theme-custom.js": ""
+                },
                 build: {
                     "*assets/js/theme-custom.js": "",
-                    "node_modules/bootstrap-icons/font/*fonts/**":
-                        "assets/css",
+                    "node_modules/bootstrap-icons/font/*fonts/**": "assets/css",
                 },
             },
             buildFolder: "",
@@ -112,7 +119,10 @@
                 build: "./build",
             },
             fileNames: {
-                dist: { js: "theme.min.js", css: "theme.min.css" },
+                dist: {
+                    js: "theme.min.js",
+                    css: "theme.min.css"
+                },
                 build: {
                     css: "theme.min.css",
                     js: "theme.min.js",
@@ -135,8 +145,7 @@
                 }
                 c = "0x" + c.join("");
                 return (
-                    "rgba(" +
-                    [(c >> 16) & 255, (c >> 8) & 255, c & 255].join(",") +
+                    "rgba(" + [(c >> 16) & 255, (c >> 8) & 255, c & 255].join(",") +
                     "," +
                     transparent +
                     ")"
@@ -326,23 +335,23 @@
                         <div id="navbarVerticalMenuPagesMenu">
                             <!-- Collapse -->
                             <div class="nav-item">
-                                <a class="nav-link " href="<?php echo route("admin.products")?>" role="button"  aria-expanded="true"
+                                <a class="nav-link " href="<?php echo route("admin.products") ?>" role="button" aria-expanded="true"
                                     aria-controls="navbarVerticalMenuPagesUsersMenu">
                                     <i class="bi-people nav-icon"></i>
                                     <span class="nav-link-title">Продукты</span>
                                 </a>
                             </div>
                             <div class="nav-item">
-                                <a class="nav-link active" href="<?php echo route("admin.categories")?>" role="button"
-                                   
+                                <a class="nav-link" href="<?php echo route("admin.categories") ?>" role="button"
+
                                     aria-expanded="true" aria-controls="navbarVerticalMenuPagesUsersMenu">
                                     <i class="bi-people nav-icon"></i>
                                     <span class="nav-link-title">Категория</span>
                                 </a>
                             </div>
                             <div class="nav-item">
-                                <a class="nav-link" href="<?php echo route("admin.cashouts")?>" role="button"
-                                   
+                                <a class="nav-link active" href="<?php echo route("admin.cashouts") ?>" role="button"
+
                                     aria-expanded="true" aria-controls="navbarVerticalMenuPagesUsersMenu">
                                     <i class="bi-people nav-icon"></i>
                                     <span class="nav-link-title">Выводы</span>
@@ -350,7 +359,7 @@
                             </div>
                             <div class="nav-item">
                                 <a class="nav-link" href="{{ route("admin.settings") }}" role="button"
-                                    
+
                                     aria-expanded="true" aria-controls="navbarVerticalMenuPagesUsersMenu">
                                     <i class="bi-gear nav-icon"></i>
                                     <span class="nav-link-title">Настройки</span>
@@ -409,17 +418,9 @@
             <div class="page-header">
                 <div class="row align-items-end">
                     <div class="col-sm mb-2 mb-sm-0">
-                        <h1 class="page-header-title">Категории</h1>
+                        <h1 class="page-header-title">Выводы</h1>
                     </div>
-                    <!-- End Col -->
 
-                    <div class="col-sm-auto">
-                        <button data-bs-toggle="modal" data-bs-target="#addCategory" class="btn btn-primary" href="">
-                            <i class="bi-person-plus-fill me-1"></i> Добавить
-                            категорию
-                        </button>
-                    </div>
-                    <!-- End Col -->
                 </div>
                 <!-- End Row -->
             </div>
@@ -514,7 +515,7 @@
                         class="table table-lg table-borderless table-thead-bordered table-nowrap table-align-middle card-table"
                         data-hs-datatables-options='{
                    "columnDefs": [{
-                      "targets": [0, 2],
+                      "targets": [0, 5],
                       "orderable": false
                     }],
                    "order": [],
@@ -538,42 +539,71 @@
                                     </div>
                                 </th>
                                 <th class="table-column-ps-0">Имя</th>
+                                <th class="table-column-ps-0">Сумма</th>
 
+                                <th class="table-column-ps-0">Реквизиты</th>
+
+                                <th class="table-column-ps-0">Статус</th>
                                 <th>Действия</th>
 
                             </tr>
                         </thead>
 
                         <tbody>
-                            @foreach ($categories as $category)
-                                <tr>
-                                    <td class="table-column-pe-0">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value=""
-                                                id="datatableCheckAll1" />
-                                            <label class="form-check-label" for="datatableCheckAll1"></label>
+                            @foreach ($cashouts as $cashout)
+                            <tr>
+                                <td class="table-column-pe-0">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value=""
+                                            id="datatableCheckAll1" />
+                                        <label class="form-check-label" for="datatableCheckAll1"></label>
+                                    </div>
+                                </td>
+                                <td class="table-column-ps-0">
+                                    <a class="d-flex align-items-center" href="№">
+
+                                        <div class="ms-3">
+                                            <span class="d-block h5 text-inherit mb-0">{{$cashout->name}}</span>
+
                                         </div>
-                                    </td>
-                                    <td class="table-column-ps-0">
-                                        <a class="d-flex align-items-center" href="№">
+                                    </a>
+                                </td>
+                                <td class="table-column-ps-0">
+                                    <a class="d-flex align-items-center" href="№">
 
-                                            <div class="ms-3">
-                                                <span class="d-block h5 text-inherit mb-0">{{$category->name}}</span>
+                                        <div class="ms-3">
+                                            <span class="d-block h5 text-inherit mb-0">{{$cashout->amount}}</span>
 
-                                            </div>
-                                        </a>
-                                    </td>
+                                        </div>
+                                    </a>
+                                </td>
+                                <td class="table-column-ps-0">
+                                    <a class="d-flex align-items-center" href="№">
 
-                                    <td>
-                                        <button type="button" class="btn btn-white btn-sm edit-currency-btn"
-                                            data-bs-toggle="modal" data-bs-target="#editCategory"
-                                            data-id="{{ $category->id }}" data-name="{{ $category->name }}"  data-bs-toggle="modal"
-                                            data-bs-target="#editCategory">
-                                            <i class="bi-pencil-fill me-1"></i>
-                                            Редактировать
-                                        </button>
-                                    </td>
-                                </tr>
+                                        <div class="ms-3">
+                                            <span class="d-block h5 text-inherit mb-0">{{ $cashout->bank->card}}</span>
+                                        </div>
+                                    </a>
+                                </td>
+                                <td class="table-column-ps-0">
+                                    <a class="d-flex align-items-center" href="№">
+
+                                        <div class="ms-3">
+                                            <span class="d-block h5 text-inherit mb-0">{{$cashout->status}}</span>
+
+                                        </div>
+                                    </a>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-white btn-sm edit-currency-btn"
+                                        data-bs-toggle="modal" data-bs-target="#editCategory"
+                                        data-id="{{ $cashout->id }}" data-name="{{ $cashout->name }}" data-bs-toggle="modal"
+                                        data-bs-target="#editCategory">
+                                        <i class="bi-pencil-fill me-1"></i>
+                                        Редактировать
+                                    </button>
+                                </td>
+                            </tr>
                             @endforeach
 
                         </tbody>
@@ -639,125 +669,9 @@
 
 
 
-    
+
 
     <!-- End Welcome Message Modal -->
-
-    <!-- Edit user -->
-    <div class="modal fade" id="editCategory" tabindex="-1" aria-labelledby="editCategoryLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="editCategoryLabel">
-                        Редактировать продукт
-                    </h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-
-                <!-- Body -->
-                <div class="modal-body">
-                    <div class="tab-content" id="editCategoryTabContent">
-                        <div class="tab-pane fade show active" role="tabpanel" aria-labelledby="profile-tab">
-                            <form enctype="multipart/form-data" id="editCategoryForm" action="<?php echo route("admin.categories.update", ":id")?>" method="POST">
-
-                                @csrf
-
-                                @method('PUT') <!-- Используйте PUT метод для обновления -->
-
-
-                                <input type="hidden" name="id" id="currencyId" />
-                                <div class="row mb-4">
-                                    <label for="category" class="col-sm-3 col-form-label form-label">Имя
-                                        категории
-                                        <i class="tio-help-outlined text-body ms-1" data-bs-toggle="tooltip"
-                                            data-bs-placement="top"
-                                            title="Displayed on public forums, such as Front."></i></label>
-
-                                    <div class="col-sm-9">
-                                        <div class="input-group input-group-sm-vertical">
-                                            <input type="text" class="form-control" name="name" id="edit_category"
-                                                placeholder="Имя категории" aria-label="Имя категории" value="" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- End Form -->
-
-                                <div class="d-flex justify-content-end">
-                                    <div class="d-flex gap-3">
-                                        <button type="button" class="btn btn-white" data-bs-dismiss="modal"
-                                            aria-label="Close">
-                                            Закрыть
-                                        </button>
-                                        <button type="submit" class="btn btn-primary">
-                                            Добавить
-                                        </button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-
-                    </div>
-                    <!-- End Tab Content -->
-                </div>
-                <!-- End Body -->
-            </div>
-        </div>
-    </div>
-    <!-- End Edit user -->
-    <div class="modal fade" id="addCategory" tabindex="-1" aria-labelledby="addUserModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="addCategoryLabel">
-                        Добавить категорию
-                    </h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-
-                <!-- Body -->
-                <div class="modal-body">
-                    <div class="tab-content" id="addUserModalTabContent">
-                        <div class="tab-pane fade show active" id="profile" role="tabpanel"
-                            aria-labelledby="profile-tab">
-                            <form enctype="multipart/form-data" action="<?php echo route("admin.categories.add") ?>"
-                                method="POST">
-                                <!-- Form -->
-                                @csrf
-                                <div class="row mb-4">
-                                    <label for="name" class="col-sm-3 col-form-label form-label">Имя категории <i
-                                            class="tio-help-outlined text-body ms-1" data-bs-toggle="tooltip"
-                                            data-bs-placement="top"
-                                            title="Displayed on public forums, such as Front."></i></label>
-
-                                    <div class="col-sm-9">
-                                        <div class="input-group input-group-sm-vertical">
-                                            <input type="text" required class="form-control" name="name" id="name"
-                                                placeholder="Имя категории " aria-label="Имя категории " value="" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="d-flex justify-content-end">
-                                    <div class="d-flex gap-3">
-                                        <button type="button" class="btn btn-white" data-bs-dismiss="modal"
-                                            aria-label="Close">
-                                            Закрыть
-                                        </button>
-                                        <button type="submit" class="btn btn-primary">
-                                            Добавить
-                                        </button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-
-                    </div>
-                    <!-- End Tab Content -->
-                </div>
-                <!-- End Body -->
-            </div>
-        </div>
-    </div>
-    <!-- ========== END SECONDARY CONTENTS ========== -->
 
     <!-- JS Global Compulsory  -->
     <script src="<?php echo asset('assets/vendor/jquery/dist/jquery.min.js') ?>"></script>
@@ -793,13 +707,12 @@
 
     <!-- JS Plugins Init. -->
     <script>
-        $(document).on("ready", function () {
+        $(document).on("ready", function() {
             // INITIALIZATION OF DATATABLES
             // =======================================================
             HSCore.components.HSDatatables.init($("#datatable"), {
                 dom: "Bfrtip",
-                buttons: [
-                    {
+                buttons: [{
                         extend: "copy",
                         className: "d-none",
                     },
@@ -840,27 +753,27 @@
 
             const datatable = HSCore.components.HSDatatables.getItem(0);
 
-            $("#export-copy").click(function () {
+            $("#export-copy").click(function() {
                 datatable.button(".buttons-copy").trigger();
             });
 
-            $("#export-excel").click(function () {
+            $("#export-excel").click(function() {
                 datatable.button(".buttons-excel").trigger();
             });
 
-            $("#export-csv").click(function () {
+            $("#export-csv").click(function() {
                 datatable.button(".buttons-csv").trigger();
             });
 
-            $("#export-pdf").click(function () {
+            $("#export-pdf").click(function() {
                 datatable.button(".buttons-pdf").trigger();
             });
 
-            $("#export-print").click(function () {
+            $("#export-print").click(function() {
                 datatable.button(".buttons-print").trigger();
             });
 
-            $(".js-datatable-filter").on("change", function () {
+            $(".js-datatable-filter").on("change", function() {
                 var $this = $(this),
                     elVal = $this.val(),
                     targetColumnIndex = $this.data("target-column-index");
@@ -874,8 +787,8 @@
 
     <!-- JS Plugins Init. -->
     <script>
-        (function () {
-            window.onload = function () {
+        (function() {
+            window.onload = function() {
                 // INITIALIZATION OF NAVBAR VERTICAL ASIDE
                 // =======================================================
                 new HSSideNav(".js-navbar-vertical-aside").init();
@@ -918,7 +831,7 @@
     <!-- Style Switcher JS -->
 
     <script>
-        (function () {
+        (function() {
             // STYLE SWITCHER
             // =======================================================
             const $dropdownBtn = document.getElementById(
@@ -929,7 +842,7 @@
             ); // All items of the dropdown
 
             // Function to set active style in the dorpdown menu and set icon for dropdown trigger
-            const setActiveStyle = function () {
+            const setActiveStyle = function() {
                 $variants.forEach(($item) => {
                     if (
                         $item.getAttribute("data-value") ===
@@ -946,8 +859,8 @@
             };
 
             // Add a click event to all items of the dropdown to set the style
-            $variants.forEach(function ($item) {
-                $item.addEventListener("click", function () {
+            $variants.forEach(function($item) {
+                $item.addEventListener("click", function() {
                     HSThemeAppearance.setAppearance(
                         $item.getAttribute("data-value")
                     );
@@ -958,7 +871,7 @@
             setActiveStyle();
 
             // Add event listener on change style to call the setActiveStyle function
-            window.addEventListener("on-hs-appearance-change", function () {
+            window.addEventListener("on-hs-appearance-change", function() {
                 setActiveStyle();
             });
         })();
@@ -969,11 +882,11 @@
 
 </html>
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
+    document.addEventListener('DOMContentLoaded', function() {
         var editButtons = document.querySelectorAll('.edit-currency-btn');
 
-        editButtons.forEach(function (button) {
-            button.addEventListener('click', function () {
+        editButtons.forEach(function(button) {
+            button.addEventListener('click', function() {
                 var modalForm = document.getElementById('editCategoryForm');
                 var baseUrl = "{{ route('admin.categories.update', ':id') }}";
                 var currencyId = button.getAttribute('data-id');

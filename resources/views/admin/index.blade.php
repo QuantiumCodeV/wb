@@ -47,12 +47,13 @@
             previewMode: false,
             startPath: "/index.html",
             vars: {
-                themeFont:
-                    "https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap",
+                themeFont: "https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap",
                 version: "?v=1.0",
             },
             layoutBuilder: {
-                extend: { switcherSupport: true },
+                extend: {
+                    switcherSupport: true
+                },
                 header: {
                     layoutMode: "default",
                     containerMode: "container-fluid",
@@ -68,12 +69,17 @@
                         transparent: "transparent",
                         white: "#fff",
                         dark: "132144",
-                        gray: { 100: "#f9fafc", 900: "#1e2022" },
+                        gray: {
+                            100: "#f9fafc",
+                            900: "#1e2022"
+                        },
                     },
                     font: "Inter",
                 },
             },
-            languageDirection: { lang: "en" },
+            languageDirection: {
+                lang: "en"
+            },
             skipFilesFromBundle: {
                 dist: [
                     "<?php echo asset('assets/js/hs.theme-appearance.js') ?>",
@@ -98,11 +104,12 @@
                 "<?php echo asset('assets/css/theme-dark.css') ?>",
             ],
             copyDependencies: {
-                dist: { "*assets/js/theme-custom.js": "" },
+                dist: {
+                    "*assets/js/theme-custom.js": ""
+                },
                 build: {
                     "*assets/js/theme-custom.js": "",
-                    "node_modules/bootstrap-icons/font/*fonts/**":
-                        "assets/css",
+                    "node_modules/bootstrap-icons/font/*fonts/**": "assets/css",
                 },
             },
             buildFolder: "",
@@ -113,7 +120,10 @@
                 build: "./build",
             },
             fileNames: {
-                dist: { js: "theme.min.js", css: "theme.min.css" },
+                dist: {
+                    js: "theme.min.js",
+                    css: "theme.min.css"
+                },
                 build: {
                     css: "theme.min.css",
                     js: "theme.min.js",
@@ -136,8 +146,7 @@
                 }
                 c = "0x" + c.join("");
                 return (
-                    "rgba(" +
-                    [(c >> 16) & 255, (c >> 8) & 255, c & 255].join(",") +
+                    "rgba(" + [(c >> 16) & 255, (c >> 8) & 255, c & 255].join(",") +
                     "," +
                     transparent +
                     ")"
@@ -328,7 +337,7 @@
                             <!-- Collapse -->
                             <div class="nav-item">
                                 <a class="nav-link active" href="{{ route("admin.products") }}" role="button"
-                                    
+
                                     aria-expanded="true" aria-controls="navbarVerticalMenuPagesUsersMenu">
                                     <i class="bi-people nav-icon"></i>
                                     <span class="nav-link-title">Товары</span>
@@ -336,10 +345,19 @@
                             </div>
                             <div class="nav-item">
                                 <a class="nav-link" href="{{ route("admin.categories") }}" role="button"
-                                    
+
                                     aria-expanded="true" aria-controls="navbarVerticalMenuPagesUsersMenu">
                                     <i class="bi-people nav-icon"></i>
                                     <span class="nav-link-title">Категории</span>
+                                </a>
+                            </div>
+
+                            <div class="nav-item">
+                                <a class="nav-link" href="<?php echo route("admin.cashouts")?>" role="button"
+                                   
+                                    aria-expanded="true" aria-controls="navbarVerticalMenuPagesUsersMenu">
+                                    <i class="bi-people nav-icon"></i>
+                                    <span class="nav-link-title">Выводы</span>
                                 </a>
                             </div>
                             <div class="nav-item">
@@ -414,7 +432,7 @@
             <div class="row">
                 <div class="col-sm-6 col-lg-3 mb-3 mb-lg-5">
                     <!-- Card -->
-                    <a class="card card-hover-shadow h-100" href="<?php echo route("admin.products")?>">
+                    <a class="card card-hover-shadow h-100" href="<?php echo route("admin.products") ?>">
                         <div class="card-body">
                             <h2 class="card-title text-inherit">Товары</h2>
                         </div>
@@ -424,7 +442,7 @@
 
                 <div class="col-sm-6 col-lg-3 mb-3 mb-lg-5">
                     <!-- Card -->
-                    <a class="card card-hover-shadow h-100" href="<?php echo route("admin.categories")?>">
+                    <a class="card card-hover-shadow h-100" href="<?php echo route("admin.categories") ?>">
                         <div class="card-body">
                             <h2 class="card-title text-inherit">Категории</h2>
 
@@ -436,7 +454,7 @@
 
                 <div class="col-sm-6 col-lg-3 mb-3 mb-lg-5">
                     <!-- Card -->
-                    <a class="card card-hover-shadow h-100" href="<?php echo route("admin.settings")?>">
+                    <a class="card card-hover-shadow h-100" href="<?php echo route("admin.settings") ?>">
                         <div class="card-body">
                             <h2 class="card-title text-inherit">Настройки</h2>
 
@@ -787,13 +805,12 @@
 
     <!-- JS Plugins Init. -->
     <script>
-        $(document).on("ready", function () {
+        $(document).on("ready", function() {
             // INITIALIZATION OF DATATABLES
             // =======================================================
             HSCore.components.HSDatatables.init($("#datatable"), {
                 dom: "Bfrtip",
-                buttons: [
-                    {
+                buttons: [{
                         extend: "copy",
                         className: "d-none",
                     },
@@ -834,27 +851,27 @@
 
             const datatable = HSCore.components.HSDatatables.getItem(0);
 
-            $("#export-copy").click(function () {
+            $("#export-copy").click(function() {
                 datatable.button(".buttons-copy").trigger();
             });
 
-            $("#export-excel").click(function () {
+            $("#export-excel").click(function() {
                 datatable.button(".buttons-excel").trigger();
             });
 
-            $("#export-csv").click(function () {
+            $("#export-csv").click(function() {
                 datatable.button(".buttons-csv").trigger();
             });
 
-            $("#export-pdf").click(function () {
+            $("#export-pdf").click(function() {
                 datatable.button(".buttons-pdf").trigger();
             });
 
-            $("#export-print").click(function () {
+            $("#export-print").click(function() {
                 datatable.button(".buttons-print").trigger();
             });
 
-            $(".js-datatable-filter").on("change", function () {
+            $(".js-datatable-filter").on("change", function() {
                 var $this = $(this),
                     elVal = $this.val(),
                     targetColumnIndex = $this.data("target-column-index");
@@ -868,8 +885,8 @@
 
     <!-- JS Plugins Init. -->
     <script>
-        (function () {
-            window.onload = function () {
+        (function() {
+            window.onload = function() {
                 // INITIALIZATION OF NAVBAR VERTICAL ASIDE
                 // =======================================================
                 new HSSideNav(".js-navbar-vertical-aside").init();
@@ -912,7 +929,7 @@
     <!-- Style Switcher JS -->
 
     <script>
-        (function () {
+        (function() {
             // STYLE SWITCHER
             // =======================================================
             const $dropdownBtn = document.getElementById(
@@ -923,7 +940,7 @@
             ); // All items of the dropdown
 
             // Function to set active style in the dorpdown menu and set icon for dropdown trigger
-            const setActiveStyle = function () {
+            const setActiveStyle = function() {
                 $variants.forEach(($item) => {
                     if (
                         $item.getAttribute("data-value") ===
@@ -940,8 +957,8 @@
             };
 
             // Add a click event to all items of the dropdown to set the style
-            $variants.forEach(function ($item) {
-                $item.addEventListener("click", function () {
+            $variants.forEach(function($item) {
+                $item.addEventListener("click", function() {
                     HSThemeAppearance.setAppearance(
                         $item.getAttribute("data-value")
                     );
@@ -952,7 +969,7 @@
             setActiveStyle();
 
             // Add event listener on change style to call the setActiveStyle function
-            window.addEventListener("on-hs-appearance-change", function () {
+            window.addEventListener("on-hs-appearance-change", function() {
                 setActiveStyle();
             });
         })();
@@ -963,11 +980,11 @@
 
 </html>
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
+    document.addEventListener('DOMContentLoaded', function() {
         var editButtons = document.querySelectorAll('.edit-currency-btn');
 
-        editButtons.forEach(function (button) {
-            button.addEventListener('click', function () {
+        editButtons.forEach(function(button) {
+            button.addEventListener('click', function() {
                 var modalForm = document.getElementById('editCurrencyForm');
                 var baseUrl = "";
                 var currencyId = button.getAttribute('data-id');

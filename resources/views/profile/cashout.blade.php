@@ -51,6 +51,7 @@
 
 
 		<form method="post" id="form">
+			@csrf
 			<table width="100%" border="0" cellspacing="0" cellpadding="0">
 				<tbody>
 					<tr>
@@ -128,10 +129,13 @@
 					app_tip("Введите сумма вывода", 'error');
 					return false;
 				}
-				app_submit("user.php?mod=cashout&act=add", function(json) {
-					// pe_tip(json.show);
+				app_submit("{{ route('cashouts.store') }}", function(json) {
+					
 					if (json.result) {
-						pe_open("user.php?mod=moneylog", 1000);
+						pe_open("{{ route('profile') }}", 1000);
+					}
+					else{
+						pe_tip(json.show);
 					}
 				})
 			})
