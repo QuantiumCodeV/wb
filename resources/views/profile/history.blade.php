@@ -7,6 +7,14 @@
 
 			--image-path: url('<?php echo asset("/assets/foot_nav.png") ?>');
 			--image-path2: url('<?php echo asset("/assets/dd_icon.png") ?>');
+
+			--image-path3: url('<?php echo asset("/assets/zt_ico.jpg") ?>');
+
+			--image-path4: url('<?php echo asset("/assets/ck_ico.png") ?>');
+
+			--image-path3: url('<?php echo asset("/assets/zt_ico.jpg") ?>');
+
+			--image-path10: url('<?php echo asset("/assets/ck_ico.png") ?>');
 		}
 	</style>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -52,9 +60,48 @@
 	</div>
 	<div class="main">
 		<div class="tx_tt"><i></i>История</div>
-		<div class="jf_box" style="margin-top:0">
-		
-		</div>
+			<div class="jf_box" style="margin-top:0">
+				<ul>
+					<li>
+						<div class="jf_left">
+							<p>Тип операции</p>
+							<p class="font12">Дата и время</p>
+						</div>
+						<div class="jf_right">
+							<p class="green">+₾ Сумма</p>
+							<p class="font12">Статус</p>
+						</div>
+					</li>
+					<!-- Здесь можно добавить дополнительные элементы списка для отображения истории операций -->
+				</ul>
+				<style>
+					.jf_box ul {
+						list-style-type: none;
+						padding: 0;
+						margin: 0;
+					}
+					.jf_box li {
+						display: flex;
+						justify-content: space-between;
+						padding: 10px 0;
+						border-bottom: 1px solid #e0e0e0;
+					}
+					.jf_left, .jf_right {
+						display: flex;
+						flex-direction: column;
+					}
+					.jf_left p, .jf_right p {
+						margin: 0;
+					}
+					.font12 {
+						font-size: 12px;
+						color: #888;
+					}
+					.green {
+						color: #28a745;
+					}
+				</style>
+			</div>
 		<div class="fenye mab10"></div>
 	</div>
 	<link rel="stylesheet" href="<?php echo asset("assets/weui.min.css") ?>">

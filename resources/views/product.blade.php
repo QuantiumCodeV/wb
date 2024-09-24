@@ -6149,18 +6149,19 @@
                 app_tip("选择产品规格");
                 return;
             }
-            app_getinfo("<?php echo route("cart.add") ?>/" + id + "/" + $(":input[name='product_num']").val(), function(json) {
+            app_getinfo("<?php echo route('cart.add', ['product' => 'DUMMY_PRODUCT', 'count' => 'DUMMY_COUNT']); ?>".replace('DUMMY_PRODUCT', id).replace('DUMMY_COUNT', $(":input[name='product_num']").val()), function(json) {
                 if (json.result == true) {
                     if (act == 'buy') {
                         app_page_close();
-                        app_open("<?php echo route("order.add") ?>" + json.id);
+                        app_open("<?php echo route('index'); ?>/" + json.id);
                     } else {
                         $("#cart_num").html(json.cart_num);
                         app_page_close();
                         app_tip("Уже в корзине");
                     }
                 }
-            })
+            });
+
         }
         //打开购买选项
         function buy_open(act) {
