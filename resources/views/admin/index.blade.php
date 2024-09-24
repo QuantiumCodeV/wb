@@ -230,7 +230,7 @@
         class="navbar navbar-expand-lg navbar-fixed navbar-height navbar-container navbar-bordered bg-white">
         <div class="navbar-nav-wrap">
             <!-- Logo -->
-            <a class="navbar-brand" href="./index.html" aria-label="Front">
+            <a class="navbar-brand" href="{{ route("admin.index")}}" aria-label="Front">
                 <img class="navbar-brand-logo" src="<?php echo asset('assets/svg/logos/logo.svg') ?>" alt="Logo"
                     data-hs-theme-appearance="default" />
                 <img class="navbar-brand-logo" src="<?php echo asset('assets/svg/logos-light/logo.svg') ?>" alt="Logo"
@@ -290,7 +290,7 @@
             <div class="navbar-vertical-footer-offset">
                 <!-- Logo -->
 
-                <a class="navbar-brand" href="./index.html" aria-label="Front">
+                <a class="navbar-brand" href="{{ route("admin.index")}}" aria-label="Front">
                     <img class="navbar-brand-logo" src="<?php echo asset('assets/svg/logos/logo.svg') ?>" alt="Logo"
                         data-hs-theme-appearance="default" />
                     <img class="navbar-brand-logo" src="<?php echo asset('assets/svg/logos-light/logo.svg') ?>"
