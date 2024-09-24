@@ -45,32 +45,32 @@
 			<div class="zc_box2">
 				<div class="zc_list">
 					<div class="zc_name">Получатель</div>
-					<div class="zc_text"><input type="text" name="user_tname" placeholder="ФИО"></div>
+					<div class="zc_text">
+						<input type="text" name="user_tname" placeholder="ФИО" value="{{ $delivery->name }}">
+					</div>
 				</div>
+
 				<div class="zc_list">
 					<div class="zc_name">Номер телефона</div>
-					<div class="zc_text"><input type="text" name="user_phone" placeholder="Номер телефона"></div>
+					<div class="zc_text">
+						<input type="text" name="user_phone" placeholder="Номер телефона" value="{{ $delivery->phone }}">
+					</div>
 				</div>
-				<!-- 		<div class="zc_list">
-			<div class="zc_name">所在地区</div>
-			<div class="zc_text">
-				<input type="text" name="shengshi" value="  " placeholder="请选择所在城市" id="shengshi" />
-				<input type="hidden" name="address_province" value="" />
-				<input type="hidden" name="address_city" value=""  />
-				<input type="hidden" name="address_area" value="" />
-			</div>
-			<i class="jt_r"></i>
-		</div> -->
+
 				<div class="zc_list zc_textarea">
 					<div class="zc_name">адрес</div>
-					<div class="zc_text"><textarea type="text" name="address_text" placeholder="Полный адрес"></textarea></div>
+					<div class="zc_text">
+						<textarea name="address_text" placeholder="Полный адрес">{{ $delivery->address }}</textarea>
+					</div>
 				</div>
+
 				<div class="sh_moren">
 					<label for="default">
 						<input type="checkbox" name="address_default" value="1" class="inputfix mar5" id="default">
 						<span>Адрес по умолчанию</span>
 					</label>
 				</div>
+
 			</div>
 			<div class="loginbtn" style="margin:20px 10px;">
 				<input type="hidden" name="pe_token" value="75236c7c5fdf7ebfe3441c02863d0cb8">
@@ -106,7 +106,7 @@
 					app_tip("Пожалуйста, заполните подробный адрес");
 					return false;
 				}
-				app_submit('{{ route("api.delivery.add") }}', function(json) {
+				app_submit('{{ route("api.delivery.update", $delivery->id) }}', function(json) {
 					if (json.result) {
 						app_open("{{ route('delivery') }}", 1000);
 					}

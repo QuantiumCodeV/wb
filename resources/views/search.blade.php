@@ -228,7 +228,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/120"
 										title="Apple / Apple iPhone 15 Pro max 1 ТБ, Титановый бежевый">Apple / Apple
 										iPhone 15 Pro max 1 ТБ, Титановый бежевый</a></p>
-								<span>₽112000</span>
+								<span>₾112000</span>
 							</div>
 						</div>
 					</li>
@@ -246,7 +246,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/225"
 										title="Pro.../ Беспроводные наушники для iPhone и Android">Pro.../ Беспроводные
 										наушники для iPhone и Android</a></p>
-								<span>₽540</span>
+								<span>₾540</span>
 							</div>
 						</div>
 					</li>
@@ -261,7 +261,7 @@
 							<div class="prolist_name">
 								<p><a href="https://wbbff.cc/index.php/product/224"
 										title="Apple/ iPhone 13 128GB">Apple/ iPhone 13 128GB</a></p>
-								<span>₽79980</span>
+								<span>₾79980</span>
 							</div>
 						</div>
 					</li>
@@ -276,7 +276,7 @@
 							<div class="prolist_name">
 								<p><a href="https://wbbff.cc/index.php/product/223"
 										title="Xiaomi/ Смартфон 13T 12/256 ГБ">Xiaomi/ Смартфон 13T 12/256 ГБ</a></p>
-								<span>₽59950</span>
+								<span>₾59950</span>
 							</div>
 						</div>
 					</li>
@@ -292,7 +292,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/222"
 										title="Ulefone/ Power Armor 19T 12+256GB">Ulefone/ Power Armor 19T 12+256GB</a>
 								</p>
-								<span>₽59980</span>
+								<span>₾59980</span>
 							</div>
 						</div>
 					</li>
@@ -309,7 +309,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/215"
 										title="Cactus/ Проектор Cactus CS-PRO.02WT.WXGA-A LCD">Cactus/ Проектор Cactus
 										CS-PRO.02WT.WXGA-A LCD</a></p>
-								<span>₽25680</span>
+								<span>₾25680</span>
 							</div>
 						</div>
 					</li>
@@ -326,7 +326,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/214"
 										title="Wanb / Проектор Wanbo T2 Max New (белый)">Wanb / Проектор Wanbo T2 Max
 										New (белый)</a></p>
-								<span>₽19980</span>
+								<span>₾19980</span>
 							</div>
 						</div>
 					</li>
@@ -343,7 +343,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/157"
 										title="Vitek/Кофеварка рожковая Vitek VT-1517">Vitek/Кофеварка рожковая Vitek
 										VT-1517</a></p>
-								<span>₽16970</span>
+								<span>₾16970</span>
 							</div>
 						</div>
 					</li>
@@ -371,7 +371,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/240"
 										title="IMHO Брюки мужские черные камуфляж трикотажные домашние хлопок">IMHO
 										Брюки мужские черные камуфляж трикотажные домашние хлопок</a></p>
-								<span>₽1076</span>
+								<span>₾1076</span>
 							</div>
 						</div>
 					</li>
@@ -389,7 +389,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/78"
 										title="ВАРГГРАДЪ  / Брюки Карго мужские на манжете (Рипстоп)">ВАРГГРАДЪ / Брюки
 										Карго мужские на манжете (Рипстоп)</a></p>
-								<span>₽108690</span>
+								<span>₾108690</span>
 							</div>
 						</div>
 					</li>
@@ -404,7 +404,7 @@
 							<div class="prolist_name">
 								<p><a href="https://wbbff.cc/index.php/product/75"
 										title="Топчик-АМ  / Джоггеры">Топчик-АМ / Джоггеры</a></p>
-								<span>₽2870</span>
+								<span>₾2870</span>
 							</div>
 						</div>
 					</li>
@@ -419,7 +419,7 @@
 							<div class="prolist_name">
 								<p><a href="https://wbbff.cc/index.php/product/71"
 										title="HXD /  Джинсы мужские бананы">HXD / Джинсы мужские бананы</a></p>
-								<span>₽3950</span>
+								<span>₾3950</span>
 							</div>
 						</div>
 					</li>
@@ -434,7 +434,7 @@
 							<div class="prolist_name">
 								<p><a href="https://wbbff.cc/index.php/product/69"
 										title="Pleasure Store  / Трусы боксеры">Pleasure Store / Трусы боксеры</a></p>
-								<span>₽1040</span>
+								<span>₾1040</span>
 							</div>
 						</div>
 					</li>
@@ -452,7 +452,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/67"
 										title="JOYCITY /  Трусы мужские набор боксеры хлопок спортивные базовые 4 шт">JOYCITY
 										/ Трусы мужские набор боксеры хлопок спортивные базовые 4 шт</a></p>
-								<span>₽720</span>
+								<span>₾720</span>
 							</div>
 						</div>
 					</li>
@@ -470,7 +470,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/61"
 										title="WOOLRICH /  Толстовка Interlock из смесового эластичного хлопка">WOOLRICH
 										/ Толстовка Interlock из смесового эластичного хлопка</a></p>
-								<span>₽39940</span>
+								<span>₾39940</span>
 							</div>
 						</div>
 					</li>
@@ -485,7 +485,7 @@
 							<div class="prolist_name">
 								<p><a href="https://wbbff.cc/index.php/product/60" title="off-white /  Худи">off-white /
 										Худи</a></p>
-								<span>₽33815</span>
+								<span>₾33815</span>
 							</div>
 						</div>
 					</li>
@@ -512,7 +512,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/227"
 										title="AVARA  Свитшот оверсайз базовый худи кофта">AVARA Свитшот оверсайз
 										базовый худи кофта</a></p>
-								<span>₽1036</span>
+								<span>₾1036</span>
 							</div>
 						</div>
 					</li>
@@ -527,7 +527,7 @@
 							<div class="prolist_name">
 								<p><a href="https://wbbff.cc/index.php/product/161"
 										title="Luciano Barbera/Джемпер">Luciano Barbera/Джемпер</a></p>
-								<span>₽72882.5</span>
+								<span>₾72882.5</span>
 							</div>
 						</div>
 					</li>
@@ -542,7 +542,7 @@
 							<div class="prolist_name">
 								<p><a href="https://wbbff.cc/index.php/product/38"
 										title="MANAF / Демисезонный берет">MANAF / Демисезонный берет</a></p>
-								<span>₽1250</span>
+								<span>₾1250</span>
 							</div>
 						</div>
 					</li>
@@ -560,7 +560,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/36"
 										title="GERDA stories / Пальто женское из меха овчины астраган">GERDA stories /
 										Пальто женское из меха овчины астраган</a></p>
-								<span>₽44000</span>
+								<span>₾44000</span>
 							</div>
 						</div>
 					</li>
@@ -575,7 +575,7 @@
 							<div class="prolist_name">
 								<p><a href="https://wbbff.cc/index.php/product/35"
 										title="12/20 SHOP / Пуховик длинный">12/20 SHOP / Пуховик длинный</a></p>
-								<span>₽9700</span>
+								<span>₾9700</span>
 							</div>
 						</div>
 					</li>
@@ -593,7 +593,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/33"
 										title="ELMARI / Кожаная косуха оверсайз куртка кожанка plus size">ELMARI /
 										Кожаная косуха оверсайз куртка кожанка plus size</a></p>
-								<span>₽21780</span>
+								<span>₾21780</span>
 							</div>
 						</div>
 					</li>
@@ -611,7 +611,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/32"
 										title="Eberron / Куртка женская зимняя с поясом с капюшоном теплая">Eberron /
 										Куртка женская зимняя с поясом с капюшоном теплая</a></p>
-								<span>₽16450</span>
+								<span>₾16450</span>
 							</div>
 						</div>
 					</li>
@@ -629,7 +629,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/30"
 										title="Кировская Меховая Фабрика / &quot;Москвичка&quot; (Сапфир) с капюшоном. Длина 100 см">Кировская
 										Меховая Фабрика / "Москвичка" (Сапфир) с капюшоном. Длина 100 см</a></p>
-								<span>₽38390</span>
+								<span>₾38390</span>
 							</div>
 						</div>
 					</li>
@@ -655,7 +655,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/228"
 										title="Tarafun  Утепленные зимние ботинки">Tarafun Утепленные зимние ботинки</a>
 								</p>
-								<span>₽1012</span>
+								<span>₾1012</span>
 							</div>
 						</div>
 					</li>
@@ -670,7 +670,7 @@
 							<div class="prolist_name">
 								<p><a href="https://wbbff.cc/index.php/product/129"
 										title="Betsy/Ботинки зимние">Betsy/Ботинки зимние</a></p>
-								<span>₽3170</span>
+								<span>₾3170</span>
 							</div>
 						</div>
 					</li>
@@ -685,7 +685,7 @@
 							<div class="prolist_name">
 								<p><a href="https://wbbff.cc/index.php/product/127"
 										title="VALEANI/Ботинки">VALEANI/Ботинки</a></p>
-								<span>₽21800</span>
+								<span>₾21800</span>
 							</div>
 						</div>
 					</li>
@@ -703,7 +703,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/52"
 										title="Mascotte  / Монки мужские бордовые классические туфли натуральная кожа">Mascotte
 										/ Монки мужские бордовые классические туфли натуральная кожа</a></p>
-								<span>₽16440</span>
+								<span>₾16440</span>
 							</div>
 						</div>
 					</li>
@@ -721,7 +721,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/51"
 										title="Mascotte /  Полуботинки мужские черные кожаные классические броги">Mascotte
 										/ Полуботинки мужские черные кожаные классические броги</a></p>
-								<span>₽39500</span>
+								<span>₾39500</span>
 							</div>
 						</div>
 					</li>
@@ -738,7 +738,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/48"
 										title="Nike  / Кроссовки Nike SB Dunk Low Purple Pigeon">Nike / Кроссовки Nike
 										SB Dunk Low Purple Pigeon</a></p>
-								<span>₽4050</span>
+								<span>₾4050</span>
 							</div>
 						</div>
 					</li>
@@ -753,7 +753,7 @@
 							<div class="prolist_name">
 								<p><a href="https://wbbff.cc/index.php/product/46" title="adidas /  Кроссовки">adidas /
 										Кроссовки</a></p>
-								<span>₽3750</span>
+								<span>₾3750</span>
 							</div>
 						</div>
 					</li>
@@ -768,7 +768,7 @@
 							<div class="prolist_name">
 								<p><a href="https://wbbff.cc/index.php/product/44"
 										title="BARRACUDA  / Кроссовки">BARRACUDA / Кроссовки</a></p>
-								<span>₽33170</span>
+								<span>₾33170</span>
 							</div>
 						</div>
 					</li>
@@ -796,7 +796,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/221"
 										title="Britax Roemer/ Детское автокресло Kidfix i-Size с 4 до 12 лет с ISOFIX">Britax
 										Roemer/ Детское автокресло Kidfix i-Size с 4 до 12 лет с ISOFIX</a></p>
-								<span>₽39770</span>
+								<span>₾39770</span>
 							</div>
 						</div>
 					</li>
@@ -813,7 +813,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/219"
 										title="CYBEX/ Автокресло Сайбекс Solution T i-Fix изофикс">CYBEX/ Автокресло
 										Сайбекс Solution T i-Fix изофикс</a></p>
-								<span>₽19970</span>
+								<span>₾19970</span>
 							</div>
 						</div>
 					</li>
@@ -831,7 +831,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/213"
 										title="Nika/ Детский стол складной для кормления развивающий обучающий">Nika/
 										Детский стол складной для кормления развивающий обучающий</a></p>
-								<span>₽32660</span>
+								<span>₾32660</span>
 							</div>
 						</div>
 					</li>
@@ -846,7 +846,7 @@
 							<div class="prolist_name">
 								<p><a href="https://wbbff.cc/index.php/product/131"
 										title="STOVEL'S/Ботинки">STOVEL'S/Ботинки</a></p>
-								<span>₽2334</span>
+								<span>₾2334</span>
 							</div>
 						</div>
 					</li>
@@ -863,7 +863,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/55"
 										title="Rodbox / Игровая приставка консоль для детей">Rodbox / Игровая приставка
 										консоль для детей</a></p>
-								<span>₽1947</span>
+								<span>₾1947</span>
 							</div>
 						</div>
 					</li>
@@ -881,7 +881,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/54"
 										title="PlayStation / Подписка Playstation Plus Deluxe на 12 месяцев Россия">PlayStation
 										/ Подписка Playstation Plus Deluxe на 12 месяцев Россия</a></p>
-								<span>₽6580</span>
+								<span>₾6580</span>
 							</div>
 						</div>
 					</li>
@@ -899,7 +899,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/53"
 										title="Revyline / Электрическая зубная щетка детская Revyline RL 020 Kids">Revyline
 										/ Электрическая зубная щетка детская Revyline RL 020 Kids</a></p>
-								<span>₽4190</span>
+								<span>₾4190</span>
 							</div>
 						</div>
 					</li>
@@ -916,7 +916,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/50"
 										title="Microsoft / Игровая консоль Xbox Series S">Microsoft / Игровая консоль
 										Xbox Series S</a></p>
-								<span>₽21980</span>
+								<span>₾21980</span>
 							</div>
 						</div>
 					</li>
@@ -944,7 +944,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/229"
 										title="ChisKate Home  Корзина для хранения плетеная с ручками">ChisKate Home
 										Корзина для хранения плетеная с ручками</a></p>
-								<span>₽1016</span>
+								<span>₾1016</span>
 							</div>
 						</div>
 					</li>
@@ -961,7 +961,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/192"
 										title="Oasis / Набор для ванны и душа «Enjoy»">Oasis / Набор для ванны и душа
 										«Enjoy»</a></p>
-								<span>₽73384</span>
+								<span>₾73384</span>
 							</div>
 						</div>
 					</li>
@@ -978,7 +978,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/191"
 										title="GenRugs / Коврик комнатный - 240x244 см">GenRugs / Коврик комнатный -
 										240x244 см</a></p>
-								<span>₽199880</span>
+								<span>₾199880</span>
 							</div>
 						</div>
 					</li>
@@ -995,7 +995,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/190"
 										title="GenRugs / Коврик комнатный - 168x244 см">GenRugs / Коврик комнатный -
 										168x244 см</a></p>
-								<span>₽87770</span>
+								<span>₾87770</span>
 							</div>
 						</div>
 					</li>
@@ -1012,7 +1012,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/189"
 										title="Genova / Бельгийский ковер из вискозы 240Х340 см.">Genova / Бельгийский
 										ковер из вискозы 240Х340 см.</a></p>
-								<span>₽44975</span>
+								<span>₾44975</span>
 							</div>
 						</div>
 					</li>
@@ -1029,7 +1029,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/188"
 										title="Hammelhorn / Шкура коровья натуральная на пол">Hammelhorn / Шкура коровья
 										натуральная на пол</a></p>
-								<span>₽23302</span>
+								<span>₾23302</span>
 							</div>
 						</div>
 					</li>
@@ -1046,7 +1046,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/165"
 										title="Necchi/Швейно-вышивальная машина Necchi 8888">Necchi/Швейно-вышивальная
 										машина Necchi 8888</a></p>
-								<span>₽19950</span>
+								<span>₾19950</span>
 							</div>
 						</div>
 					</li>
@@ -1064,7 +1064,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/160"
 										title="SKYSLEEP/Матрас FLEX PLUS DOUBLE LATEX 22 беспружинный 95x170">SKYSLEEP/Матрас
 										FLEX PLUS DOUBLE LATEX 22 беспружинный 95x170</a></p>
-								<span>₽49885</span>
+								<span>₾49885</span>
 							</div>
 						</div>
 					</li>
@@ -1092,7 +1092,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/230"
 										title="Waterdent  Жидкость для ирригатора Отбеливающая + Ополаскиватель, набор">Waterdent
 										Жидкость для ирригатора Отбеливающая + Ополаскиватель, набор</a></p>
-								<span>₽1036</span>
+								<span>₾1036</span>
 							</div>
 						</div>
 					</li>
@@ -1109,7 +1109,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/87"
 										title="ECO&amp;Vit / Маска для волос с перцем">ECO&amp;Vit / Маска для волос с
 										перцем</a></p>
-								<span>₽336</span>
+								<span>₾336</span>
 							</div>
 						</div>
 					</li>
@@ -1126,7 +1126,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/85"
 										title="Calismo / Набор гель-лаков 15 мл для ногтей 60 штук">Calismo / Набор
 										гель-лаков 15 мл для ногтей 60 штук</a></p>
-								<span>₽6770</span>
+								<span>₾6770</span>
 							</div>
 						</div>
 					</li>
@@ -1144,7 +1144,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/83"
 										title="Milliphora / Профессиональный набор для поврежденных сухих волос">Milliphora
 										/ Профессиональный набор для поврежденных сухих волос</a></p>
-								<span>₽4360</span>
+								<span>₾4360</span>
 							</div>
 						</div>
 					</li>
@@ -1162,7 +1162,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/80"
 										title="NOVEL / Набор Кератиновых гелей Novel в ШОУ-боксе, 25 шт.">NOVEL / Набор
 										Кератиновых гелей Novel в ШОУ-боксе, 25 шт.</a></p>
-								<span>₽10491</span>
+								<span>₾10491</span>
 							</div>
 						</div>
 					</li>
@@ -1180,7 +1180,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/77"
 										title="Kid`s Room / Детская косметика для девочек декоративный набор подарок">Kid`s
 										Room / Детская косметика для девочек декоративный набор подарок</a></p>
-								<span>₽2150</span>
+								<span>₾2150</span>
 							</div>
 						</div>
 					</li>
@@ -1198,7 +1198,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/74"
 										title="GILLETTE / ProGlide Power Мужская Бритва, 1 кассета, FlexBall">GILLETTE /
 										ProGlide Power Мужская Бритва, 1 кассета, FlexBall</a></p>
-								<span>₽1839</span>
+								<span>₾1839</span>
 							</div>
 						</div>
 					</li>
@@ -1216,7 +1216,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/73"
 										title="Ollin Professional / Спрей для волос термозащита несмываемый уход Ollin 15 в 1">Ollin
 										Professional / Спрей для волос термозащита несмываемый уход Ollin 15 в 1</a></p>
-								<span>₽700</span>
+								<span>₾700</span>
 							</div>
 						</div>
 					</li>
@@ -1244,7 +1244,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/231"
 										title="Snugway Двухсторонний накладной хвост на крабе шиньон 70см">Snugway
 										Двухсторонний накладной хвост на крабе шиньон 70см</a></p>
-								<span>₽1088</span>
+								<span>₾1088</span>
 							</div>
 						</div>
 					</li>
@@ -1262,7 +1262,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/193"
 										title="WigStar / Парик из длинных натуральных волос c моновставкой.">WigStar /
 										Парик из длинных натуральных волос c моновставкой.</a></p>
-								<span>₽24970</span>
+								<span>₾24970</span>
 							</div>
 						</div>
 					</li>
@@ -1279,7 +1279,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/135"
 										title="BOPAI/Рюкзак кожаный для ноутбука 15,6">BOPAI/Рюкзак кожаный для ноутбука
 										15,6</a></p>
-								<span>₽7730</span>
+								<span>₾7730</span>
 							</div>
 						</div>
 					</li>
@@ -1295,7 +1295,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/97"
 										title="RUIMAS  /Часы наручные спортивные">RUIMAS /Часы наручные спортивные</a>
 								</p>
-								<span>₽5260</span>
+								<span>₾5260</span>
 							</div>
 						</div>
 					</li>
@@ -1312,7 +1312,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/96"
 										title="Daniele Riccardi / Кошелек кожаный портмоне">Daniele Riccardi / Кошелек
 										кожаный портмоне</a></p>
-								<span>₽4070</span>
+								<span>₾4070</span>
 							</div>
 						</div>
 					</li>
@@ -1330,7 +1330,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/93"
 										title="Lutik Wedding / Бутоньерка для жениха, браслет на руку, комплект свадебный">Lutik
 										Wedding / Бутоньерка для жениха, браслет на руку, комплект свадебный</a></p>
-								<span>₽1046</span>
+								<span>₾1046</span>
 							</div>
 						</div>
 					</li>
@@ -1345,7 +1345,7 @@
 							<div class="prolist_name">
 								<p><a href="https://wbbff.cc/index.php/product/91"
 										title="БАНИНПАР / Веер банный">БАНИНПАР / Веер банный</a></p>
-								<span>₽14997</span>
+								<span>₾14997</span>
 							</div>
 						</div>
 					</li>
@@ -1362,7 +1362,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/89"
 										title="Suprinto / Термонаклейка на одежду мишка teddy bear">Suprinto /
 										Термонаклейка на одежду мишка teddy bear</a></p>
-								<span>₽376</span>
+								<span>₾376</span>
 							</div>
 						</div>
 					</li>
@@ -1389,7 +1389,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/232"
 										title="Космический песок  Кинетический песок для детей">Космический песок
 										Кинетический песок для детей</a></p>
-								<span>₽1084</span>
+								<span>₾1084</span>
 							</div>
 						</div>
 					</li>
@@ -1407,7 +1407,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/183"
 										title="Уточка в очках Lalafanfan / Уточка Утка Lalafanfan в одежде и очках">Уточка
 										в очках Lalafanfan / Уточка Утка Lalafanfan в одежде и очках</a></p>
-								<span>₽86000</span>
+								<span>₾86000</span>
 							</div>
 						</div>
 					</li>
@@ -1425,7 +1425,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/182"
 										title="MotionLamps Настольный двигатель Стирлинга V-Power Grand 270x165x165 мм">MotionLamps
 										Настольный двигатель Стирлинга V-Power Grand 270x165x165 мм</a></p>
-								<span>₽26000</span>
+								<span>₾26000</span>
 							</div>
 						</div>
 					</li>
@@ -1442,7 +1442,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/181"
 										title="Evdakoff / Мягкая игрушка уточка в очках Лалафанфан">Evdakoff / Мягкая
 										игрушка уточка в очках Лалафанфан</a></p>
-								<span>₽48850</span>
+								<span>₾48850</span>
 							</div>
 						</div>
 					</li>
@@ -1459,7 +1459,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/105"
 										title="FLATTY TOYS /  Вездеход на радиоуправлении">FLATTY TOYS / Вездеход на
 										радиоуправлении</a></p>
-								<span>₽35420</span>
+								<span>₾35420</span>
 							</div>
 						</div>
 					</li>
@@ -1477,7 +1477,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/102"
 										title="Y.P.Kids  / Машинка на пульте управления конструктор Аналог lego technic">Y.P.Kids
 										/ Машинка на пульте управления конструктор Аналог lego technic</a></p>
-								<span>₽2770</span>
+								<span>₾2770</span>
 							</div>
 						</div>
 					</li>
@@ -1494,7 +1494,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/98"
 										title="Дрофа-Медиа /  Развивающая карточная игра для детей">Дрофа-Медиа /
 										Развивающая карточная игра для детей</a></p>
-								<span>₽570</span>
+								<span>₾570</span>
 							</div>
 						</div>
 					</li>
@@ -1509,7 +1509,7 @@
 							<div class="prolist_name">
 								<p><a href="https://wbbff.cc/index.php/product/94"
 										title="Smile Game /  Квест для детей">Smile Game / Квест для детей</a></p>
-								<span>₽540</span>
+								<span>₾540</span>
 							</div>
 						</div>
 					</li>
@@ -1536,7 +1536,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/233"
 										title="Том Полкер Стол журнальный на колесиках">Том Полкер Стол журнальный на
 										колесиках</a></p>
-								<span>₽1056</span>
+								<span>₾1056</span>
 							</div>
 						</div>
 					</li>
@@ -1554,7 +1554,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/211"
 										title="Classmark / Лопата туристическая многофункциональная складная мультитул">Classmark
 										/ Лопата туристическая многофункциональная складная мультитул</a></p>
-								<span>₽84900</span>
+								<span>₾84900</span>
 							</div>
 						</div>
 					</li>
@@ -1572,7 +1572,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/210"
 										title="UNIX Fit / Профессиональный теннисный стол 25 мм MDF с сеткой">UNIX Fit /
 										Профессиональный теннисный стол 25 мм MDF с сеткой</a></p>
-								<span>₽64900</span>
+								<span>₾64900</span>
 							</div>
 						</div>
 					</li>
@@ -1589,7 +1589,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/209"
 										title="UNIXFIT / Беговая дорожка MX-450V USB, AUX, складная">UNIXFIT / Беговая
 										дорожка MX-450V USB, AUX, складная</a></p>
-								<span>₽19600</span>
+								<span>₾19600</span>
 							</div>
 						</div>
 					</li>
@@ -1606,7 +1606,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/208"
 										title="EastShark / Раскладушка EastShark HYB 006A">EastShark / Раскладушка
 										EastShark HYB 006A</a></p>
-								<span>₽35800</span>
+								<span>₾35800</span>
 							</div>
 						</div>
 					</li>
@@ -1623,7 +1623,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/186"
 										title="GoodPoof / Чехол для Кресла-мешка Оксфорд XXXL">GoodPoof / Чехол для
 										Кресла-мешка Оксфорд XXXL</a></p>
-								<span>₽1120</span>
+								<span>₾1120</span>
 							</div>
 						</div>
 					</li>
@@ -1640,7 +1640,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/185"
 										title="MIELLA / Кресло кровать для дома бескаркасное ELLA">MIELLA / Кресло
 										кровать для дома бескаркасное ELLA</a></p>
-								<span>₽19860</span>
+								<span>₾19860</span>
 							</div>
 						</div>
 					</li>
@@ -1658,7 +1658,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/108"
 										title="ЗМИ / Обувница в прихожую узкая металлическая открытая этажерка">ЗМИ /
 										Обувница в прихожую узкая металлическая открытая этажерка</a></p>
-								<span>₽5460</span>
+								<span>₾5460</span>
 							</div>
 						</div>
 					</li>
@@ -1685,7 +1685,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/153"
 										title="Tenga/Мастурбатор Tenga FLIP ORB STRONG BLUE RUSH">Tenga/Мастурбатор
 										Tenga FLIP ORB STRONG BLUE RUSH</a></p>
-								<span>₽19695</span>
+								<span>₾19695</span>
 							</div>
 						</div>
 					</li>
@@ -1703,7 +1703,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/149"
 										title="Shunga/гибкий вибростимулятор MIYO с двумя моторами - 18,5 см.">Shunga/гибкий
 										вибростимулятор MIYO с двумя моторами - 18,5 см.</a></p>
-								<span>₽28485</span>
+								<span>₾28485</span>
 							</div>
 						</div>
 					</li>
@@ -1720,7 +1720,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/144"
 										title="Tenga/Бежевый мастурбатор Tenga Puffy">Tenga/Бежевый мастурбатор Tenga
 										Puffy</a></p>
-								<span>₽27835</span>
+								<span>₾27835</span>
 							</div>
 						</div>
 					</li>
@@ -1738,7 +1738,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/81"
 										title="Smazka  / Лубрикант на водной основе гель смазка интимная для взрослых">Smazka
 										/ Лубрикант на водной основе гель смазка интимная для взрослых</a></p>
-								<span>₽360</span>
+								<span>₾360</span>
 							</div>
 						</div>
 					</li>
@@ -1756,7 +1756,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/79"
 										title="DopingLove  / Вибратор стимулятор реалистичный с подогревом">DopingLove /
 										Вибратор стимулятор реалистичный с подогревом</a></p>
-								<span>₽3720</span>
+								<span>₾3720</span>
 							</div>
 						</div>
 					</li>
@@ -1783,7 +1783,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/234"
 										title="Queen's line Кофе в зернах Сантос 1 кг">Queen's line Кофе в зернах Сантос
 										1 кг</a></p>
-								<span>₽1088</span>
+								<span>₾1088</span>
 							</div>
 						</div>
 					</li>
@@ -1801,7 +1801,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/178"
 										title="DE JANEIRO / Кофе в зёрнах 1 кг ESPRESSO EXTRA DARK Арабика / Робуста">DE
 										JANEIRO / Кофе в зёрнах 1 кг ESPRESSO EXTRA DARK Арабика / Робуста</a></p>
-								<span>₽1040</span>
+								<span>₾1040</span>
 							</div>
 						</div>
 					</li>
@@ -1818,7 +1818,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/177"
 										title="LAST CUP / Super Mild кофе в зернах 1 кг 1кг">LAST CUP / Super Mild кофе
 										в зернах 1 кг 1кг</a></p>
-								<span>₽1060</span>
+								<span>₾1060</span>
 							</div>
 						</div>
 					</li>
@@ -1835,7 +1835,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/176"
 										title="LAST CUP / Бразилия Моджиана кофе в зернах 1 кг 1кг">LAST CUP / Бразилия
 										Моджиана кофе в зернах 1 кг 1кг</a></p>
-								<span>₽1046</span>
+								<span>₾1046</span>
 							</div>
 						</div>
 					</li>
@@ -1853,7 +1853,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/109"
 										title="Пастилушка  / Пастила без сахара, комплект из 2-ух упаковок по 0,8 к">Пастилушка
 										/ Пастила без сахара, комплект из 2-ух упаковок по 0,8 к</a></p>
-								<span>₽605</span>
+								<span>₾605</span>
 							</div>
 						</div>
 					</li>
@@ -1871,7 +1871,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/107"
 										title="DREAMBOX /  Подарочный набор сладкий бокс подарок женщине маме подруге">DREAMBOX
 										/ Подарочный набор сладкий бокс подарок женщине маме подруге</a></p>
-								<span>₽1070</span>
+								<span>₾1070</span>
 							</div>
 						</div>
 					</li>
@@ -1899,7 +1899,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/235"
 										title="FUTULA Напольные электронные весы до 180 кг Futula Scale 2">FUTULA
 										Напольные электронные весы до 180 кг Futula Scale 2</a></p>
-								<span>₽1068</span>
+								<span>₾1068</span>
 							</div>
 						</div>
 					</li>
@@ -1916,7 +1916,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/218"
 										title="Silter/ Отпариватель напольный вертикальный 2004/F">Silter/ Отпариватель
 										напольный вертикальный 2004/F</a></p>
-								<span>₽77750</span>
+								<span>₾77750</span>
 							</div>
 						</div>
 					</li>
@@ -1935,7 +1935,7 @@
 										title="NAC intelligent technology/ Паровой - гладильный пресс отпариватель напольный с доской">NAC
 										intelligent technology/ Паровой - гладильный пресс отпариватель напольный с
 										доской</a></p>
-								<span>₽36340</span>
+								<span>₾36340</span>
 							</div>
 						</div>
 					</li>
@@ -1953,7 +1953,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/207"
 										title="TOSHIBA  / Сплит-система TOSHIBA Seiya RAS-16CVG-EE комплект">TOSHIBA /
 										Сплит-система TOSHIBA Seiya RAS-16CVG-EE комплект</a></p>
-								<span>₽85000</span>
+								<span>₾85000</span>
 							</div>
 						</div>
 					</li>
@@ -1970,7 +1970,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/180"
 										title="мини кондиционер / мини кондиционер">мини кондиционер / мини
 										кондиционер</a></p>
-								<span>₽16680</span>
+								<span>₾16680</span>
 							</div>
 						</div>
 					</li>
@@ -1988,7 +1988,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/179"
 										title="Nimefel / Озонатор ионизатор воздуха для дома / Воздухоочиститель быто">Nimefel
 										/ Озонатор ионизатор воздуха для дома / Воздухоочиститель быто</a></p>
-								<span>₽33000</span>
+								<span>₾33000</span>
 							</div>
 						</div>
 					</li>
@@ -2006,7 +2006,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/115"
 										title="Dyson  / Пылесос V12 (SV30) Detect Slim Absolute (UK) с подсветкой">Dyson
 										/ Пылесос V12 (SV30) Detect Slim Absolute (UK) с подсветкой</a></p>
-								<span>₽79000</span>
+								<span>₾79000</span>
 							</div>
 						</div>
 					</li>
@@ -2024,7 +2024,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/114"
 										title="easyroom / Шкаф для одежды в спальню, в прихожую, гардеробная система">easyroom
 										/ Шкаф для одежды в спальню, в прихожую, гардеробная система</a></p>
-								<span>₽2170</span>
+								<span>₾2170</span>
 							</div>
 						</div>
 					</li>
@@ -2052,7 +2052,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/236"
 										title="Барсик Наполнитель комкующийся для кошек соевый тофу Зеленый чай 15">Барсик
 										Наполнитель комкующийся для кошек соевый тофу Зеленый чай 15</a></p>
-								<span>₽1028</span>
+								<span>₾1028</span>
 							</div>
 						</div>
 					</li>
@@ -2069,7 +2069,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/226"
 										title="Джи Пи АЙ/ Лоток для животных Сима Люкс">Джи Пи АЙ/ Лоток для животных
 										Сима Люкс</a></p>
-								<span>₽540</span>
+								<span>₾540</span>
 							</div>
 						</div>
 					</li>
@@ -2087,7 +2087,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/184"
 										title="Whiskas / Сухой корм Whiskas для кошек, Обед с говядиной, 13.8кг">Whiskas
 										/ Сухой корм Whiskas для кошек, Обед с говядиной, 13.8кг</a></p>
-								<span>₽4070</span>
+								<span>₾4070</span>
 							</div>
 						</div>
 					</li>
@@ -2105,7 +2105,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/146"
 										title="SHOLIS /  Одежда для животных / Кофта худи для собак и кошек">SHOLIS /
 										Одежда для животных / Кофта худи для собак и кошек</a></p>
-								<span>₽1580</span>
+								<span>₾1580</span>
 							</div>
 						</div>
 					</li>
@@ -2123,7 +2123,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/142"
 										title="Uniclean /  Ликвидатор запаха кошачьих туалетов Яблоневый сад 600г">Uniclean
 										/ Ликвидатор запаха кошачьих туалетов Яблоневый сад 600г</a></p>
-								<span>₽319</span>
+								<span>₾319</span>
 							</div>
 						</div>
 					</li>
@@ -2141,7 +2141,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/133"
 										title="garra zoo /  Лоток туалет для кошек закрытый с совком">garra zoo / Лоток
 										туалет для кошек закрытый с совком</a></p>
-								<span>₽2300</span>
+								<span>₾2300</span>
 							</div>
 						</div>
 					</li>
@@ -2157,7 +2157,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/130"
 										title="Пеленки для животных одноразовые">Пеленки для животных одноразовые</a>
 								</p>
-								<span>₽39700</span>
+								<span>₾39700</span>
 							</div>
 						</div>
 					</li>
@@ -2185,7 +2185,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/237"
 										title="Горелка туристическая Горелка газовая с пьезоподжигом">Горелка
 										туристическая Горелка газовая с пьезоподжигом</a></p>
-								<span>₽1032</span>
+								<span>₾1032</span>
 							</div>
 						</div>
 					</li>
@@ -2202,7 +2202,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/205"
 										title="BOSU / Балансировочная полусфера для фитнеса / Elite">BOSU /
 										Балансировочная полусфера для фитнеса / Elite</a></p>
-								<span>₽8220</span>
+								<span>₾8220</span>
 							</div>
 						</div>
 					</li>
@@ -2217,7 +2217,7 @@
 							<div class="prolist_name">
 								<p><a href="https://wbbff.cc/index.php/product/204"
 										title="Escape / Шина спортивная">Escape / Шина спортивная</a></p>
-								<span>₽92500</span>
+								<span>₾92500</span>
 							</div>
 						</div>
 					</li>
@@ -2234,7 +2234,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/203"
 										title="Strong Jaw / Тренажер для скул, эспандер">Strong Jaw / Тренажер для скул,
 										эспандер</a></p>
-								<span>₽79900</span>
+								<span>₾79900</span>
 							</div>
 						</div>
 					</li>
@@ -2252,7 +2252,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/202"
 										title="Jump Power / Батут 312см 10ft детский с сеткой большой уличный">Jump
 										Power / Батут 312см 10ft детский с сеткой большой уличный</a></p>
-								<span>₽59990</span>
+								<span>₾59990</span>
 							</div>
 						</div>
 					</li>
@@ -2267,7 +2267,7 @@
 							<div class="prolist_name">
 								<p><a href="https://wbbff.cc/index.php/product/201" title="Другие Бренды / Батут">Другие
 										Бренды / Батут</a></p>
-								<span>₽49480</span>
+								<span>₾49480</span>
 							</div>
 						</div>
 					</li>
@@ -2284,7 +2284,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/155"
 										title="FitnessLive / Батут каркасный с защитной сеткой">FitnessLive / Батут
 										каркасный с защитной сеткой</a></p>
-								<span>₽6770</span>
+								<span>₾6770</span>
 							</div>
 						</div>
 					</li>
@@ -2302,7 +2302,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/150"
 										title="ТИТАН / Гантели разборные со штангой для спорта и фитнеса">ТИТАН /
 										Гантели разборные со штангой для спорта и фитнеса</a></p>
-								<span>₽2980</span>
+								<span>₾2980</span>
 							</div>
 						</div>
 					</li>
@@ -2330,7 +2330,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/238"
 										title="Miestilo Подвеска на шею женская серебро 925 пробы, камень на леске">Miestilo
 										Подвеска на шею женская серебро 925 пробы, камень на леске</a></p>
-								<span>₽1052</span>
+								<span>₾1052</span>
 							</div>
 						</div>
 					</li>
@@ -2347,7 +2347,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/200"
 										title="uvilers / Кольцо золотое 585 Цикада">uvilers / Кольцо золотое 585
 										Цикада</a></p>
-								<span>₽67900</span>
+								<span>₾67900</span>
 							</div>
 						</div>
 					</li>
@@ -2364,7 +2364,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/199"
 										title="Artfacet / Золотое кольцо с перламутром">Artfacet / Золотое кольцо с
 										перламутром</a></p>
-								<span>₽29995</span>
+								<span>₾29995</span>
 							</div>
 						</div>
 					</li>
@@ -2379,7 +2379,7 @@
 							<div class="prolist_name">
 								<p><a href="https://wbbff.cc/index.php/product/198"
 										title="EFREMOV / кольцо золотое">EFREMOV / кольцо золотое</a></p>
-								<span>₽38900</span>
+								<span>₾38900</span>
 							</div>
 						</div>
 					</li>
@@ -2396,7 +2396,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/195"
 										title="Mr Diamond / Золотое кольцо с бриллиантами">Mr Diamond / Золотое кольцо с
 										бриллиантами</a></p>
-								<span>₽46605</span>
+								<span>₾46605</span>
 							</div>
 						</div>
 					</li>
@@ -2414,7 +2414,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/194"
 										title="Petersburg Diamonds / Кольцо с бриллиантом белое золото / Бриллианты Якутии">Petersburg
 										Diamonds / Кольцо с бриллиантом белое золото / Бриллианты Якутии</a></p>
-								<span>₽31245</span>
+								<span>₾31245</span>
 							</div>
 						</div>
 					</li>
@@ -2433,7 +2433,7 @@
 										title="Московский ювелирный завод / Серьги из золота 585 пробы с танцующим голубым бриллиантом">Московский
 										ювелирный завод / Серьги из золота 585 пробы с танцующим голубым бриллиантом</a>
 								</p>
-								<span>₽74940</span>
+								<span>₾74940</span>
 							</div>
 						</div>
 					</li>
@@ -2450,7 +2450,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/174"
 										title="O! JEWELRY / Золотое кольцо Бриллиантовая дорожка">O! JEWELRY / Золотое
 										кольцо Бриллиантовая дорожка</a></p>
-								<span>₽59250</span>
+								<span>₾59250</span>
 							</div>
 						</div>
 					</li>
@@ -2477,7 +2477,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/239"
 										title="Ajax Доводчик двери универсальный, морозостойкий">Ajax Доводчик двери
 										универсальный, морозостойкий</a></p>
-								<span>₽1072</span>
+								<span>₾1072</span>
 							</div>
 						</div>
 					</li>
@@ -2495,7 +2495,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/119"
 										title="Центурион  / Самоклеящиеся панели ПВХ для стен матовые 60х30 см 10 шт.">Центурион
 										/ Самоклеящиеся панели ПВХ для стен матовые 60х30 см 10 шт.</a></p>
-								<span>₽1070</span>
+								<span>₾1070</span>
 							</div>
 						</div>
 					</li>
@@ -2513,7 +2513,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/117"
 										title="BAUEDGE /  Унитаз подвесной безободковый вихревой Bau Nimb Hurricane">BAUEDGE
 										/ Унитаз подвесной безободковый вихревой Bau Nimb Hurricane</a></p>
-								<span>₽15890</span>
+								<span>₾15890</span>
 							</div>
 						</div>
 					</li>
@@ -2530,7 +2530,7 @@
 								<p><a href="https://wbbff.cc/index.php/product/116"
 										title="NIAGARA /  Унитаз подвесной безободковый NG-9302">NIAGARA / Унитаз
 										подвесной безободковый NG-9302</a></p>
-								<span>₽9350</span>
+								<span>₾9350</span>
 							</div>
 						</div>
 					</li>
@@ -2559,7 +2559,7 @@
 										title="Глобальный конституционализм: процессы интеграции и фрагментации в создании нового мирового порядка">Глобальный
 										конституционализм: процессы интеграции и фрагментации в создании нового мирового
 										порядка</a></p>
-								<span>₽1040</span>
+								<span>₾1040</span>
 							</div>
 						</div>
 					</li>
@@ -2576,25 +2576,25 @@
 								<p><a href="https://wbbff.cc/index.php/product/124"
 										title="ITUNES ЯПОНИЯ ПОДАРОЧНАЯ КАРТА 1000 YEN JP">ITUNES ЯПОНИЯ ПОДАРОЧНАЯ
 										КАРТА 1000 YEN JP</a></p>
-								<span>₽1080</span>
+								<span>₾1080</span>
 							</div>
 						</div>
 					</li>
 					<li>
 						<div class="li_box">
 							<a href="https://wbbff.cc/index.php/product/122"
-								title="Карта пополнения Apple ID iTunes 500 руб. (App Store, iTunes, iCloud)">
+								title="Карта пополнения Apple ID iTunes 500 ₾. (App Store, iTunes, iCloud)">
 								<div class="prolist_logo">
 									<img src="<?php echo asset("assets/pixel.gif")?>" data-url=""
-										title="Карта пополнения Apple ID iTunes 500 руб. (App Store, iTunes, iCloud)"
+										title="Карта пополнения Apple ID iTunes 500 ₾. (App Store, iTunes, iCloud)"
 										class="js_imgload">
 								</div>
 							</a>
 							<div class="prolist_name">
 								<p><a href="https://wbbff.cc/index.php/product/122"
-										title="Карта пополнения Apple ID iTunes 500 руб. (App Store, iTunes, iCloud)">Карта
-										пополнения Apple ID iTunes 500 руб. (App Store, iTunes, iCloud)</a></p>
-								<span>₽3170</span>
+										title="Карта пополнения Apple ID iTunes 500 ₾. (App Store, iTunes, iCloud)">Карта
+										пополнения Apple ID iTunes 500 ₾. (App Store, iTunes, iCloud)</a></p>
+								<span>₾3170</span>
 							</div>
 						</div>
 					</li>

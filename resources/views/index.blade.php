@@ -5647,7 +5647,7 @@
         <p>
         <a href="{{ route('product', $product->id) }}" title="{{ $product->name }}">{{ $product->name }}</a>
         </p>
-        <span>₽{{ $product->price }}</span>
+        <span>₾{{ $product->price }}</span>
       </div>
       </div>
       </li>

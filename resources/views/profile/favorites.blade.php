@@ -49,7 +49,7 @@
 								src="{{ asset("storage/" . $favorite->images[0])}}"></a></div>
 					<div class="dingdan_name" style="margin-right:0">
 						<p><a href="{{route("product", $favorite->id)}}">{{$favorite->name}}</a></p>
-						<div class="num corg mat5">₽{{$favorite->price}}</div>
+						<div class="num corg mat5">₾{{$favorite->price}}</div>
 					</div>
 				</div>
 				<div class="fl mat10 cbbb font12">{{$favorite->created_at}}</div>

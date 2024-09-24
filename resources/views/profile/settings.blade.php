@@ -42,14 +42,14 @@
 		<form method="post" id="form">
 			<div class="zc_box2">
 				<div class="zc_list sk_box">
-					<a href="https://wbbff.cc/user.php?mod=setting&amp;act=tname">
+					<a href="">
 						<span class="sk_name">ФИО</span>
 						<div class="info_tt"></div>
 						<i></i>
 					</a>
 				</div>
 				<div class="zc_list sk_box">
-					<a href="https://wbbff.cc/user.php?mod=setting&amp;act=phone">
+					<a href="">
 						<span class="sk_name">Номер телефона</span>
 						<div class="info_tt">798****7384</div>
 						<i></i>

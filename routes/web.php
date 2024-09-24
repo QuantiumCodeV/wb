@@ -1,9 +1,11 @@
 <?php
 
+use App\Http\Controllers\DeliveryController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use App\Models\Category;
+use App\Models\DeliveryAddress;
 
 /*
 |--------------------------------------------------------------------------
@@ -130,6 +132,8 @@ Route::middleware(['auth'])->group(function () {
         return view('profile.cart');
     })->name("cart");
 
+    Route::get("/cart/add/{product}/{count}", [App\Http\Controllers\CartController::class, "add"])->name("cart.add");
+
     Route::get("/profile", function () {
         return view("profile.profile", [
             "user" => Auth::user(),
@@ -219,10 +223,40 @@ Route::middleware(['auth'])->group(function () {
 
     Route::post("/payment/add", [App\Http\Controllers\PaymentController::class, "add"])->name("api.payments.add");
 
-    Route::get("/delivery", function () {
-        return view("delivery.delivery");
-    })->name("delivery");
+    Route::get('/delivery', function () {
+        // Проверка авторизации
+        if (!auth()->check()) {
+            return redirect('/login'); // или другой маршрут, если пользователь не авторизован
+        }
 
+        // Получение данных только для авторизованного пользователя
+        $user = auth()->user();
+        $deliveryPoints = DeliveryAddress::where('user_id', $user->id)->get();
+        return view('delivery.delivery', compact('deliveryPoints'));
+    })->name('delivery')->middleware('auth'); // Middleware auth для проверки авторизации
+
+    //deliveryAdd
+
+    Route::get("/delivery/add", function () {
+        return view('delivery.delivery_add');
+    })->name("delivery.add")->middleware('auth');
+
+    Route::post("/api/delivery/add", [DeliveryController::class, "add"])->name("api.delivery.add");
+
+    Route::get('/delivery/edit/{id}', function ($id) {
+        $user = auth()->user();
+        $delivery = DeliveryAddress::where('user_id', $user->id)->where('id', $id)->first();
+
+        if (!$delivery) {
+            return redirect()->route('delivery')->with('error', 'Address not found or you do not have permission to edit this address.');
+        }
+
+        return view('delivery.delivery_edit', compact('delivery'));
+    })->name('user.address.edit')->middleware('auth');
+    Route::post('/api/delivery/update/{id}', [DeliveryController::class, 'update'])->name('api.delivery.update')->middleware('auth');
+    
+
+    Route::get('/api/delivery/delete/{id}', [DeliveryController::class, 'delete'])->name('user.address.delete')->middleware('auth');
 
     Route::get("/about_us", function () {
         return view("about_us");

@@ -343,9 +343,7 @@
                                 </a>
                             </div>
                             <div class="nav-item">
-                                <a class="nav-link" href="{{ route("admin.settings") }}" role="button"
-                                    
-                                    aria-expanded="true" aria-controls="navbarVerticalMenuPagesUsersMenu">
+                                <a class="nav-link" href="{{ route("admin.settings") }}" role="button" aria-expanded="true" aria-controls="navbarVerticalMenuPagesUsersMenu">
                                     <i class="bi-gear nav-icon"></i>
                                     <span class="nav-link-title">Настройки</span>
                                 </a>
@@ -438,7 +436,7 @@
 
                 <div class="col-sm-6 col-lg-3 mb-3 mb-lg-5">
                     <!-- Card -->
-                    <a class="card card-hover-shadow h-100" href="<?php echo route("admin.settings")?></a>">
+                    <a class="card card-hover-shadow h-100" href="<?php echo route("admin.settings")?>">
                         <div class="card-body">
                             <h2 class="card-title text-inherit">Настройки</h2>
 

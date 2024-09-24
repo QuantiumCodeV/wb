@@ -56,7 +56,7 @@
 					<tr>
 						<td style="text-align:right;" width="150">баланс：</td>
 						<td style="text-align:left;">
-							<span class="corg">{{ Auth::user()->balance }} руб.</span>
+							<span class="corg">{{ Auth::user()->balance }} ₾.</span>
 						</td>
 					</tr>
 					<tr>
@@ -75,13 +75,13 @@
 					<tr>
 						<td style="text-align:right;">сумма вывода：</td>
 						<td style="text-align:left;">
-							<input type="text" name="cashout_money" value="0.0" class="inputall input100" autocomplete="off"> RUB
+							<input type="text" name="cashout_money" value="0.0" class="inputall input100" autocomplete="off"> GEL
 							<span id="cashout_money_show" class="mal10"></span>
 						</td>
 					</tr>
 					<!-- 		<tr>
 			<td style="text-align:right;">гонорар：</td>
-			<td><span id="cashout_fee">0</span> RUB</td>
+			<td><span id="cashout_fee">0</span> GEL</td>
 		</tr> -->
 
 
@@ -99,7 +99,7 @@
 			</div>
 		</form>
 
-		<!-- <div class="tixing c888" style="margin-top:70px"><p class="cred mab10">温馨提示：</p>单笔500RUB起可以提现，每笔扣除0%的手续费<p class="cred mab10">提交后请等待客服审核，审核通过后自动到账</p></div> -->
+		<!-- <div class="tixing c888" style="margin-top:70px"><p class="cred mab10">温馨提示：</p>单笔500GEL起可以提现，每笔扣除0%的手续费<p class="cred mab10">提交后请等待客服审核，审核通过后自动到账</p></div> -->
 
 	</div>
 

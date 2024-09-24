@@ -1169,7 +1169,7 @@ page_loading();
 		<div class="dingdan_name">
 			<p style="height:40px; overflow:hidden;"><a href="https://wbbff.cc/index.php/product/120">Apple / Apple iPhone 15 Pro max 1 ТБ, Титановый бежевый</a></p>
 			<p class="c888 font12"></p>
-			<p class="num corg mat3">₽ 112000</p>
+			<p class="num corg mat3">₾ 112000</p>
 		</div>
 		<div class="clear"></div>
 		<div class="order_r">
@@ -1183,7 +1183,7 @@ page_loading();
 	</div>
 		<div class="add_tj">
 		<div class="add_qx"><span onclick="checkall_btn()"><i></i>выбрать все</span></div>
-		<div class="add_heji">Всего：<span class="corg font16">₽ <span id="order_money">0.0</span></span></div>
+		<div class="add_heji">Всего：<span class="corg font16">₾ <span id="order_money">0.0</span></span></div>
 		<div class="add_tjbtn">
 			<input type="hidden" name="pe_token" value="75236c7c5fdf7ebfe3441c02863d0cb8">
 			<input type="hidden" name="pesubmit">	
@@ -1225,7 +1225,7 @@ function cart_edit(type, cart_id) {
 		_this.val(json.num);
 		//更新商品小计金额
 		var product_allmoney = pe_num(_this.attr("product_money") * json.num, 'round', 1);
-		js_cart.find(".product_allmoney").html('₽ '+product_allmoney);
+		js_cart.find(".product_allmoney").html('₾ '+product_allmoney);
 		cart_money();
 	})
 }

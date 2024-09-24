@@ -52,7 +52,7 @@ page_loading();
 				<p style="height:40px; overflow:hidden;"><a href="https://wbbff.cc/index.php/product/214" title="Wanb / Проектор Wanbo T2 Max New (белый)">Wanb / Проектор Wanbo T2 Max New (белый)</a></p>
 				<p class="c888 font12"></p>
 				<div class="order_r">
-					<p class="num fl corg font14">₽ 19980</p>
+					<p class="num fl corg font14">₾ 19980</p>
 					<p class="fr">×1</p>
 					<div class="clear"></div>
 				</div>
@@ -64,12 +64,12 @@ page_loading();
 	<div class="yhq_box">
 		<div class="yhq_sel">
 			<span class="fl c666">сумма заказа:</span>
-			<span class="fr">₽ <span id="order_product_money">19980.0</span></span>
+			<span class="fr">₾ <span id="order_product_money">19980.0</span></span>
 			<div class="clear"></div>
 		</div>
 		<div class="yhq_sel">
 			<span class="fl c666">груз заказа:</span>
-			<span class="fr">₽ <span id="order_wl_money">0.0</span></span>
+			<span class="fr">₾ <span id="order_wl_money">0.0</span></span>
 			<div class="clear"></div>
 		</div>
 <!-- 		<div class="yhq_sel">
@@ -83,7 +83,7 @@ page_loading();
 		</div> -->
 				<div class="yhq_sel" style="border-bottom:0">
 			<span class="fl c666">Общая сумма:</span>
-			<span class="fr corg font16">₽ <span class="order_money">19980.0</span></span>
+			<span class="fr corg font16">₾ <span class="order_money">19980.0</span></span>
 			<div class="clear"></div>
 		</div>
 	</div>
@@ -101,7 +101,7 @@ page_loading();
 	</div>
 	<div style="margin-bottom:60px;"></div>
 	<div class="add_tj">
-		<div class="fl mal10 c666">Всего：<span class="corg font16">₽ <span class="order_money">19980.0</span></span></div>
+		<div class="fl mal10 c666">Всего：<span class="corg font16">₾ <span class="order_money">19980.0</span></span></div>
 		<div class="add_tjbtn">
 			<input type="hidden" name="address_id" value="833">
 			<input type="hidden" name="pe_token" value="75236c7c5fdf7ebfe3441c02863d0cb8">
@@ -139,7 +139,7 @@ page_loading();
 	<div class="add_tt">使用积分抵扣</div>
 	<div class="close_btn" onclick="app_page_close();"></div>
 	<div class="quan_tc">
-		<div class=""><span class="c888">积分баланс:</span>0个，可抵扣：0RUB</div>
+		<div class=""><span class="c888">积分баланс:</span>0个，可抵扣：0GEL</div>
 		<div class="mat20">
 			<span class="fl c888" style="margin-top:3px">本次使用：</span>
 			<div class="quan_input fl"><input type="text" name="order_point_use" value="0" class="quan_input"> <span class="c888">积分</span></div>
@@ -157,7 +157,7 @@ page_loading();
 			<input type="radio" name="order_payment" value="balance" payment_name="balance" id="order_payment_balance" class="divhide" checked="checked">
 			<div class="fl mar5" style="width:22px; overflow:hidden;"><img src="<?php echo asset("assets/logo.png")?>" width="85"></div>
 			<div class="fl mat2">balance</div>
-						<div class="fl mat2 corg">（баланс:0.0RUB）</div>
+						<div class="fl mat2 corg">（баланс:0.0GEL）</div>
 						<div class="dui_1"></div>
 			<div class="clear"></div>
 		</label>
@@ -196,7 +196,7 @@ $(function(){
 			point_money = pe_num(point/0, 'floor', 1, true);
 		}
 		if (point) {
-			$("#point_btn").html("省"+point_money+"RUB：使用"+point+"积分");
+			$("#point_btn").html("省"+point_money+"GEL：使用"+point+"积分");
 		}
 		else {
 			$("#point_btn").html("不使用积分");		

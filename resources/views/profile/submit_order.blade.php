@@ -52,7 +52,7 @@ page_loading();
 		</div>
 		<div class="yhq_sel">
 			<span class="fl c666">Общая сумма:</span>
-			<span class="fr">₽ 19980.0</span>
+			<span class="fr">₾ 19980.0</span>
 			<div class="clear"></div>
 		</div>
 		<div class="yhq_sel">
@@ -102,7 +102,7 @@ page_loading();
 			<input type="radio" name="order_payment" value="balance" payment_name="balance" id="order_payment_balance" class="divhide" checked="checked">
 			<div class="fl mar5" style="width:22px; overflow:hidden;"><img src="<?php echo asset("assets/logo.png")?>" width="85"></div>
 			<div class="fl mat2">balance</div>
-						<div class="fl mat2 corg">（баланс:0.0RUB）</div>
+						<div class="fl mat2 corg">（баланс:0.0GEL）</div>
 						<div class="dui_1"></div>
 			<div class="clear"></div>
 		</label>

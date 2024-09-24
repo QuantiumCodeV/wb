@@ -67,7 +67,7 @@
 			<div class="nav">
 				<a class="tgdd_tt" href="<?php echo route("history") ?>"><span class="fl">Мой кошелек</span></a>
 				<div class="side_fh1">
-					<a><span>{{ $user->balance }} руб.</span>баланс</a>
+					<a><span>{{ $user->balance }} ₾.</span>баланс</a>
 					<a><span>0 </span>Точки</a>
 					<a><span>0</span>купон</a>
 					<div class="clear"></div>

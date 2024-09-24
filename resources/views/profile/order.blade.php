@@ -55,7 +55,7 @@
 				<p class="c888 font12"></p>
 			</div>
 			<div class="dingdan_jg">
-				₽112000.0				<div class="c999 font12">×1</div>
+				₾112000.0				<div class="c999 font12">×1</div>
 				<div class="font12"><span class="corg"></span></div>
 			</div>
 		</a>
@@ -63,7 +63,7 @@
 				<div class="yingfu">
 			<div class="order_yf fr">
 				<!-- <span style="color:red">退税：</span> -->
-				Всего：₽ <span class="font16 mar5">112000.0</span> (Включая фрахт ₽0.0)</div>
+				Всего：₾ <span class="font16 mar5">112000.0</span> (Включая фрахт ₾0.0)</div>
 			<div class="clear"></div>
 			<div class="fr" style="padding:8px 10px 10px;">
 								<a class="tag_org fl" href="https://wbbff.cc/index.php?mod=order&amp;act=pay&amp;id=240820122155556">платить</a>
@@ -87,7 +87,7 @@
 				<p class="c888 font12"></p>
 			</div>
 			<div class="dingdan_jg">
-				₽1088.0				<div class="c999 font12">×1</div>
+				₾1088.0				<div class="c999 font12">×1</div>
 				<div class="font12"><span class="corg"></span></div>
 			</div>
 		</a>
@@ -95,7 +95,7 @@
 				<div class="yingfu">
 			<div class="order_yf fr">
 				<!-- <span style="color:red">退税：</span> -->
-				Всего：₽ <span class="font16 mar5">1088.0</span> (Включая фрахт ₽0.0)</div>
+				Всего：₾ <span class="font16 mar5">1088.0</span> (Включая фрахт ₾0.0)</div>
 			<div class="clear"></div>
 			<div class="fr" style="padding:8px 10px 10px;">
 												<div class="clear"></div>
@@ -117,7 +117,7 @@
 				<p class="c888 font12"></p>
 			</div>
 			<div class="dingdan_jg">
-				₽2170.0				<div class="c999 font12">×1</div>
+				₾2170.0				<div class="c999 font12">×1</div>
 				<div class="font12"><span class="corg"></span></div>
 			</div>
 		</a>
@@ -125,7 +125,7 @@
 				<div class="yingfu">
 			<div class="order_yf fr">
 				<!-- <span style="color:red">退税：</span> -->
-				Всего：₽ <span class="font16 mar5">2170.0</span> (Включая фрахт ₽0.0)</div>
+				Всего：₾ <span class="font16 mar5">2170.0</span> (Включая фрахт ₾0.0)</div>
 			<div class="clear"></div>
 			<div class="fr" style="padding:8px 10px 10px;">
 												<div class="clear"></div>
@@ -147,7 +147,7 @@
 				<p class="c888 font12"></p>
 			</div>
 			<div class="dingdan_jg">
-				₽1046.0				<div class="c999 font12">×1</div>
+				₾1046.0				<div class="c999 font12">×1</div>
 				<div class="font12"><span class="corg"></span></div>
 			</div>
 		</a>
@@ -155,7 +155,7 @@
 				<div class="yingfu">
 			<div class="order_yf fr">
 				<!-- <span style="color:red">退税：</span> -->
-				Всего：₽ <span class="font16 mar5">1046.0</span> (Включая фрахт ₽0.0)</div>
+				Всего：₾ <span class="font16 mar5">1046.0</span> (Включая фрахт ₾0.0)</div>
 			<div class="clear"></div>
 			<div class="fr" style="padding:8px 10px 10px;">
 												<div class="clear"></div>

@@ -5588,7 +5588,7 @@
 				<i></i><p>分享</p>
 			</div>-->
             </div>
-            <div class="jg_price mat5"><span class="font14 mar5">₽</span>{{$product->price}}</div>
+            <div class="jg_price mat5"><span class="font14 mar5">₾</span>{{$product->price}}</div>
             <div class="yunfei_box">
                 <span style="text-align:left">груз заказа: 0 </span>
                 <span style="text-align:center">Продажи：{{$product->sales}} </span>
@@ -5947,7 +5947,7 @@
                             <td valign="top">
 
                                 <p class="jg_name">5</p>
-                                <p class="cred mat10">₽<span id="product_money">5</span></p>
+                                <p class="cred mat10">₾<span id="product_money">5</span></p>
                             </td>
                             <td width="30">
                                 <div class="close_btn" onclick="app_page_close();"></div>
@@ -5992,7 +5992,7 @@
                 <div class="share_pro">
                     <img src="<?php echo asset("assets/ee4c961b8c946be89009eee77323ae1e.png") ?>">
                     <div class="share_name">{{ $product->name }}</div>
-                    <div class="mat5 cred font16">₽{{$product->price}}</div>
+                    <div class="mat5 cred font16">₾{{$product->price}}</div>
                     <div class="clear"></div>
                 </div>
             </div>
@@ -6149,11 +6149,11 @@
                 app_tip("选择产品规格");
                 return;
             }
-            app_getinfo("<?php echo route("cart") ?>" + act + "&id=" + id + "&guid=" + $(":input[name='product_guid']").val() + "&num=" + $(":input[name='product_num']").val(), function(json) {
+            app_getinfo("<?php echo route("cart.add") ?>/" + id + "/" + $(":input[name='product_num']").val(), function(json) {
                 if (json.result == true) {
                     if (act == 'buy') {
                         app_page_close();
-                        app_open("<?php echo route("order") ?>" + json.id);
+                        app_open("<?php echo route("order.add") ?>" + json.id);
                     } else {
                         $("#cart_num").html(json.cart_num);
                         app_page_close();
@@ -6185,10 +6185,10 @@
 
         wx.ready(function() {
             wx_share({
-                name: "Wanb / Проектор Wanbo T2 Max New (белый)",
-                desc: "抢购价：19980 руб.",
-                url: "https://wbbff.cc/index.php/product/214?u=11769",
-                img: "https://wbbff.cc/cache/thumb/2024-08/thumb__800x_800_2023111218541916957o.png"
+                name: "{{$product->name}}",
+                desc: "{{ $product->price }} ₾.",
+                url: "{{ route('product', $product->id) }}",
+                img: "{{ asset('storage/' . $product->images[0]) }}"
             })
             wx.hideMenuItems({
                 menuList: ['menuItem:favorite'] // 要隐藏的菜单项，只能隐藏"传播类"和"保护类"按钮，所有menu项见附录3
