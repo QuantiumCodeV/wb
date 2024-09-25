@@ -50,4 +50,11 @@ class OrderController extends Controller
         $product = \App\Models\Product::find($productId);
         return $product ? $product->price : 0;
     }
+
+
+    public function pay(Request $request){
+        $order = Order::find($request->order_id);
+        $order->status = "payed";
+        $order->save();
+    }
 }

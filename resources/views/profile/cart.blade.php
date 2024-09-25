@@ -2326,7 +2326,7 @@
     }
 
     .tjcg_dui {
-        background: url(../images/dui_01.jpg) no-repeat;
+        background: var(--image-path8) no-repeat;
         background-size: 80px auto;
         width: 80px;
         height: 80px;

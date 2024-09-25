@@ -130,11 +130,10 @@
 					return false;
 				}
 				app_submit("{{ route('cashouts.store') }}", function(json) {
-					
+
 					if (json.result) {
 						pe_open("{{ route('profile') }}", 1000);
-					}
-					else{
+					} else {
 						pe_tip(json.show);
 					}
 				})

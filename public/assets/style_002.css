@@ -470,8 +470,8 @@ a.gw2{background:#f24445; width:120px; height:37px; line-height:37px; text-align
 
 
 .order_cg{background:#fff; padding:20px; font-size:14px; margin:0 0 10px 0; position:relative; color:#666;}
-.order_cg p{background:url(../images/dui.png) no-repeat; padding-left:50px; height:31px; line-height:31px; font-size:22px; margin-bottom:25px; color:#7ABD54;}
-.tjcg_dui{background:url(../images/dui_01.jpg) no-repeat; background-size:80px auto; width:80px; height:80px; display:block; text-align:center; margin:0 auto}
+.order_cg p{background:var(--image-path8) no-repeat; padding-left:50px; height:31px; line-height:31px; font-size:22px; margin-bottom:25px; color:#7ABD54;}
+.tjcg_dui{background:var(--image-path8) no-repeat; background-size:80px auto; width:80px; height:80px; display:block; text-align:center; margin:0 auto}
 .tjcg_tt{font-size:16px; line-height:22px; text-align:center; margin-top:20px;}
 .dd_yingfu span{font-size:16px; color:#F9932F}
 .fkfs{background:#fff; border:1px #ddd solid; padding:15px 10px;}

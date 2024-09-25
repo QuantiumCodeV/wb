@@ -7,8 +7,19 @@
 
 			--image-path: url('<?php echo asset("/assets/foot_nav.png") ?>');
 			--image-path2: url('<?php echo asset("/assets/dd_icon.png") ?>');
+
+			--image-path5: url('<?php echo asset("/assets/ico_jia.png") ?>');
+
+			--image-path6: url('<?php echo asset("/assets/ico_jian.png") ?>');
+
+			--image-path7: url('<?php echo asset("/assets/icon_index.png") ?>');
+
+			--image-path8: url('<?php echo asset("/assets/dui_2.png") ?>');
+
+			--image-path9: url('<?php echo asset("/assets/dui_1.png") ?>');
 		}
 	</style>
+
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
 	<title>Отправить заказ - Wildberries</title>
@@ -162,13 +173,9 @@
 						});
 						return false;
 					}
-					app_submit("https://wbbff.cc/index.php?mod=order&act=pay&id=240820143911191", function(json) {
+					app_submit("{{ route('api.order.pay') }}", function(json) {
 						if (json.result) {
-							if (order_payment == 'wechat') {
-								wx_pay(json.id);
-							} else {
-								app_open(json.url, 1000);
-							}
+							app_open('{{ route("order.pay") }}', 1000);
 						}
 					})
 				}

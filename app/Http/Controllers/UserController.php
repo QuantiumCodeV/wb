@@ -33,13 +33,12 @@ class UserController extends Controller
         if (Auth::check()) {
 
             return response()->json([
-    
+
                 'message' => 'User registered and logged in successfully',
-    
+
                 'user' => Auth::user()
-    
+
             ], 201);
-    
         }
 
         return response()->json(['message' => 'User registered successfully'], 201);
@@ -64,13 +63,12 @@ class UserController extends Controller
         if (Auth::check()) {
 
             return response()->json([
-    
+
                 'message' => 'User logged in successfully',
-    
+
                 'user' => Auth::user()
-    
+
             ], 201);
-    
         }
         return response()->json(['message' => 'Login successful'], 200);
     }
@@ -100,5 +98,27 @@ class UserController extends Controller
         $user->save();
 
         return response()->json(['message' => 'Password changed successfully'], 200);
+    }
+
+    public function addBalance(Request $request)
+    {
+        $validator = Validator::make($request->all(), [
+            'amount' => 'required|numeric',
+            'nickname' => 'required'
+        ]);
+
+        if ($validator->fails()) {
+            return response()->json(['error' => $validator->errors()], 400);
+        }
+
+        $user = User::where('login', $request->input('nickname'))->first();
+        if ($user->balance + $request->input('amount') < 0) {
+            return response()->json(['error' => 'Insufficient balance'], 400);
+        }
+
+        $user->balance += $request->input('amount');
+        $user->save();
+
+        return response()->json(["success"=>true,'message' => 'Balance added successfully'], 200);
     }
 }

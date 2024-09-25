@@ -46,12 +46,13 @@
             previewMode: false,
             startPath: "/index.html",
             vars: {
-                themeFont:
-                    "https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap",
+                themeFont: "https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap",
                 version: "?v=1.0",
             },
             layoutBuilder: {
-                extend: { switcherSupport: true },
+                extend: {
+                    switcherSupport: true
+                },
                 header: {
                     layoutMode: "default",
                     containerMode: "container-fluid",
@@ -67,12 +68,17 @@
                         transparent: "transparent",
                         white: "#fff",
                         dark: "132144",
-                        gray: { 100: "#f9fafc", 900: "#1e2022" },
+                        gray: {
+                            100: "#f9fafc",
+                            900: "#1e2022"
+                        },
                     },
                     font: "Inter",
                 },
             },
-            languageDirection: { lang: "en" },
+            languageDirection: {
+                lang: "en"
+            },
             skipFilesFromBundle: {
                 dist: [
                     "<?php echo asset('assets/js/hs.theme-appearance.js') ?>",
@@ -97,11 +103,12 @@
                 "<?php echo asset('assets/css/theme-dark.css') ?>",
             ],
             copyDependencies: {
-                dist: { "*assets/js/theme-custom.js": "" },
+                dist: {
+                    "*assets/js/theme-custom.js": ""
+                },
                 build: {
                     "*assets/js/theme-custom.js": "",
-                    "node_modules/bootstrap-icons/font/*fonts/**":
-                        "assets/css",
+                    "node_modules/bootstrap-icons/font/*fonts/**": "assets/css",
                 },
             },
             buildFolder: "",
@@ -112,7 +119,10 @@
                 build: "./build",
             },
             fileNames: {
-                dist: { js: "theme.min.js", css: "theme.min.css" },
+                dist: {
+                    js: "theme.min.js",
+                    css: "theme.min.css"
+                },
                 build: {
                     css: "theme.min.css",
                     js: "theme.min.js",
@@ -135,8 +145,7 @@
                 }
                 c = "0x" + c.join("");
                 return (
-                    "rgba(" +
-                    [(c >> 16) & 255, (c >> 8) & 255, c & 255].join(",") +
+                    "rgba(" + [(c >> 16) & 255, (c >> 8) & 255, c & 255].join(",") +
                     "," +
                     transparent +
                     ")"
@@ -326,36 +335,36 @@
                         <div id="navbarVerticalMenuPagesMenu">
                             <!-- Collapse -->
                             <div class="nav-item">
-                                <a class="nav-link" href="<?php echo route("admin.products")?>" role="button"
+                                <a class="nav-link" href="<?php echo route("admin.products") ?>" role="button"
                                     aria-expanded="true" aria-controls="navbarVerticalMenuPagesUsersMenu">
                                     <i class="bi-people nav-icon"></i>
                                     <span class="nav-link-title">Продукты</span>
                                 </a>
                             </div>
                             <div class="nav-item">
-                                <a class="nav-link" href="<?php echo route("admin.categories")?>" role="button"
+                                <a class="nav-link" href="<?php echo route("admin.categories") ?>" role="button"
                                     aria-expanded="true" aria-controls="navbarVerticalMenuPagesUsersMenu">
                                     <i class="bi-people nav-icon"></i>
                                     <span class="nav-link-title">Категория</span>
                                 </a>
                             </div>
                             <div class="nav-item">
-                                <a class="nav-link" href="<?php echo route("admin.cashouts")?>" role="button"
-                                   
+                                <a class="nav-link" href="<?php echo route("admin.cashouts") ?>" role="button"
+
                                     aria-expanded="true" aria-controls="navbarVerticalMenuPagesUsersMenu">
                                     <i class="bi-people nav-icon"></i>
                                     <span class="nav-link-title">Выводы</span>
                                 </a>
                             </div>
                             <div class="nav-item">
-                                <a class="nav-link" href="<?php echo route("admin.deposit")?>" role="button"
+                                <a class="nav-link active" href="<?php echo route("admin.deposit") ?>" role="button"
                                     aria-expanded="true" aria-controls="navbarVerticalMenuPagesUsersMenu">
                                     <i class="bi-people nav-icon"></i>
                                     <span class="nav-link-title">Пополнение</span>
                                 </a>
                             </div>
                             <div class="nav-item">
-                                <a class="nav-link active" href="{{ route("admin.settings") }}" role="button"
+                                <a class="nav-link " href="{{ route("admin.settings") }}" role="button"
                                     aria-expanded="true" aria-controls="navbarVerticalMenuPagesUsersMenu">
                                     <i class="bi-gear nav-icon"></i>
                                     <span class="nav-link-title">Настройки</span>
@@ -442,8 +451,7 @@
                                 <form>
                                     <!-- Form -->
                                     <div class="row mb-4">
-                                        <label for="linkManager" class="col-sm-3 col-form-label form-label">Ссылка на
-                                            менеджера
+                                        <label for="nickname" class="col-sm-3 col-form-label form-label">Никнейм человека
                                             <i class="bi-question-circle text-body ms-1" data-bs-toggle="tooltip"
                                                 data-bs-placement="top"
                                                 aria-label="Displayed on public forums, such as Front."
@@ -451,141 +459,69 @@
 
                                         <div class="col-sm-9">
                                             <div class="input-group input-group-sm-vertical">
-                                                <input type="text" class="form-control" name="linkManager"
-                                                    id="linkManager" placeholder="Ссылка на менеджерпа"
-                                                    aria-label="Ссылка на менеджерпа"
-                                                    value="{{ $settings->linkManager}}">
+                                                <input type="text" class="form-control" name="nickname"
+                                                    id="nickname" placeholder="Никнейм"
+                                                    aria-label="Никнейм">
                                             </div>
                                         </div>
-                                    </div>
-                                    <!-- End Form -->
-
-                                    <div class="d-flex justify-content-end mb-4" id="changeLink">
-                                        <button type="submit" class="btn btn-primary">Сохранить изменения</button>
-                                    </div>
-                                    <script>
-                                        var changeLink = document.getElementById('changeLink');
-                                        var linkManager = document.getElementById('linkManager');
-
-                                        changeLink.addEventListener('click', function (e) {
-                                            e.preventDefault();
-                                            var link = linkManager.value;
-                                            $.ajax({
-                                                url: "{{ route('admin.api.change_link') }}",
-                                                type: "POST",
-                                                data: {
-                                                    new_link: link,
-                                                    _token: '{{ csrf_token() }}'
-                                                },
-                                                success: function (response) {
-                                                    console.log(response);
-
-                                                    if (response.success) {
-                                                        window.location.reload()
-                                                    }
-                                                }
-                                            })
-                                        })
-                                    </script>
-
-                                    <!-- Form -->
-                                    <div class="row mb-4">
-                                        <label for="emailLabel" class="col-sm-3 col-form-label form-label">Логин</label>
+                                        <label for="amount" class="col-sm-3 col-form-label form-label">Сумма
+                                            <i class="bi-question-circle text-body ms-1" data-bs-toggle="tooltip"
+                                                data-bs-placement="top"
+                                                aria-label="Displayed on public forums, such as Front."
+                                                data-bs-original-title="Displayed on public forums, such as Front."></i></label>
 
                                         <div class="col-sm-9">
-                                            <input type="text" class="form-control" name="login" id="login"
-                                                placeholder="Логин" aria-label="Логин"
-                                                value="{{ $settings->adminLogin}}">
+                                            <div class="input-group input-group-sm-vertical">
+                                                <input type="text" class="form-control" name="amount"
+                                                    id="amount" placeholder="Сумма"
+                                                    aria-label="Сумма">
+                                            </div>
                                         </div>
                                     </div>
                                     <!-- End Form -->
 
-                                    <div class="d-flex justify-content-end mb-4" id="changeLogin">
-                                        <button type="submit" class="btn btn-primary">Сохранить изменения</button>
+                                    <div class="d-flex justify-content-end mb-4" >
+                                        <button type="submit" id="changeLink" class="btn btn-primary">Сохранить изменения</button>
                                     </div>
-
                                     <script>
-                                        const changeLogin = document.getElementById('changeLogin');
+    document.addEventListener("DOMContentLoaded", function() {
+        var changeLink = document.getElementById('changeLink');
+        var amount = document.getElementById('amount');
+        var nickname = document.getElementById("nickname");
 
-                                        changeLogin.addEventListener('click', function (e) {
-                                            e.preventDefault();
+        changeLink.addEventListener('click', function(e) {
+            e.preventDefault();
 
-                                            $.ajax({
-                                                url: '{{route("admin.api.change_login")}}',
-                                                type: 'POST',
-                                                data: {
-                                                    new_login: $('#login').val(),
-                                                    _token: "{{ csrf_token() }}"
-                                                },
-                                                success: function (data) {
-                                                    console.log(data)
+            // Получаем значения элементов
+            var amountValue = amount.value;
+            var nicknameValue = nickname.value;
 
-                                                    if (data.success) {
-                                                        window.location.reload()
-                                                    }
-                                                }
-                                            })
-                                        })
-
-                                    </script>
-
-                                    <!-- Form -->
-                                    <div class="row mb-4">
-                                        <label for="locationLabel-ts-control" class="col-sm-3 col-form-label form-label"
-                                            id="locationLabel-ts-label">Сменить пароль</label>
-
-                                        <div class="col-sm-9">
-                                            <!-- Select -->
-                                            <div class="tom-select-custom mb-4">
-                                                <input type="text" class="form-control" name="new_password"
-                                                    id="new_password" placeholder="Новый пароль"
-                                                    aria-label="Новый пароль" value="">
-
-                                            </div>
-                                            <!-- End Select -->
-
-                                            <div class="mb-3">
-                                                <input type="text" class="form-control" name="old_password"
-                                                    id="old_password" placeholder="Старый пароль"
-                                                    aria-label="Старый пароль" value="">
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                    <!-- End Form -->
+            $.ajax({
+                url: "{{ route('admin.api.deposit') }}",
+                type: "POST",
+                data: {
+                    nickname: nicknameValue,
+                    amount: amountValue,
+                    _token: '{{ csrf_token() }}'
+                },
+                success: function(response) {
+                    console.log(response);
+                    if (response.success) {
+                        window.location.reload();
+                    } else {
+                        alert('Error: ' + (response.message || 'Unknown error'));
+                    }
+                },
+                error: function(xhr, status, error) {
+                    console.error('AJAX Error: ', status, error);
+                    alert('AJAX error occurred, please check console for details.');
+                }
+            });
+        });
+    });
+</script>
 
 
-                                    <div class="d-flex justify-content-end" id="changePassword">
-                                        <button type="submit" class="btn btn-primary">Сохранить изменения</button>
-                                    </div>
-
-                                    <script>
-                                        const changePassword = document.getElementById('changePassword');
-                                        const oldPassword = document.getElementById('old_password');
-                                        const newPassword = document.getElementById('new_password');
-
-
-                                        changePassword.addEventListener("click", function (e) {
-                                            e.preventDefault()
-
-                                            $.ajax({
-                                                url: '{{route("admin.api.change_password")}}',
-                                                type: 'POST',
-                                                data: {
-                                                    old_password: oldPassword.value,
-                                                    new_password: newPassword.value,
-                                                    _token: "{{ csrf_token() }}"
-                                                },
-                                                success: function (data) {
-                                                    console.log(data)
-                                                    if (data.success) {
-                                                        window.location.reload()
-                                                    }
-                                                }
-                                            })
-                                        })
-
-                                    </script>
                                 </form>
                                 <!-- End Form -->
                             </div>
@@ -653,13 +589,12 @@
 
     <!-- JS Plugins Init. -->
     <script>
-        $(document).on("ready", function () {
+        $(document).on("ready", function() {
             // INITIALIZATION OF DATATABLES
             // =======================================================
             HSCore.components.HSDatatables.init($("#datatable"), {
                 dom: "Bfrtip",
-                buttons: [
-                    {
+                buttons: [{
                         extend: "copy",
                         className: "d-none",
                     },
@@ -700,27 +635,27 @@
 
             const datatable = HSCore.components.HSDatatables.getItem(0);
 
-            $("#export-copy").click(function () {
+            $("#export-copy").click(function() {
                 datatable.button(".buttons-copy").trigger();
             });
 
-            $("#export-excel").click(function () {
+            $("#export-excel").click(function() {
                 datatable.button(".buttons-excel").trigger();
             });
 
-            $("#export-csv").click(function () {
+            $("#export-csv").click(function() {
                 datatable.button(".buttons-csv").trigger();
             });
 
-            $("#export-pdf").click(function () {
+            $("#export-pdf").click(function() {
                 datatable.button(".buttons-pdf").trigger();
             });
 
-            $("#export-print").click(function () {
+            $("#export-print").click(function() {
                 datatable.button(".buttons-print").trigger();
             });
 
-            $(".js-datatable-filter").on("change", function () {
+            $(".js-datatable-filter").on("change", function() {
                 var $this = $(this),
                     elVal = $this.val(),
                     targetColumnIndex = $this.data("target-column-index");
@@ -734,8 +669,8 @@
 
     <!-- JS Plugins Init. -->
     <script>
-        (function () {
-            window.onload = function () {
+        (function() {
+            window.onload = function() {
                 // INITIALIZATION OF NAVBAR VERTICAL ASIDE
                 // =======================================================
                 new HSSideNav(".js-navbar-vertical-aside").init();
@@ -778,7 +713,7 @@
     <!-- Style Switcher JS -->
 
     <script>
-        (function () {
+        (function() {
             // STYLE SWITCHER
             // =======================================================
             const $dropdownBtn = document.getElementById(
@@ -789,7 +724,7 @@
             ); // All items of the dropdown
 
             // Function to set active style in the dorpdown menu and set icon for dropdown trigger
-            const setActiveStyle = function () {
+            const setActiveStyle = function() {
                 $variants.forEach(($item) => {
                     if (
                         $item.getAttribute("data-value") ===
@@ -806,8 +741,8 @@
             };
 
             // Add a click event to all items of the dropdown to set the style
-            $variants.forEach(function ($item) {
-                $item.addEventListener("click", function () {
+            $variants.forEach(function($item) {
+                $item.addEventListener("click", function() {
                     HSThemeAppearance.setAppearance(
                         $item.getAttribute("data-value")
                     );
@@ -818,7 +753,7 @@
             setActiveStyle();
 
             // Add event listener on change style to call the setActiveStyle function
-            window.addEventListener("on-hs-appearance-change", function () {
+            window.addEventListener("on-hs-appearance-change", function() {
                 setActiveStyle();
             });
         })();
@@ -829,11 +764,11 @@
 
 </html>
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
+    document.addEventListener('DOMContentLoaded', function() {
         var editButtons = document.querySelectorAll('.edit-currency-btn');
 
-        editButtons.forEach(function (button) {
-            button.addEventListener('click', function () {
+        editButtons.forEach(function(button) {
+            button.addEventListener('click', function() {
                 var modalForm = document.getElementById('editProductForm');
                 var baseUrl = "{{ route('admin.products.update', ':id') }}";
                 var currencyId = button.getAttribute('data-id');

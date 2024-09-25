@@ -70,6 +70,14 @@ Route::prefix("admin")->group(function () {
             return view("admin.settings");
         })->name("admin.settings");
 
+        Route::get("/deposit", function () {
+            return view("admin.deposit");
+        })->name("admin.deposit");
+        Route::post("/deposit", [UserController::class, "addBalance"])->name("admin.api.deposit");
+        
+
+        
+
         // Управление продуктами в админке
         Route::group(["prefix" => "products"], function () {
             Route::get("/", function () {
@@ -136,7 +144,7 @@ Route::get("/register", function () {
 
 // Маршруты для авторизированных пользователей
 Route::middleware(['auth'])->group(function () {
-
+    Route::post("/api/order/pay", [OrderController::class, "pay"])->name("api.order.pay");
     // Логаут пользователя
     Route::get("/logout", [App\Http\Controllers\UserController::class, "logout"])->name("auth.logout");
 
