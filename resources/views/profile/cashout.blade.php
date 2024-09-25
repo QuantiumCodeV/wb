@@ -76,7 +76,7 @@
 					<tr>
 						<td style="text-align:right;">сумма вывода：</td>
 						<td style="text-align:left;">
-							<input type="text" name="cashout_money" value="0.0" class="inputall input100" autocomplete="off"> GEL
+							<input type="text" name="cashout_money" value="0.0" class="inputall input100" autocomplete="off"> ₾
 							<span id="cashout_money_show" class="mal10"></span>
 						</td>
 					</tr>

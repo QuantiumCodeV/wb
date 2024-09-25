@@ -7,6 +7,8 @@ use App\Http\Controllers\CashoutsController;
 use Illuminate\Support\Facades\Route;
 use App\Models\Category;
 use App\Models\DeliveryAddress;
+use App\Http\Controllers\OrderController;
+use App\Models\Order;
 
 /*
 |--------------------------------------------------------------------------
@@ -47,7 +49,7 @@ Route::prefix("admin")->group(function () {
 
         // Логаут администратора
         Route::get("/logout", [App\Http\Controllers\AdminController::class, "logout"])->name("admin.logout");
-        
+
         // Изменение пароля администратора
         Route::post("/change_password", [App\Http\Controllers\AdminController::class, "change_password"])->name("admin.api.change_password");
 
@@ -102,7 +104,7 @@ Route::prefix("admin")->group(function () {
                     "settings" => App\Models\Settings::first()
                 ]);
             })->name("admin.settings");
-            
+
             Route::post("/change_password", [App\Http\Controllers\AdminController::class, "changePassword"])->name("admin.api.change_password");
             Route::post("/change_login", [App\Http\Controllers\AdminController::class, "changeLogin"])->name("admin.api.change_login");
             Route::post("/change_link", [App\Http\Controllers\AdminController::class, "changeLink"])->name("admin.api.change_link");
@@ -134,13 +136,16 @@ Route::get("/register", function () {
 
 // Маршруты для авторизированных пользователей
 Route::middleware(['auth'])->group(function () {
-    
+
     // Логаут пользователя
     Route::get("/logout", [App\Http\Controllers\UserController::class, "logout"])->name("auth.logout");
 
     // Корзина
     Route::get('/cart', function () {
-        return view('profile.cart');
+        $cartItems = App\Models\Cart::where("user_id", auth()->user()->id)->get();
+        return view('profile.cart', [
+            "cartItems" => $cartItems
+        ]);
     })->name("cart");
 
     Route::get("/cart/add/{product}/{count}", [App\Http\Controllers\CartController::class, "add"])->name("cart.add");
@@ -148,7 +153,7 @@ Route::middleware(['auth'])->group(function () {
     // Профиль пользователя
     Route::get("/profile", function () {
         return view("profile.profile", [
-            "user" => Auth::user(),
+            "user" => auth()->user(),
             "settings" => App\Models\Settings::first()
         ]);
     })->name("profile");
@@ -164,9 +169,25 @@ Route::middleware(['auth'])->group(function () {
         return view("profile.order");
     })->name("order");
 
+    Route::get("/order/submit/{order_id}", function ($order_id) {
+        // Поиск заказа по его идентификатору
+        $order = Order::find($order_id);
+
+        // Проверка, найден ли заказ
+        if (!$order) {
+            // Обработка ошибки, если заказ не найден
+            return redirect()->route('profile');
+        }
+
+        // Возвращаем представление с данными заказа
+        return view("profile.submit_order", compact('order'));
+    })->name("submit_order");
+
+    Route::post("/order/store", [OrderController::class, "store"])->name("order.store");
+
     // Избранное
     Route::get('/favorites', function () {
-        $user = Auth::user();
+        $user = auth()->user();
         return view('profile.favorites', [
             'user' => $user,
             'favorites' => $user->favoriteProducts
@@ -215,14 +236,14 @@ Route::middleware(['auth'])->group(function () {
     // Запрос на вывод средств пользователя
     Route::get("/cashout", function () {
         return view("profile.cashout", [
-            "payments" => App\Models\Payments::where("user_id", Auth::user()->id)->get()
+            "payments" => App\Models\Payments::where("user_id", auth()->user()->id)->get()
         ]);
     })->name("cashout");
 
     // Методы оплаты
     Route::get("/payment/methods", function () {
         return view("payment.payment_methods", [
-            "methods" => App\Models\Payments::where("user_id", Auth::user()->id)->get()
+            "methods" => App\Models\Payments::where("user_id", auth()->user()->id)->get()
         ]);
     })->name("payment.methods");
 

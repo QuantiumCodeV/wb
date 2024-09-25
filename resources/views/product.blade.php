@@ -6149,11 +6149,25 @@
                 app_tip("选择产品规格");
                 return;
             }
-            app_getinfo("<?php echo route('cart.add', ['product' => 'DUMMY_PRODUCT', 'count' => 'DUMMY_COUNT']); ?>".replace('DUMMY_PRODUCT', id).replace('DUMMY_COUNT', $(":input[name='product_num']").val()), function(json) {
+            const productId = id;
+
+            // Получаем значение input с именем 'product_num'
+            let productCount = $(":input[name='product_num']").val();
+            
+            // Обрезаем значение до символа '&'
+            if (productCount.includes('&')) {
+                productCount = productCount.split('&')[0];
+            }
+
+            const cartAddUrl = `<?php echo route('cart.add', ['product' => 'DUMMY_PRODUCT', 'count' => 'DUMMY_COUNT']); ?>`
+                .replace('DUMMY_PRODUCT', productId)
+                .replace('DUMMY_COUNT', productCount);
+
+            app_getinfo(cartAddUrl, function(json) {
                 if (json.result == true) {
                     if (act == 'buy') {
                         app_page_close();
-                        app_open("<?php echo route('index'); ?>/" + json.id);
+                        app_open("<?php echo route('cart'); ?>");
                     } else {
                         $("#cart_num").html(json.cart_num);
                         app_page_close();
@@ -6161,6 +6175,7 @@
                     }
                 }
             });
+
 
         }
         //打开购买选项

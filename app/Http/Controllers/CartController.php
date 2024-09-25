@@ -22,7 +22,10 @@ class CartController extends Controller
             $cart->count = $count;
             $cart->save();
         }
-        return redirect()->back();
+        return response()->json([
+            "result" => true,
+            "cart_num" => Cart::where("user_id", $user->id)->count()
+        ]);
     }
 
     public function delete(Request $request)

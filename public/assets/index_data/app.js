@@ -98,8 +98,8 @@ function app_getlist(url, event, func) {
 }
 //ajax获取信息
 function app_getinfo(url, func) {
-	var app_info = '&city=' + app_pageval('city') + '&location=' + app_getval('location');
-	$.getJSON(url + app_info, {}, function(json){
+	
+	$.getJSON(url, {}, function(json){
 		if (typeof(json.show) != 'undefined' && json.show != '') app_tip(json.show);
     	if (func && typeof(func) == "function") {
     		func(json);
