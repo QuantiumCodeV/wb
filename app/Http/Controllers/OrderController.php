@@ -53,6 +53,9 @@ class OrderController extends Controller
 
 
     public function pay(Request $request){
+        
+
+
         $order = Order::find($request->order_id);
         $order->status = "payed";
         $order->save();
