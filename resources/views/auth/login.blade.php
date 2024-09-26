@@ -48,7 +48,7 @@
 		</div>
 	</form>
 	<div class="zh_zc1">
-		<a href="<?php echo route('auth.register') ?>" class="mar10">зарегистрироваться</a> |
+		<a href="<?php echo secure_url(route('auth.register')) ?>" class="mar10">зарегистрироваться</a> |
 		<!-- <a href="https://wbbff.cc/user.php?mod=do&act=getpw" class="mal10">забыть пароль</a>  | -->
 		<a href="" target="_blank" class="mal10">Поддержка</a>
 	</div>
@@ -64,7 +64,7 @@
 					return false;
 				}
 				$(this).val("в войти.");
-				app_submit("<?php echo route("user.api.login") ?>", function (json) {
+				app_submit("<?php echo secure_url(route("user.api.login")) ?>", function (json) {
 					console.log(json)
 					if (json.message == "User logged in successfully") {
 						if ('' != '') {
