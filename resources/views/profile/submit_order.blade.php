@@ -175,7 +175,7 @@
 					}
 					app_submit("{{ route('api.order.pay') }}", function(json) {
 						if (json.result) {
-							app_open('{{ route("order.pay") }}', 1000);
+							app_open('{{ route("submit_order", ['order_id' => $order->id]) }}', 1000);
 						}
 					})
 				}

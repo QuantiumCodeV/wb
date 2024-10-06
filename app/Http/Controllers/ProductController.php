@@ -16,6 +16,8 @@ class ProductController extends Controller
             'sales' => 'required|string',
             'description' => 'required|string',
             'category_id' => 'required|exists:categories,id',
+            'custom_field_name' => 'nullable|array',
+            'custom_field_value' => 'nullable|array',
         ]);
 
         $images = [];
@@ -26,7 +28,17 @@ class ProductController extends Controller
             }
         }
 
-        $validateData = array_merge($validated, ['images' => $images]);
+        $customFields = [];
+        if ($request->has('custom_field_name') && $request->has('custom_field_value')) {
+            foreach ($request->custom_field_name as $index => $name) {
+                $customFields[] = [
+                    'name' => $name,
+                    'value' => $request->custom_field_value[$index] ?? '',
+                ];
+            }
+        }
+
+        $validateData = array_merge($validated, ['images' => $images, 'custom_fields' => $customFields]);
 
         $product = Product::create($validateData);
 
@@ -42,6 +54,8 @@ class ProductController extends Controller
             'sales' => 'required|string',
             'description' => 'required|string',
             'category_id' => 'required|exists:categories,id',
+            'custom_field_name' => 'nullable|array',
+            'custom_field_value' => 'nullable|array',
         ]);
 
         $images = $product->images;
@@ -52,7 +66,17 @@ class ProductController extends Controller
             }
         }
 
-        $validateData = array_merge($validated, ['images' => $images]);
+        $customFields = [];
+        if ($request->has('custom_field_name') && $request->has('custom_field_value')) {
+            foreach ($request->custom_field_name as $index => $name) {
+                $customFields[] = [
+                    'name' => $name,
+                    'value' => $request->custom_field_value[$index] ?? '',
+                ];
+            }
+        }
+
+        $validateData = array_merge($validated, ['images' => $images, 'custom_fields' => $customFields]);
 
         $product->update($validateData);
 

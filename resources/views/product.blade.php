@@ -5620,202 +5620,32 @@
                     </p>
                     <p>Развернуть описание</p>
                 </section>
+                @if(!empty($product->custom_fields))
                 <table class="product-params__table">
                     <caption class="product-params__caption"
                         style="box-sizing: border-box; outline: 0px; font-weight: 600; text-align: left; margin-bottom: 4px;">
-                        Экран</caption>
+                        Дополнительные характеристики</caption>
                     <tbody style="box-sizing: border-box; outline: 0px;">
-                        <tr class="product-params__row firstRow" style="box-sizing: border-box; outline: 0px;">
-                            <th class="product-params__cell"
-                                style="box-sizing: border-box; outline: 0px; ; color: rgb(134, 134, 149); font-weight: 400; text-align: left; vertical-align: top; padding: 4px 0px;">
-                                <span class="product-params__cell-decor"
-                                    style="box-sizing: border-box; outline: 0px; position: relative; display: inline-block; vertical-align: bottom; ;"><span
-                                        style="box-sizing: border-box; outline: 0px; padding-right: 12px; position: relative; z-index: 1; background-color: rgb(255, 255, 255);">Контрастность</span></span>
-                            </th>
-                            <td class="product-params__cell"
-                                style="box-sizing: border-box; outline: 0px; vertical-align: bottom; padding: 4px 0px 4px 12px;">
-                                <span style="box-sizing: border-box; outline: 0px;">2000:1</span>
-                            </td>
-                        </tr>
+                        @foreach($product->custom_fields as $field)
                         <tr class="product-params__row" style="box-sizing: border-box; outline: 0px;">
                             <th class="product-params__cell"
-                                style="box-sizing: border-box; outline: 0px; ; color: rgb(134, 134, 149); font-weight: 400; text-align: left; vertical-align: top; padding: 4px 0px;">
+                                style="box-sizing: border-box; outline: 0px; color: rgb(134, 134, 149); font-weight: 400; text-align: left; vertical-align: top; padding: 4px 0px;">
                                 <span class="product-params__cell-decor"
-                                    style="box-sizing: border-box; outline: 0px; position: relative; display: inline-block; vertical-align: bottom; ;"><span
-                                        style="box-sizing: border-box; outline: 0px; padding-right: 12px; position: relative; z-index: 1; background-color: rgb(255, 255, 255);">Разрешение
-                                        экрана</span></span>
+                                    style="box-sizing: border-box; outline: 0px; position: relative; display: inline-block; vertical-align: bottom;">
+                                    <span style="box-sizing: border-box; outline: 0px; padding-right: 12px; position: relative; z-index: 1; background-color: rgb(255, 255, 255);">
+                                        {{ $field['name'] }}
+                                    </span>
+                                </span>
                             </th>
                             <td class="product-params__cell"
                                 style="box-sizing: border-box; outline: 0px; vertical-align: bottom; padding: 4px 0px 4px 12px;">
-                                <span style="box-sizing: border-box; outline: 0px;">1920×1080 Full HD</span>
+                                <span style="box-sizing: border-box; outline: 0px;">{{ $field['value'] }}</span>
                             </td>
                         </tr>
+                        @endforeach
                     </tbody>
                 </table>
-                <table class="product-params__table">
-                    <caption class="product-params__caption"
-                        style="box-sizing: border-box; outline: 0px; font-weight: 600; text-align: left; margin-bottom: 4px;">
-                        Габариты</caption>
-                    <tbody style="box-sizing: border-box; outline: 0px;">
-                        <tr class="product-params__row firstRow" style="box-sizing: border-box; outline: 0px;">
-                            <th class="product-params__cell"
-                                style="box-sizing: border-box; outline: 0px; ; color: rgb(134, 134, 149); font-weight: 400; text-align: left; vertical-align: top; padding: 4px 0px;">
-                                <span class="product-params__cell-decor"
-                                    style="box-sizing: border-box; outline: 0px; position: relative; display: inline-block; vertical-align: bottom; ;"><span
-                                        style="box-sizing: border-box; outline: 0px; padding-right: 12px; position: relative; z-index: 1; background-color: rgb(255, 255, 255);">Вес
-                                        с упаковкой (кг)</span></span>
-                            </th>
-                            <td class="product-params__cell"
-                                style="box-sizing: border-box; outline: 0px; vertical-align: bottom; padding: 4px 0px 4px 12px;">
-                                <span style="box-sizing: border-box; outline: 0px;">1.89 кг</span>
-                            </td>
-                        </tr>
-                        <tr class="product-params__row" style="box-sizing: border-box; outline: 0px;">
-                            <th class="product-params__cell"
-                                style="box-sizing: border-box; outline: 0px; ; color: rgb(134, 134, 149); font-weight: 400; text-align: left; vertical-align: top; padding: 4px 0px;">
-                                <span class="product-params__cell-decor"
-                                    style="box-sizing: border-box; outline: 0px; position: relative; display: inline-block; vertical-align: bottom; ;"><span
-                                        style="box-sizing: border-box; outline: 0px; padding-right: 12px; position: relative; z-index: 1; background-color: rgb(255, 255, 255);">Длина
-                                        упаковки</span></span>
-                            </th>
-                            <td class="product-params__cell"
-                                style="box-sizing: border-box; outline: 0px; vertical-align: bottom; padding: 4px 0px 4px 12px;">
-                                <span style="box-sizing: border-box; outline: 0px;">21 см</span>
-                            </td>
-                        </tr>
-                        <tr class="product-params__row" style="box-sizing: border-box; outline: 0px;">
-                            <th class="product-params__cell"
-                                style="box-sizing: border-box; outline: 0px; ; color: rgb(134, 134, 149); font-weight: 400; text-align: left; vertical-align: top; padding: 4px 0px;">
-                                <span class="product-params__cell-decor"
-                                    style="box-sizing: border-box; outline: 0px; position: relative; display: inline-block; vertical-align: bottom; ;"><span
-                                        style="box-sizing: border-box; outline: 0px; padding-right: 12px; position: relative; z-index: 1; background-color: rgb(255, 255, 255);">Высота
-                                        упаковки</span></span>
-                            </th>
-                            <td class="product-params__cell"
-                                style="box-sizing: border-box; outline: 0px; vertical-align: bottom; padding: 4px 0px 4px 12px;">
-                                <span style="box-sizing: border-box; outline: 0px;">26 см</span>
-                            </td>
-                        </tr>
-                        <tr class="product-params__row" style="box-sizing: border-box; outline: 0px;">
-                            <th class="product-params__cell"
-                                style="box-sizing: border-box; outline: 0px; ; color: rgb(134, 134, 149); font-weight: 400; text-align: left; vertical-align: top; padding: 4px 0px;">
-                                <span class="product-params__cell-decor"
-                                    style="box-sizing: border-box; outline: 0px; position: relative; display: inline-block; vertical-align: bottom; ;"><span
-                                        style="box-sizing: border-box; outline: 0px; padding-right: 12px; position: relative; z-index: 1; background-color: rgb(255, 255, 255);">Ширина
-                                        упаковки</span></span>
-                            </th>
-                            <td class="product-params__cell"
-                                style="box-sizing: border-box; outline: 0px; vertical-align: bottom; padding: 4px 0px 4px 12px;">
-                                <span style="box-sizing: border-box; outline: 0px;">17 см</span>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <table class="product-params__table">
-                    <caption class="product-params__caption"
-                        style="box-sizing: border-box; outline: 0px; font-weight: 600; text-align: left; margin-bottom: 4px;">
-                        Общие характеристики</caption>
-                    <tbody style="box-sizing: border-box; outline: 0px;">
-                        <tr class="product-params__row firstRow" style="box-sizing: border-box; outline: 0px;">
-                            <th class="product-params__cell"
-                                style="box-sizing: border-box; outline: 0px; ; color: rgb(134, 134, 149); font-weight: 400; text-align: left; vertical-align: top; padding: 4px 0px;">
-                                <span class="product-params__cell-decor"
-                                    style="box-sizing: border-box; outline: 0px; position: relative; display: inline-block; vertical-align: bottom; ;"><span
-                                        style="box-sizing: border-box; outline: 0px; padding-right: 12px; position: relative; z-index: 1; background-color: rgb(255, 255, 255);">Модель</span></span>
-                            </th>
-                            <td class="product-params__cell"
-                                style="box-sizing: border-box; outline: 0px; vertical-align: bottom; padding: 4px 0px 4px 12px;">
-                                <span style="box-sizing: border-box; outline: 0px;">Wanbo T2 Max New</span>
-                            </td>
-                        </tr>
-                        <tr class="product-params__row" style="box-sizing: border-box; outline: 0px;">
-                            <th class="product-params__cell"
-                                style="box-sizing: border-box; outline: 0px; ; color: rgb(134, 134, 149); font-weight: 400; text-align: left; vertical-align: top; padding: 4px 0px;">
-                                <span class="product-params__cell-decor"
-                                    style="box-sizing: border-box; outline: 0px; position: relative; display: inline-block; vertical-align: bottom; ;"><span
-                                        style="box-sizing: border-box; outline: 0px; padding-right: 12px; position: relative; z-index: 1; background-color: rgb(255, 255, 255);">Гарантийный
-                                        срок</span></span>
-                            </th>
-                            <td class="product-params__cell"
-                                style="box-sizing: border-box; outline: 0px; vertical-align: bottom; padding: 4px 0px 4px 12px;">
-                                <span style="box-sizing: border-box; outline: 0px;">1 год</span>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <table class="product-params__table">
-                    <caption class="product-params__caption"
-                        style="box-sizing: border-box; outline: 0px; font-weight: 600; text-align: left; margin-bottom: 4px;">
-                        Интерфейсы и разъемы</caption>
-                    <tbody style="box-sizing: border-box; outline: 0px;">
-                        <tr class="product-params__row firstRow" style="box-sizing: border-box; outline: 0px;">
-                            <th class="product-params__cell"
-                                style="box-sizing: border-box; outline: 0px; ; color: rgb(134, 134, 149); font-weight: 400; text-align: left; vertical-align: top; padding: 4px 0px;">
-                                <span class="product-params__cell-decor"
-                                    style="box-sizing: border-box; outline: 0px; position: relative; display: inline-block; vertical-align: bottom; ;"><span
-                                        style="box-sizing: border-box; outline: 0px; padding-right: 12px; position: relative; z-index: 1; background-color: rgb(255, 255, 255);">Вид
-                                        разъема</span></span>
-                            </th>
-                            <td class="product-params__cell"
-                                style="box-sizing: border-box; outline: 0px; vertical-align: bottom; padding: 4px 0px 4px 12px;">
-                                <span style="box-sizing: border-box; outline: 0px;">3.5 мм; HDMI; USB</span>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <table class="product-params__table">
-                    <caption class="product-params__caption"
-                        style="box-sizing: border-box; outline: 0px; font-weight: 600; text-align: left; margin-bottom: 4px;">
-                        Связь</caption>
-                    <tbody style="box-sizing: border-box; outline: 0px;">
-                        <tr class="product-params__row firstRow" style="box-sizing: border-box; outline: 0px;">
-                            <th class="product-params__cell"
-                                style="box-sizing: border-box; outline: 0px; ; color: rgb(134, 134, 149); font-weight: 400; text-align: left; vertical-align: top; padding: 4px 0px;">
-                                <span class="product-params__cell-decor"
-                                    style="box-sizing: border-box; outline: 0px; position: relative; display: inline-block; vertical-align: bottom; ;"><span
-                                        style="box-sizing: border-box; outline: 0px; padding-right: 12px; position: relative; z-index: 1; background-color: rgb(255, 255, 255);">Беспроводные
-                                        интерфейсы</span></span>
-                            </th>
-                            <td class="product-params__cell"
-                                style="box-sizing: border-box; outline: 0px; vertical-align: bottom; padding: 4px 0px 4px 12px;">
-                                <span style="box-sizing: border-box; outline: 0px;">Bluetooth; Wi-Fi</span>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <table class="product-params__table">
-                    <caption class="product-params__caption"
-                        style="box-sizing: border-box; outline: 0px; font-weight: 600; text-align: left; margin-bottom: 4px;">
-                        Дополнительная информация</caption>
-                    <tbody style="box-sizing: border-box; outline: 0px;">
-                        <tr class="product-params__row firstRow" style="box-sizing: border-box; outline: 0px;">
-                            <th class="product-params__cell"
-                                style="box-sizing: border-box; outline: 0px; ; color: rgb(134, 134, 149); font-weight: 400; text-align: left; vertical-align: top; padding: 4px 0px;">
-                                <span class="product-params__cell-decor"
-                                    style="box-sizing: border-box; outline: 0px; position: relative; display: inline-block; vertical-align: bottom; ;"><span
-                                        style="box-sizing: border-box; outline: 0px; padding-right: 12px; position: relative; z-index: 1; background-color: rgb(255, 255, 255);">Макс.
-                                        диагональ экрана</span></span>
-                            </th>
-                            <td class="product-params__cell"
-                                style="box-sizing: border-box; outline: 0px; vertical-align: bottom; padding: 4px 0px 4px 12px;">
-                                <span style="box-sizing: border-box; outline: 0px;">120 см</span>
-                            </td>
-                        </tr>
-                        <tr class="product-params__row" style="box-sizing: border-box; outline: 0px;">
-                            <th class="product-params__cell"
-                                style="box-sizing: border-box; outline: 0px; ; color: rgb(134, 134, 149); font-weight: 400; text-align: left; vertical-align: top; padding: 4px 0px;">
-                                <span class="product-params__cell-decor"
-                                    style="box-sizing: border-box; outline: 0px; position: relative; display: inline-block; vertical-align: bottom; ;"><span
-                                        style="box-sizing: border-box; outline: 0px; padding-right: 12px; position: relative; z-index: 1; background-color: rgb(255, 255, 255);">Страна
-                                        производства</span></span>
-                            </th>
-                            <td class="product-params__cell"
-                                style="box-sizing: border-box; outline: 0px; vertical-align: bottom; padding: 4px 0px 4px 12px;">
-                                <span style="box-sizing: border-box; outline: 0px;">Китай</span>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+                @endif
                 <p>Развернуть характеристики</p>
                 <p class="description-error__text"
                     style="box-sizing: border-box; outline: 0px; margin-top: 0px; margin-bottom: 0px; padding: 0px; font-size: 14px; line-height: 20px; color: rgb(134, 134, 149);">
@@ -6153,7 +5983,7 @@
 
             // Получаем значение input с именем 'product_num'
             let productCount = $(":input[name='product_num']").val();
-            
+
             // Обрезаем значение до символа '&'
             if (productCount.includes('&')) {
                 productCount = productCount.split('&')[0];

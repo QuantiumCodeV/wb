@@ -46,12 +46,13 @@
             previewMode: false,
             startPath: "/index.html",
             vars: {
-                themeFont:
-                    "https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap",
+                themeFont: "https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap",
                 version: "?v=1.0",
             },
             layoutBuilder: {
-                extend: { switcherSupport: true },
+                extend: {
+                    switcherSupport: true
+                },
                 header: {
                     layoutMode: "default",
                     containerMode: "container-fluid",
@@ -67,12 +68,17 @@
                         transparent: "transparent",
                         white: "#fff",
                         dark: "132144",
-                        gray: { 100: "#f9fafc", 900: "#1e2022" },
+                        gray: {
+                            100: "#f9fafc",
+                            900: "#1e2022"
+                        },
                     },
                     font: "Inter",
                 },
             },
-            languageDirection: { lang: "en" },
+            languageDirection: {
+                lang: "en"
+            },
             skipFilesFromBundle: {
                 dist: [
                     "<?php echo asset('assets/js/hs.theme-appearance.js') ?>",
@@ -97,11 +103,12 @@
                 "<?php echo asset('assets/css/theme-dark.css') ?>",
             ],
             copyDependencies: {
-                dist: { "*assets/js/theme-custom.js": "" },
+                dist: {
+                    "*assets/js/theme-custom.js": ""
+                },
                 build: {
                     "*assets/js/theme-custom.js": "",
-                    "node_modules/bootstrap-icons/font/*fonts/**":
-                        "assets/css",
+                    "node_modules/bootstrap-icons/font/*fonts/**": "assets/css",
                 },
             },
             buildFolder: "",
@@ -112,7 +119,10 @@
                 build: "./build",
             },
             fileNames: {
-                dist: { js: "theme.min.js", css: "theme.min.css" },
+                dist: {
+                    js: "theme.min.js",
+                    css: "theme.min.css"
+                },
                 build: {
                     css: "theme.min.css",
                     js: "theme.min.js",
@@ -135,8 +145,7 @@
                 }
                 c = "0x" + c.join("");
                 return (
-                    "rgba(" +
-                    [(c >> 16) & 255, (c >> 8) & 255, c & 255].join(",") +
+                    "rgba(" + [(c >> 16) & 255, (c >> 8) & 255, c & 255].join(",") +
                     "," +
                     transparent +
                     ")"
@@ -326,29 +335,29 @@
                         <div id="navbarVerticalMenuPagesMenu">
                             <!-- Collapse -->
                             <div class="nav-item">
-                                <a class="nav-link active" href="<?php echo route("admin.products")?>" role="button" aria-expanded="true"
+                                <a class="nav-link active" href="<?php echo route("admin.products") ?>" role="button" aria-expanded="true"
                                     aria-controls="navbarVerticalMenuPagesUsersMenu">
                                     <i class="bi-people nav-icon"></i>
                                     <span class="nav-link-title">Продукты</span>
                                 </a>
                             </div>
                             <div class="nav-item">
-                                <a class="nav-link" href="<?php echo route("admin.categories")?>" role="button"
+                                <a class="nav-link" href="<?php echo route("admin.categories") ?>" role="button"
                                     aria-expanded="true" aria-controls="navbarVerticalMenuPagesUsersMenu">
                                     <i class="bi-people nav-icon"></i>
                                     <span class="nav-link-title">Категория</span>
                                 </a>
                             </div>
                             <div class="nav-item">
-                                <a class="nav-link" href="<?php echo route("admin.cashouts")?>" role="button"
-                                   
+                                <a class="nav-link" href="<?php echo route("admin.cashouts") ?>" role="button"
+
                                     aria-expanded="true" aria-controls="navbarVerticalMenuPagesUsersMenu">
                                     <i class="bi-people nav-icon"></i>
                                     <span class="nav-link-title">Выводы</span>
                                 </a>
                             </div>
                             <div class="nav-item">
-                                <a class="nav-link" href="<?php echo route("admin.deposit")?>" role="button"
+                                <a class="nav-link" href="<?php echo route("admin.deposit") ?>" role="button"
                                     aria-expanded="true" aria-controls="navbarVerticalMenuPagesUsersMenu">
                                     <i class="bi-people nav-icon"></i>
                                     <span class="nav-link-title">Пополнение</span>
@@ -356,7 +365,7 @@
                             </div>
                             <div class="nav-item">
                                 <a class="nav-link" href="{{ route("admin.settings") }}" role="button"
-                                    
+
                                     aria-expanded="true" aria-controls="navbarVerticalMenuPagesUsersMenu">
                                     <i class="bi-gear nav-icon"></i>
                                     <span class="nav-link-title">Настройки</span>
@@ -559,50 +568,51 @@
 
                         <tbody>
                             @foreach ($products as $product)
-                                <tr>
-                                    <td class="table-column-pe-0">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value=""
-                                                id="datatableCheckAll1" />
-                                            <label class="form-check-label" for="datatableCheckAll1"></label>
+                            <tr>
+                                <td class="table-column-pe-0">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value=""
+                                            id="datatableCheckAll1" />
+                                        <label class="form-check-label" for="datatableCheckAll1"></label>
+                                    </div>
+                                </td>
+                                <td class="table-column-ps-0">
+                                    <a class="d-flex align-items-center" href="№">
+                                        <div class="avatar ">
+                                            <img class="avatar-img"
+                                                src="<?php echo asset('storage/' . $product->images[0]) ?>"
+                                                alt="Image Description">
                                         </div>
-                                    </td>
-                                    <td class="table-column-ps-0">
-                                        <a class="d-flex align-items-center" href="№">
-                                            <div class="avatar ">
-                                                <img class="avatar-img"
-                                                    src="<?php    echo asset('storage/' . $product->images[0]) ?>"
-                                                    alt="Image Description">
-                                            </div>
-                                            <div class="ms-3">
-                                                <span class="d-block h5 text-inherit mb-0">{{$product->name}}</span>
+                                        <div class="ms-3">
+                                            <span class="d-block h5 text-inherit mb-0">{{$product->name}}</span>
 
-                                            </div>
-                                        </a>
-                                    </td>
-                                    <td>
-                                        <span class="d-block h5 mb-0">{{ $product->price }}</span>
-                                    </td>
-                                    <td>
-                                        <span class="d-block h5 mb-0">{{ $product->description }}</span>
-                                    </td>
-                                    <td>{{ $product->sales }}</td>
-                                    <td>{{ $product->category_id }}</td>
+                                        </div>
+                                    </a>
+                                </td>
+                                <td>
+                                    <span class="d-block h5 mb-0">{{ $product->price }}</span>
+                                </td>
+                                <td>
+                                    <span class="d-block h5 mb-0">{{ $product->description }}</span>
+                                </td>
+                                <td>{{ $product->sales }}</td>
+                                <td>{{ $product->category_id }}</td>
 
-                                    <td>
-                                        <button type="button" class="btn btn-white btn-sm edit-currency-btn"
-                                            data-bs-toggle="modal" data-bs-target="#editProduct"
-                                            data-id="{{ $product->id }}" data-name="{{ $product->name }}"
-                                            data-sales="{{ $product->sales }}"
-                                            data-description="{{ $product->description }}"
-                                            data-price="{{ $product->price }}"
-                                            data-category_id="{{ $product->category_id }}" data-bs-toggle="modal"
-                                            data-bs-target="#editProduct">
-                                            <i class="bi-pencil-fill me-1"></i>
-                                            Редактировать
-                                        </button>
-                                    </td>
-                                </tr>
+                                <td>
+                                    <button type="button" class="btn btn-white btn-sm edit-currency-btn"
+                                        data-bs-toggle="modal" data-bs-target="#editProduct"
+                                        data-id="{{ $product->id }}" data-name="{{ $product->name }}"
+                                        data-sales="{{ $product->sales }}"
+                                        data-description="{{ $product->description }}"
+                                        data-price="{{ $product->price }}"
+                                        data-category_id="{{ $product->category_id }}"
+                                        data-custom_fields="{{ json_encode($product->custom_fields) }}"
+                                        data-bs-toggle="modal" data-bs-target="#editProduct">
+                                        <i class="bi-pencil-fill me-1"></i>
+                                        Редактировать
+                                    </button>
+                                </td>
+                            </tr>
                             @endforeach
 
                         </tbody>
@@ -678,7 +688,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="editProductLabel">
-                        Редактировать валюту
+                        Редактировать продукт
                     </h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
@@ -758,11 +768,64 @@
                                   "hideSearch": true
                                 }'>
                                             @foreach ($categories as $category)
-                                                <option value="{{$category->id}}">{{$category->name}}</option>
+                                            <option value="{{$category->id}}">{{$category->name}}</option>
                                             @endforeach
                                         </select>
                                     </div>
                                 </div>
+                                <div id="edit_custom_fields_container"></div>
+                                <div class="row mb-4">
+                                    <div class="col-sm-9 offset-sm-3">
+                                        <button type="button" class="btn btn-secondary" id="edit_add_custom_field">Добавить поле</button>
+                                    </div>
+                                </div>
+
+                                <script>
+                                    let editCustomFieldCounter = 2;
+                                    document.getElementById('edit_add_custom_field').addEventListener('click', function() {
+                                        var container = document.createElement('div');
+                                        container.className = 'row mb-4';
+
+                                        var label1 = document.createElement('label');
+                                        label1.className = 'col-sm-3 col-form-label form-label';
+                                        label1.innerText = 'Название поля';
+                                        container.appendChild(label1);
+
+                                        var div1 = document.createElement('div');
+                                        div1.className = 'col-sm-3';
+                                        var input1 = document.createElement('input');
+                                        input1.type = 'text';
+                                        input1.className = 'form-control';
+                                        input1.name = 'custom_field_name[]';
+                                        input1.id = 'edit_custom_field_name_' + editCustomFieldCounter;
+                                        input1.placeholder = 'Название поля';
+                                        input1.ariaLabel = 'Название поля';
+                                        div1.appendChild(input1);
+                                        container.appendChild(div1);
+
+                                        var label2 = document.createElement('label');
+                                        label2.className = 'col-sm-3 col-form-label form-label';
+                                        label2.innerText = 'Значение поля';
+                                        container.appendChild(label2);
+
+                                        var div2 = document.createElement('div');
+                                        div2.className = 'col-sm-3';
+                                        var input2 = document.createElement('input');
+                                        input2.type = 'text';
+                                        input2.className = 'form-control';
+                                        input2.name = 'custom_field_value[]';
+                                        input2.id = 'edit_custom_field_value_' + editCustomFieldCounter;
+                                        input2.placeholder = 'Значение поля';
+                                        input2.ariaLabel = 'Значение поля';
+                                        div2.appendChild(input2);
+                                        container.appendChild(div2);
+
+                                        var customFieldsContainer = document.getElementById('edit_custom_fields_container');
+                                        customFieldsContainer.appendChild(container);
+
+                                        editCustomFieldCounter++;
+                                    });
+                                </script>
                                 <div class="d-flex justify-content-end">
                                     <div class="d-flex gap-3">
                                         <button type="button" class="btn btn-white" data-bs-dismiss="modal"
@@ -870,11 +933,65 @@
                                   "hideSearch": true
                                 }'>
                                             @foreach ($categories as $category)
-                                                <option value="{{$category->id}}">{{$category->name}}</option>
+                                            <option value="{{$category->id}}">{{$category->name}}</option>
                                             @endforeach
                                         </select>
                                     </div>
                                 </div>
+                                
+                                <div id="custom_fields_container"></div>
+                                <div class="row mb-4">
+                                    <div class="col-sm-9 offset-sm-3">
+                                        <button type="button" class="btn btn-secondary" id="add_custom_field">Добавить поле</button>
+                                    </div>
+                                </div>
+
+                                <script>
+                                    let customFieldCounter = 2;
+                                    document.getElementById('add_custom_field').addEventListener('click', function() {
+                                        var container = document.createElement('div');
+                                        container.className = 'row mb-4';
+
+                                        var label1 = document.createElement('label');
+                                        label1.className = 'col-sm-3 col-form-label form-label';
+                                        label1.innerText = 'Название поля';
+                                        container.appendChild(label1);
+
+                                        var div1 = document.createElement('div');
+                                        div1.className = 'col-sm-3';
+                                        var input1 = document.createElement('input');
+                                        input1.type = 'text';
+                                        input1.className = 'form-control';
+                                        input1.name = 'custom_field_name[]';
+                                        input1.id = 'custom_field_name_' + customFieldCounter;
+                                        input1.placeholder = 'Название поля';
+                                        input1.ariaLabel = 'Название поля';
+                                        div1.appendChild(input1);
+                                        container.appendChild(div1);
+
+                                        var label2 = document.createElement('label');
+                                        label2.className = 'col-sm-3 col-form-label form-label';
+                                        label2.innerText = 'Значение поля';
+                                        container.appendChild(label2);
+
+                                        var div2 = document.createElement('div');
+                                        div2.className = 'col-sm-3';
+                                        var input2 = document.createElement('input');
+                                        input2.type = 'text';
+                                        input2.className = 'form-control';
+                                        input2.name = 'custom_field_value[]';
+                                        input2.id = 'custom_field_value_' + customFieldCounter;
+                                        input2.placeholder = 'Значение поля';
+                                        input2.ariaLabel = 'Значение поля';
+                                        div2.appendChild(input2);
+                                        container.appendChild(div2);
+
+                                        var customFieldsContainer = document.getElementById('custom_fields_container');
+                                        customFieldsContainer.appendChild(container);
+
+                                        customFieldCounter++;
+                                    });
+                                </script>
                                 <div class="d-flex justify-content-end">
                                     <div class="d-flex gap-3">
                                         <button type="button" class="btn btn-white" data-bs-dismiss="modal"
@@ -932,13 +1049,12 @@
 
     <!-- JS Plugins Init. -->
     <script>
-        $(document).on("ready", function () {
+        $(document).on("ready", function() {
             // INITIALIZATION OF DATATABLES
             // =======================================================
             HSCore.components.HSDatatables.init($("#datatable"), {
                 dom: "Bfrtip",
-                buttons: [
-                    {
+                buttons: [{
                         extend: "copy",
                         className: "d-none",
                     },
@@ -979,27 +1095,27 @@
 
             const datatable = HSCore.components.HSDatatables.getItem(0);
 
-            $("#export-copy").click(function () {
+            $("#export-copy").click(function() {
                 datatable.button(".buttons-copy").trigger();
             });
 
-            $("#export-excel").click(function () {
+            $("#export-excel").click(function() {
                 datatable.button(".buttons-excel").trigger();
             });
 
-            $("#export-csv").click(function () {
+            $("#export-csv").click(function() {
                 datatable.button(".buttons-csv").trigger();
             });
 
-            $("#export-pdf").click(function () {
+            $("#export-pdf").click(function() {
                 datatable.button(".buttons-pdf").trigger();
             });
 
-            $("#export-print").click(function () {
+            $("#export-print").click(function() {
                 datatable.button(".buttons-print").trigger();
             });
 
-            $(".js-datatable-filter").on("change", function () {
+            $(".js-datatable-filter").on("change", function() {
                 var $this = $(this),
                     elVal = $this.val(),
                     targetColumnIndex = $this.data("target-column-index");
@@ -1013,8 +1129,8 @@
 
     <!-- JS Plugins Init. -->
     <script>
-        (function () {
-            window.onload = function () {
+        (function() {
+            window.onload = function() {
                 // INITIALIZATION OF NAVBAR VERTICAL ASIDE
                 // =======================================================
                 new HSSideNav(".js-navbar-vertical-aside").init();
@@ -1057,7 +1173,7 @@
     <!-- Style Switcher JS -->
 
     <script>
-        (function () {
+        (function() {
             // STYLE SWITCHER
             // =======================================================
             const $dropdownBtn = document.getElementById(
@@ -1068,7 +1184,7 @@
             ); // All items of the dropdown
 
             // Function to set active style in the dorpdown menu and set icon for dropdown trigger
-            const setActiveStyle = function () {
+            const setActiveStyle = function() {
                 $variants.forEach(($item) => {
                     if (
                         $item.getAttribute("data-value") ===
@@ -1085,8 +1201,8 @@
             };
 
             // Add a click event to all items of the dropdown to set the style
-            $variants.forEach(function ($item) {
-                $item.addEventListener("click", function () {
+            $variants.forEach(function($item) {
+                $item.addEventListener("click", function() {
                     HSThemeAppearance.setAppearance(
                         $item.getAttribute("data-value")
                     );
@@ -1097,7 +1213,7 @@
             setActiveStyle();
 
             // Add event listener on change style to call the setActiveStyle function
-            window.addEventListener("on-hs-appearance-change", function () {
+            window.addEventListener("on-hs-appearance-change", function() {
                 setActiveStyle();
             });
         })();
@@ -1108,11 +1224,11 @@
 
 </html>
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
+    document.addEventListener('DOMContentLoaded', function() {
         var editButtons = document.querySelectorAll('.edit-currency-btn');
 
-        editButtons.forEach(function (button) {
-            button.addEventListener('click', function () {
+        editButtons.forEach(function(button) {
+            button.addEventListener('click', function() {
                 var modalForm = document.getElementById('editProductForm');
                 var baseUrl = "{{ route('admin.products.update', ':id') }}";
                 var currencyId = button.getAttribute('data-id');
@@ -1122,6 +1238,56 @@
                 document.getElementById("edit_description").value = button.getAttribute('data-description');
                 document.getElementById("edit_category_id").value = button.getAttribute('data-category_id');
                 document.getElementById("edit_sales").value = button.getAttribute('data-sales');
+                
+                // Очистить контейнер custom_fields
+                var customFieldsContainer = document.getElementById('edit_custom_fields_container');
+                customFieldsContainer.innerHTML = '';
+
+                // Добавить custom_fields в модалку
+                var customFields = JSON.parse(button.getAttribute('data-custom_fields'));
+                customFields.forEach(function(field, index) {
+                    var container = document.createElement('div');
+                    container.className = 'row mb-4';
+
+                    var label1 = document.createElement('label');
+                    label1.className = 'col-sm-3 col-form-label form-label';
+                    label1.innerText = 'Название поля';
+                    container.appendChild(label1);
+
+                    var div1 = document.createElement('div');
+                    div1.className = 'col-sm-3';
+                    var input1 = document.createElement('input');
+                    input1.type = 'text';
+                    input1.className = 'form-control';
+                    input1.name = 'custom_field_name[]';
+                    input1.id = 'edit_custom_field_name_' + index;
+                    input1.placeholder = 'Название поля';
+                    input1.ariaLabel = 'Название поля';
+                    input1.value = field.name;
+                    div1.appendChild(input1);
+                    container.appendChild(div1);
+
+                    var label2 = document.createElement('label');
+                    label2.className = 'col-sm-3 col-form-label form-label';
+                    label2.innerText = 'Значение поля';
+                    container.appendChild(label2);
+
+                    var div2 = document.createElement('div');
+                    div2.className = 'col-sm-3';
+                    var input2 = document.createElement('input');
+                    input2.type = 'text';
+                    input2.className = 'form-control';
+                    input2.name = 'custom_field_value[]';
+                    input2.id = 'edit_custom_field_value_' + index;
+                    input2.placeholder = 'Значение поля';
+                    input2.ariaLabel = 'Значение поля';
+                    input2.value = field.value;
+                    div2.appendChild(input2);
+                    container.appendChild(div2);
+
+                    customFieldsContainer.appendChild(container);
+                });
+
                 // Установить правильный action URL для отправки формы
                 modalForm.action = baseUrl.replace(':id', currencyId);
             });

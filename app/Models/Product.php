@@ -13,7 +13,7 @@ class Product extends Model
 
         'images' => 'array',
 
-        'dopInfo' => 'array',
+        'custom_fields' => 'array',
 
     ];
 
@@ -26,7 +26,7 @@ class Product extends Model
         'sales',
         'description',
         'category_id',
-        'dopInfo'
+        'custom_fields'
 
     ];
 

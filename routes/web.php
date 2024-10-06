@@ -174,7 +174,8 @@ Route::middleware(['auth'])->group(function () {
 
     // Заказы пользователя
     Route::get("/order", function () {
-        return view("profile.order");
+        $orders = Order::where('user_id', auth()->user()->id)->get();
+        return view("profile.order", ['orders' => $orders]);
     })->name("order");
 
     Route::get("/order/submit/{order_id}", function ($order_id) {
