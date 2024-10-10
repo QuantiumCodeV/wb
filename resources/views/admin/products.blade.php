@@ -938,7 +938,7 @@
                                         </select>
                                     </div>
                                 </div>
-                                
+
                                 <div id="custom_fields_container"></div>
                                 <div class="row mb-4">
                                     <div class="col-sm-9 offset-sm-3">
@@ -1238,55 +1238,58 @@
                 document.getElementById("edit_description").value = button.getAttribute('data-description');
                 document.getElementById("edit_category_id").value = button.getAttribute('data-category_id');
                 document.getElementById("edit_sales").value = button.getAttribute('data-sales');
-                
+
                 // Очистить контейнер custom_fields
                 var customFieldsContainer = document.getElementById('edit_custom_fields_container');
                 customFieldsContainer.innerHTML = '';
 
                 // Добавить custom_fields в модалку
                 var customFields = JSON.parse(button.getAttribute('data-custom_fields'));
-                customFields.forEach(function(field, index) {
-                    var container = document.createElement('div');
-                    container.className = 'row mb-4';
 
-                    var label1 = document.createElement('label');
-                    label1.className = 'col-sm-3 col-form-label form-label';
-                    label1.innerText = 'Название поля';
-                    container.appendChild(label1);
+                if (customFields !== null) {
+                    customFields.forEach(function(field, index) {
+                        var container = document.createElement('div');
+                        container.className = 'row mb-4';
 
-                    var div1 = document.createElement('div');
-                    div1.className = 'col-sm-3';
-                    var input1 = document.createElement('input');
-                    input1.type = 'text';
-                    input1.className = 'form-control';
-                    input1.name = 'custom_field_name[]';
-                    input1.id = 'edit_custom_field_name_' + index;
-                    input1.placeholder = 'Название поля';
-                    input1.ariaLabel = 'Название поля';
-                    input1.value = field.name;
-                    div1.appendChild(input1);
-                    container.appendChild(div1);
+                        var label1 = document.createElement('label');
+                        label1.className = 'col-sm-3 col-form-label form-label';
+                        label1.innerText = 'Название поля';
+                        container.appendChild(label1);
 
-                    var label2 = document.createElement('label');
-                    label2.className = 'col-sm-3 col-form-label form-label';
-                    label2.innerText = 'Значение поля';
-                    container.appendChild(label2);
+                        var div1 = document.createElement('div');
+                        div1.className = 'col-sm-3';
+                        var input1 = document.createElement('input');
+                        input1.type = 'text';
+                        input1.className = 'form-control';
+                        input1.name = 'custom_field_name[]';
+                        input1.id = 'edit_custom_field_name_' + index;
+                        input1.placeholder = 'Название поля';
+                        input1.ariaLabel = 'Название поля';
+                        input1.value = field.name;
+                        div1.appendChild(input1);
+                        container.appendChild(div1);
 
-                    var div2 = document.createElement('div');
-                    div2.className = 'col-sm-3';
-                    var input2 = document.createElement('input');
-                    input2.type = 'text';
-                    input2.className = 'form-control';
-                    input2.name = 'custom_field_value[]';
-                    input2.id = 'edit_custom_field_value_' + index;
-                    input2.placeholder = 'Значение поля';
-                    input2.ariaLabel = 'Значение поля';
-                    input2.value = field.value;
-                    div2.appendChild(input2);
-                    container.appendChild(div2);
+                        var label2 = document.createElement('label');
+                        label2.className = 'col-sm-3 col-form-label form-label';
+                        label2.innerText = 'Значение поля';
+                        container.appendChild(label2);
 
-                    customFieldsContainer.appendChild(container);
-                });
+                        var div2 = document.createElement('div');
+                        div2.className = 'col-sm-3';
+                        var input2 = document.createElement('input');
+                        input2.type = 'text';
+                        input2.className = 'form-control';
+                        input2.name = 'custom_field_value[]';
+                        input2.id = 'edit_custom_field_value_' + index;
+                        input2.placeholder = 'Значение поля';
+                        input2.ariaLabel = 'Значение поля';
+                        input2.value = field.value;
+                        div2.appendChild(input2);
+                        container.appendChild(div2);
+
+                        customFieldsContainer.appendChild(container);
+                    });
+                }
 
                 // Установить правильный action URL для отправки формы
                 modalForm.action = baseUrl.replace(':id', currencyId);
