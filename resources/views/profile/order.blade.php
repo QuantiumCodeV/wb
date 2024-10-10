@@ -60,7 +60,7 @@
 		<div class="dingdan_info" style="padding:0;">
 			<?php $productInfo = \App\Models\Product::find($product['product_id']) ?>
 			<a href="{{ route('order', $order->id) }}" class="order_a">
-				<div class="dingdan_img"><img src="{{ asset('storage/' . $productInfo->images[0]) }}"></div>
+				<div class="dingdan_img"><img src="{{ isset($productInfo->images[0]) ? asset('storage/' . $productInfo->images[0]) : asset('assets/default.png') }}"></div>
 				<div class="dingdan_name" style="line-height:20px;">
 					<div style="height:40px; overflow:hidden; line-height:20px;">
 						{{ $productInfo->name }}

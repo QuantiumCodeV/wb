@@ -5772,7 +5772,7 @@
                     <tbody>
                         <tr>
                             <td width="52"><span class="tc_img"><img
-                                        src="<?php echo asset("storage/" . $product->images[0]) ?>"></span>
+                                       src="{{ isset($product->images[0]) ? asset('storage/' . $product->images[0]) : asset('assets/default.png') }}"></span>
                             </td>
                             <td valign="top">
 
@@ -5817,7 +5817,7 @@
         <div class="close_btn" onclick="app_page_close();"></div>
         <div style="position:relative">
             <div class="share_box" id="share_html">
-                <div class="share_img"><img src="<?php echo asset("storage/" . $product->images[0]) ?>">
+                <div class="share_img"><img src="{{ isset($product->images[0]) ? asset('storage/' . $product->images[0]) : asset('assets/default.png') }}">
                 </div>
                 <div class="share_pro">
                     <img src="<?php echo asset("assets/ee4c961b8c946be89009eee77323ae1e.png") ?>">

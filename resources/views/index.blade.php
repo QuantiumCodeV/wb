@@ -5639,7 +5639,7 @@
       <div class="li_box">
       <a href="{{ route('product', $product->id) }}" title="{{ $product->name }}">
         <div class="prolist_logo">
-        <img src="{{ asset('storage/' . $product->images[0]) }}" data-url="" title="{{ $product->name }}"
+        <img src="{{ isset($product->images[0]) ? asset('storage/' . $product->images[0]) : asset('assets/default.png') }}" data-url="" title="{{ $product->name }}"
         class="js_imgload" />
         </div>
       </a>

@@ -580,7 +580,7 @@
                                     <a class="d-flex align-items-center" href="№">
                                         <div class="avatar ">
                                             <img class="avatar-img"
-                                                src="<?php echo asset('storage/' . $product->images[0]) ?>"
+                                                src="{{ isset($product->images[0]) ? asset('storage/' . $product->images[0]) : asset('assets/default.png') }}"
                                                 alt="Image Description">
                                         </div>
                                         <div class="ms-3">
