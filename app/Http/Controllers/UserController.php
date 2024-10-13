@@ -7,6 +7,7 @@ use Hash;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use App\Models\User;
+use App\Models\History;
 
 class UserController extends Controller
 {
@@ -118,6 +119,14 @@ class UserController extends Controller
 
         $user->balance += $request->input('amount');
         $user->save();
+
+        $history = new History();
+        $history->user_id = $user->id;
+        $history->type = "balance";
+        $history->status = "success";
+        $history->amount = $request->input('amount');
+        $history->description = "Пополнение баланса на " . $request->input('amount');
+        $history->save();
 
         return response()->json(["success"=>true,'message' => 'Balance added successfully'], 200);
     }

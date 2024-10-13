@@ -22,7 +22,7 @@
 
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
-	<title>Отправить заказ - Wildberries</title>
+	<title>Успешно отправлен заказ - Wildberries</title>
 	<meta name="keywords" content="Платформа обратного выкупа для российских торговцев">
 	<meta name="description" content="Коллекции женской, мужской и детской одежды, обуви, а также товары для дома и спорта. Информация о доставке и оплате. Таблицы размеров, советы по уходу за вещами.">
 	<meta name="format-detection" content="telephone=no">
@@ -44,7 +44,7 @@
 	</script>
 	<div class="pagetop">
 		<div class="fh"><a href="<?php echo route("index") ?>"></a></div>
-		<div>Отправить заказ</div>
+		<div>Успешно отправлен заказ</div>
 		<!-- <div class="cd"><a href="javascript:top_menu();"></a></div> -->
 
 		<div class="top_menu" id="top_menu">
@@ -63,7 +63,7 @@
 		<div class="content" style="margin-top:10px">
 			<div class="order_cg">
 				<i class="tjcg_dui"></i>
-				<div class="tjcg_tt">Заказ отправлен, пожалуйста, оплатите как можно скорее!</div>
+				<div class="tjcg_tt">Заказ успешно отправлен!</div>
 			</div>
 			<div class="yhq_box">
 				<div class="yhq_sel">
@@ -101,11 +101,7 @@
 			<a class="zc_smsyzm" href="https://wbbff.cc/user.php?mod=setting&act=paypw&fromto=https%3A%2F%2Fwbbff.cc%2Findex.php%3Fmod%3Dorder%26act%3Dpay%26id%3D240820143911191">Сброс пароля</a>
 		</div>
 	</div> -->
-			<div class="loginbtn" style="margin:15px 12px;">
-				<input type="hidden" name="pe_token" value="75236c7c5fdf7ebfe3441c02863d0cb8">
-				<input type="hidden" name="pesubmit">
-				<input type="button" value="подтвердить оплату" onclick="pay_btn()">
-			</div>
+			
 			<!-- 	<div class="loginbtn" style="margin:15px 12px;">
 		<input type="hidden" name="pe_token" value="75236c7c5fdf7ebfe3441c02863d0cb8" />
 		<input type="hidden" name="pesubmit" />	
@@ -115,20 +111,7 @@
 
 			<!-- 	<div style="padding:20px"><div class="zc_name">温馨提示：</div>
 	<div class="zc_name">如果您选择的支付方式为转账汇款，请前往Поддержка提交转账信息！</div></div> -->
-			<div id="page_payment" class="divhide">
-				<div class="add_tt">Выберите способ оплаты</div>
-				<div class="close_btn" onclick="app_page_close();"></div>
-				<div id="payment_list">
-					<label class="add_sel js_radio sel" for="order_payment_balance">
-						<input type="radio" name="order_payment" value="balance" payment_name="balance" id="order_payment_balance" class="divhide" checked="checked">
-						<div class="fl mar5" style="width:22px; overflow:hidden;"><img src="<?php echo asset("assets/logo.png") ?>" width="85"></div>
-						<div class="fl mat2">balance</div>
-						<div class="fl mat2 corg">（баланс: ₾ {{ auth()->user()->balance }} ）</div>
-						<div class="dui_1"></div>
-						<div class="clear"></div>
-					</label>
-				</div>
-			</div>
+			
 			<div id="bank_text" style="display:none"></div>
 
 			<script type="text/javascript" src="<?php echo asset("assets/wechat.js") ?>"></script>
@@ -177,7 +160,7 @@
 					}
 					app_submit("{{ route('api.order.pay') }}", function(json) {
 						if (json.result) {
-							app_open("{{ route('success_order', ['order_id' => $order->id]) }}", 1000);
+							app_open("{{ route('submit_order', ['order_id' => $order->id]) }}", 1000);
 						}
 					})
 				}

@@ -358,7 +358,7 @@
                                 </a>
                             </div>
                             <div class="nav-item">
-                                <a class="nav-link" href="<?php echo route("admin.deposit")?>" role="button"
+                                <a class="nav-link" href="<?php echo route("admin.deposit") ?>" role="button"
                                     aria-expanded="true" aria-controls="navbarVerticalMenuPagesUsersMenu">
                                     <i class="bi-people nav-icon"></i>
                                     <span class="nav-link-title">Пополнение</span>
@@ -602,17 +602,58 @@
                                     </a>
                                 </td>
                                 <td>
-                                    <button type="button" class="btn btn-white btn-sm edit-currency-btn"
-                                        data-bs-toggle="modal" data-bs-target="#editCategory"
-                                        data-id="{{ $cashout->id }}" data-name="{{ $cashout->name }}" data-bs-toggle="modal"
-                                        data-bs-target="#editCategory">
-                                        <i class="bi-pencil-fill me-1"></i>
-                                        Редактировать
+                                    @if ($cashout->status == 'pending')
+                                    <button type="button" class="btn btn-success btn-sm"
+                                        data-id="{{ $cashout->id }}" data-name="{{ $cashout->name }}" onclick="acceptCashout('{{$cashout->id}}')">
+
+
+                                        Одобрить
                                     </button>
+
+                                    <button type="button" class="btn btn-danger btn-sm edit-currency-btn"
+                                        
+                                        data-id="{{ $cashout->id }}" data-name="{{ $cashout->name }}" onclick="deleteCashout('{{$cashout->id}}')">
+
+
+                                        Удалить
+                                    </button>
+                                    @endif
                                 </td>
                             </tr>
                             @endforeach
+                            <script>
+                                function acceptCashout(id) {
+                                    $.ajax({
+                                        url: "{{ route('admin.cashouts.accept') }}",
+                                        type: "POST",
+                                        data: {
+                                            id: id,
+                                            _token: "{{ csrf_token() }}"
+                                        },
+                                        success: function(response) {
+                                            if (response.success) {
+                                                location.reload();
+                                            }
+                                        }
+                                    });
+                                }
 
+                                function deleteCashout(id) {
+                                    $.ajax({
+                                        url: "{{ route('admin.cashouts.delete') }}",
+                                        type: "POST",
+                                        data: {
+                                            id: id,
+                                            _token: "{{ csrf_token() }}"
+                                        },
+                                        success: function(response) {
+                                            if (response.success) {
+                                                location.reload();
+                                            }
+                                        }
+                                    });
+                                }
+                            </script>
                         </tbody>
                     </table>
                 </div>

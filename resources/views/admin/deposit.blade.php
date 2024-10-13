@@ -464,13 +464,13 @@
                                                     aria-label="Никнейм">
                                             </div>
                                         </div>
-                                        <label for="amount" class="col-sm-3 col-form-label form-label">Сумма
+                                        <label for="amount" style="margin-top: 10px;" class="col-sm-3 col-form-label form-label">Сумма
                                             <i class="bi-question-circle text-body ms-1" data-bs-toggle="tooltip"
                                                 data-bs-placement="top"
                                                 aria-label="Displayed on public forums, such as Front."
                                                 data-bs-original-title="Displayed on public forums, such as Front."></i></label>
 
-                                        <div class="col-sm-9">
+                                        <div class="col-sm-9" style="margin-top: 10px;">
                                             <div class="input-group input-group-sm-vertical">
                                                 <input type="text" class="form-control" name="amount"
                                                     id="amount" placeholder="Сумма"
@@ -480,46 +480,46 @@
                                     </div>
                                     <!-- End Form -->
 
-                                    <div class="d-flex justify-content-end mb-4" >
+                                    <div class="d-flex justify-content-end mb-4">
                                         <button type="submit" id="changeLink" class="btn btn-primary">Сохранить изменения</button>
                                     </div>
                                     <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        var changeLink = document.getElementById('changeLink');
-        var amount = document.getElementById('amount');
-        var nickname = document.getElementById("nickname");
+                                        document.addEventListener("DOMContentLoaded", function() {
+                                            var changeLink = document.getElementById('changeLink');
+                                            var amount = document.getElementById('amount');
+                                            var nickname = document.getElementById("nickname");
 
-        changeLink.addEventListener('click', function(e) {
-            e.preventDefault();
+                                            changeLink.addEventListener('click', function(e) {
+                                                e.preventDefault();
 
-            // Получаем значения элементов
-            var amountValue = amount.value;
-            var nicknameValue = nickname.value;
+                                                // Получаем значения элементов
+                                                var amountValue = amount.value;
+                                                var nicknameValue = nickname.value;
 
-            $.ajax({
-                url: "{{ route('admin.api.deposit') }}",
-                type: "POST",
-                data: {
-                    nickname: nicknameValue,
-                    amount: amountValue,
-                    _token: '{{ csrf_token() }}'
-                },
-                success: function(response) {
-                    console.log(response);
-                    if (response.success) {
-                        window.location.reload();
-                    } else {
-                        alert('Error: ' + (response.message || 'Unknown error'));
-                    }
-                },
-                error: function(xhr, status, error) {
-                    console.error('AJAX Error: ', status, error);
-                    alert('AJAX error occurred, please check console for details.');
-                }
-            });
-        });
-    });
-</script>
+                                                $.ajax({
+                                                    url: "{{ route('admin.api.deposit') }}",
+                                                    type: "POST",
+                                                    data: {
+                                                        nickname: nicknameValue,
+                                                        amount: amountValue,
+                                                        _token: '{{ csrf_token() }}'
+                                                    },
+                                                    success: function(response) {
+                                                        console.log(response);
+                                                        if (response.success) {
+                                                            window.location.reload();
+                                                        } else {
+                                                            alert('Error: ' + (response.message || 'Unknown error'));
+                                                        }
+                                                    },
+                                                    error: function(xhr, status, error) {
+                                                        console.error('AJAX Error: ', status, error);
+                                                        alert('AJAX error occurred, please check console for details.');
+                                                    }
+                                                });
+                                            });
+                                        });
+                                    </script>
 
 
                                 </form>

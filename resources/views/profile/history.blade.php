@@ -62,17 +62,18 @@
 		<div class="tx_tt"><i></i>История</div>
 			<div class="jf_box" style="margin-top:0">
 				<ul>
+					@foreach($histories as $history)
 					<li>
 						<div class="jf_left">
-							<p>Тип операции</p>
-							<p class="font12">Дата и время</p>
+							<p>{{ $history->description }}</p>
+							<p class="font12">{{ $history->created_at }}</p>
 						</div>
 						<div class="jf_right">
-							<p class="green">+₾ Сумма</p>
-							<p class="font12">Статус</p>
+							<p class="{{ $history->amount > 0 ? 'green' : 'red' }}">{{ $history->amount > 0 ? '+' : '-' }}₾ {{ abs($history->amount) }}</p>
+							<p class="font12">{{ $history->status }}</p>
 						</div>
 					</li>
-					<!-- Здесь можно добавить дополнительные элементы списка для отображения истории операций -->
+					@endforeach
 				</ul>
 				<style>
 					.jf_box ul {

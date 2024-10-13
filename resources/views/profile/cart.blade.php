@@ -5563,7 +5563,7 @@
             @endphp
             <div class="cart_list js_cart" cart_id="{{ $item->id }}">
                 <label class="dui" for="cart_id_{{ $item->id }}">
-                    <input type="checkbox" name="cart_id[]" value="{{ $item->id }}" id="cart_id_{{ $item->id }}" style="display:none">
+                    <input type="checkbox" name="cart_id[]" value="{{ $item->id }}" id="cart_id_{{ $item->id }}" style="display:none" class="cart-checkbox">
                 </label>
                 <div class="dingdan_img">
                     <img src="{{ isset($product->images[0]) ? asset('storage/' . $product->images[0]) : asset('assets/default.png') }}" alt="{{ $product->name }}">
@@ -5580,7 +5580,7 @@
                     <div class="shuliang sl_1">
                         <span class="img1" onclick="cart_edit('-', '{{ $item->id }}');"><i></i></span>
                         <span class="shuliang_box">
-                            <input type="text" name="cart_num[]" value="{{ $item->count }}" product_money="{{ $product->price }}">
+                            <input type="text" name="cart_num[{{ $item->id }}]" value="{{ $item->count }}" product_money="{{ $product->price }}" class="cart-num" disabled>
                         </span>
                         <span class="img2" onclick="cart_edit('+', '{{ $item->id }}');"><i></i></span>
                     </div>
@@ -5596,7 +5596,6 @@
                     <input type="hidden" name="pe_token" value="75236c7c5fdf7ebfe3441c02863d0cb8">
                     <input type="hidden" name="pesubmit">
                     <a href="javascript:cart_submit();">Kупить <span class="font12">( <span class="font14" id="order_num">0</span> )</span></a>
-                    <!--<input type="button" id="order_btn" onclick="cart_submit()" value="结算" />-->
                 </div>
             </div>
         </form>
@@ -5612,10 +5611,10 @@
             })
         })
         cart_money();
-        //购物车изменен
+        
         function cart_edit(type, cart_id) {
             var js_cart = $(".js_cart[cart_id='" + cart_id + "']");
-            var _this = js_cart.find(":input[name='cart_num[]']");
+            var _this = js_cart.find(":input[name='cart_num[" + cart_id + "]']");
             if (type == 'del') {
                 var num = 0;
             } else {
@@ -5625,18 +5624,17 @@
             if (num == 0) {
                 if (confirm("Вы уверены, что хотите удалить этот товар?") == false) return;
             }
-            app_getinfo("<?php echo route("cart") ?>edit&id=" + cart_id + "&num=" + num, function(json) {
+            app_getinfo("{{ route('cart.editCount', ['id' => ':id', 'num' => ':num']) }}".replace(":id", cart_id).replace(":num", num), function(json) {
                 if (json.result) {
                     if (num == 0) js_cart.remove();
                 }
                 _this.val(json.num);
-                //更新商品小计金额
                 var product_allmoney = pe_num(_this.attr("product_money") * json.num, 'round', 1);
                 js_cart.find(".product_allmoney").html('₾ ' + product_allmoney);
                 cart_money();
             })
         }
-        //购物车金额
+        
         function cart_money() {
             if ($(".js_cart").length == 0) {
                 $(".wgw_box").show();
@@ -5650,7 +5648,7 @@
                 order_money = 0,
                 order_num = 0;
             $(":input[name='cart_id[]']:checked").each(function() {
-                var _this = $(this).parents(".js_cart").find(":input[name='cart_num[]']");
+                var _this = $(this).parents(".js_cart").find(":input[name^='cart_num']");
                 product_money = pe_num(_this.attr("product_money"), 'round', 1);
                 product_num = pe_num(_this.val(), 'floor');
                 order_money += product_money * product_num;
@@ -5659,16 +5657,25 @@
             $("#order_money").html(pe_num(order_money, 'round', 1, true));
             $("#order_num").html(order_num);
         }
-        //购物车结算
+        
         function cart_submit() {
             if ($(":input[name='cart_id[]']:checked").length == 0) {
                 app_tip("Пожалуйста выберите хотя бы один товар");
                 return false;
             }
+            
+            var form = $('#form');
+            form.find(':input[name^="cart_num"]').prop('disabled', true);
+            $(":input[name='cart_id[]']:checked").each(function() {
+                var cart_id = $(this).val();
+                form.find(':input[name="cart_num[' + cart_id + ']"]').prop('disabled', false);
+            });
+            
             app_submit("{{ route('order.store') }}", function(json) {
                 if (json.result) {
                     app_open("<?php echo route("submit_order","CUSTOM_VALUE") ?>/".replace("CUSTOM_VALUE",json.order_id));
                 }
+                form.find(':input[name^="cart_num"]').prop('disabled', false);
             })
         }
 

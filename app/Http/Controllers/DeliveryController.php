@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\DeliveryAddress;
 use Illuminate\Support\Facades\Validator;
+use App\Models\History;
 
 class DeliveryController extends Controller
 {
@@ -31,6 +32,15 @@ class DeliveryController extends Controller
             'address' => $request->address_text,
             'user_id' => $request->user()->id
         ]);
+
+
+        $history = new History();
+        $history->user_id = $request->user()->id;
+        $history->type = "delivery";
+        $history->status = "success";
+        $history->amount = 0;
+        $history->description = "Добавление адреса доставки";
+        $history->save();
 
         // Возврат JSON ответа с результатом
         return response()->json(['result' => true]);
@@ -65,6 +75,14 @@ class DeliveryController extends Controller
             'is_default' => $request->has('address_default') ? 1 : 0,
         ]);
 
+        $history = new History();
+        $history->user_id = $user->id;
+        $history->type = "delivery";
+        $history->status = "success";
+        $history->amount = 0;
+        $history->description = "Изменение адреса доставки";
+        $history->save();
+
         return response()->json(['result' => true]);
     }
     public function delete($id)
@@ -77,6 +95,14 @@ class DeliveryController extends Controller
         }
 
         $delivery->delete();
+
+        $history = new History();
+        $history->user_id = $user->id;
+        $history->type = "delivery";
+        $history->status = "success";
+        $history->amount = 0;
+        $history->description = "Удаление адреса доставки";
+        $history->save();
 
         return response()->json(['result' => true]);
     }

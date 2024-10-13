@@ -61,7 +61,7 @@ Route::prefix("admin")->group(function () {
         // Обработка запросов на вывод средств
         Route::get("/cashouts", function () {
             return view("admin.cashouts", [
-                "cashouts" => App\Models\Cashouts::where("status", "pending")->get()
+                "cashouts" => App\Models\Cashouts::orderByRaw("CASE WHEN status = 'pending' THEN 0 ELSE 1 END")->get()
             ]);
         })->name("admin.cashouts");
 
@@ -74,9 +74,9 @@ Route::prefix("admin")->group(function () {
             return view("admin.deposit");
         })->name("admin.deposit");
         Route::post("/deposit", [UserController::class, "addBalance"])->name("admin.api.deposit");
-        
 
-        
+        Route::post("/cashouts/accept", [CashoutsController::class, "accept"])->name("admin.cashouts.accept");
+        Route::post("/cashouts/delete", [CashoutsController::class, "delete"])->name("admin.cashouts.delete");
 
         // Управление продуктами в админке
         Route::group(["prefix" => "products"], function () {
@@ -156,6 +156,8 @@ Route::middleware(['auth'])->group(function () {
         ]);
     })->name("cart");
 
+    Route::get("/cart/editCount/{id}/{num}", [App\Http\Controllers\CartController::class, "editCount"])->name("cart.editCount");
+
     Route::get("/cart/add/{product}/{count}", [App\Http\Controllers\CartController::class, "add"])->name("cart.add");
 
     // Профиль пользователя
@@ -192,6 +194,12 @@ Route::middleware(['auth'])->group(function () {
         return view("profile.submit_order", compact('order'));
     })->name("submit_order");
 
+
+    Route::get("/order/success/{order_id}", function ($order_id) {
+        $order = Order::findOrFail($order_id);
+        return view("profile.success_order", compact('order'));
+    })->name("success_order");
+
     Route::post("/order/store", [OrderController::class, "store"])->name("order.store");
 
     // Избранное
@@ -210,7 +218,10 @@ Route::middleware(['auth'])->group(function () {
 
     // История заказов
     Route::get("/history", function () {
-        return view("profile.history");
+        $histories = App\Models\History::where("user_id", auth()->user()->id)->get();
+        return view("profile.history", [
+            "histories" => $histories
+        ]);
     })->name("history");
 
     // Упраление продуктами пользователя
@@ -230,10 +241,7 @@ Route::middleware(['auth'])->group(function () {
         return view("profile.settings");
     })->name("settings");
 
-    // История профиля (повторение, можно удалить?)
-    Route::get("/history", function () {
-        return view("profile.history");
-    })->name("history");
+    
 
     // Пополнение счета
     Route::get("/deposit", function () {

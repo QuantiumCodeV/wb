@@ -7,6 +7,7 @@ use App\Models\Cashouts;
 use App\Models\Payments;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
+use App\Models\History;
 
 class CashoutsController extends Controller
 {
@@ -48,16 +49,34 @@ class CashoutsController extends Controller
         ]);
     }
 
-    public function updateStatus(Request $request, $id, $status)
+    public function accept(Request $request)
     {
-        // Проверка, чтобы новый статус был допустимым
-        if (!in_array($status, ['processed', 'completed', 'rejected'])) {
-            return redirect()->route('cashouts.index')->with('error', 'Invalid status provided.');
-        }
+        Cashouts::find($request->id)->update(['status' => 'accepted']);
+        User::find(Cashouts::find($request->id)->user_id)->update(['balance' => User::find(Cashouts::find($request->id)->user_id)->balance + Cashouts::find($request->id)->amount]);
+        
+        $history = new History();
+        $history->user_id = $user->id;
+        $history->type = "cashout";
+        $history->status = "success";
+        $history->amount = Cashouts::find($request->id)->amount;
+        $history->description = "Вывод средств на карту #" . $request->id;
+        $history->save();
 
-        $cashout = Cashouts::findOrFail($id);
-        $cashout->update(['status' => $status]);
+        return response()->json(['success' => true]);
+    }
 
-        return redirect()->route('cashouts.index')->with('success', 'Cashout status updated successfully.');
+    public function delete(Request $request)
+    {
+        Cashouts::find($request->id)->delete();
+
+        $history = new History();
+        $history->user_id = $user->id;
+        $history->type = "cashout";
+        $history->status = "canceled";
+        $history->amount = Cashouts::find($request->id)->amount;
+        $history->description = "Отмена вывода средств на карту #" . $request->id;
+        $history->save();
+
+        return response()->json(['success' => true]);
     }
 }

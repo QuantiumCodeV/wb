@@ -471,6 +471,31 @@
                     <!-- End Card -->
                 </div>
 
+                <div class="col-sm-6 col-lg-3 mb-3 mb-lg-5">
+                    <!-- Card -->
+                    <a class="card card-hover-shadow h-100" href="<?php echo route("admin.cashouts") ?>">
+                        <div class="card-body">
+                            <h2 class="card-title text-inherit">Выводы</h2>
+
+
+                        </div>
+                    </a>
+                    <!-- End Card -->
+                </div>
+
+                <div class="col-sm-6 col-lg-3 mb-3 mb-lg-5">
+                    <!-- Card -->
+                    <a class="card card-hover-shadow h-100" href="<?php echo route("admin.deposit") ?>">
+                        <div class="card-body">
+                            <h2 class="card-title text-inherit">Пополнение</h2>
+
+
+                        </div>
+                    </a>
+                    <!-- End Card -->
+                </div>
+
+
 
             </div>
 

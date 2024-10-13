@@ -38,4 +38,12 @@ class CartController extends Controller
         }
         return redirect()->back();
     }
+
+    public function editCount($id, $num)
+    {
+        $cart = Cart::find($id);
+        $cart->count = $num;
+        $cart->save();
+        return response()->json(["result" => true, "num" => $cart->count]);
+    }
 }

@@ -197,6 +197,7 @@ function app_submit(url, func, id) {
 	$.post(url, $("#"+form_id).serialize(), function(json){
 		app_loading_close();
 		if (typeof(json.show) != 'undefined' && json.show != '') {
+			console.log(json);
 			if (json.result == true) {
 				app_tip(json.show, 'success');
 			}
