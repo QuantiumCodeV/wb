@@ -103,7 +103,7 @@
 
 				layer.open({
 					type: 4,
-					title: "Kончик",
+					title: "Пополнить баланс",
 					area: ['300px', '350px'],
 					fixed: false, //不固定
 					shadeClose: true,
