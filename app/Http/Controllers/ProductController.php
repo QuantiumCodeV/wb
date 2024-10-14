@@ -71,6 +71,8 @@ class ProductController extends Controller
                 $path = $image->store('images', 'public');
                 $images[] = $path;
             }
+
+            $validateData = array_merge($validated, ['images' => $images]);
         }
 
         $customFields = [];
@@ -81,9 +83,8 @@ class ProductController extends Controller
                     'value' => $request->custom_field_value[$index] ?? '',
                 ];
             }
+            $validateData = array_merge($validated, ['custom_fields' => $customFields]);
         }
-
-        $validateData = array_merge($validated, ['images' => $images, 'custom_fields' => $customFields]);
 
         $product->update($validateData);
 
@@ -99,12 +100,12 @@ class ProductController extends Controller
         return response()->json(['success' => 'Product added to favorites']);
     }
 
-    public function removeFromFavorites(Request $request, Product $product){
+    public function removeFromFavorites(Request $request, Product $product)
+    {
         $user = auth()->user();
         if ($user->favoriteProducts()->where('product_id', $product->id)->exists()) {
             $user->favoriteProducts()->detach($product->id);
         }
         return response()->json(['success' => 'Product removed from favorites']);
     }
-
 }
