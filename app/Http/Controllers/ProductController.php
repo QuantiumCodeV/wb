@@ -73,7 +73,8 @@ class ProductController extends Controller
                 $path = $image->store('images', 'public');
                 $images[] = $path;
             }
-            $validateData['images'] = $images;
+            
+            $validateData = array_merge($validated, ['images' => $images]);
         }
 
         $customFields = [];
