@@ -76,7 +76,7 @@ class ProductController extends Controller
             
             $validateData = array_merge($validated, ['images' => $images]);
         }
-
+        dd($validateData);
         $customFields = [];
         if ($request->has('custom_field_name') && $request->has('custom_field_value')) {
             foreach ($request->custom_field_name as $index => $name) {
