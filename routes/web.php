@@ -91,7 +91,7 @@ Route::prefix("admin")->group(function () {
 
             Route::post("/add", [ProductController::class, "store"])->name("admin.products.store");
             Route::put("/{product}", [ProductController::class, "update"])->name("admin.products.update");
-            Route::delete("/{product}", [ProductController::class, "delete"])->name("admin.products.delete");
+            
         });
 
         // Управление категориями в админке
