@@ -468,7 +468,7 @@
                                     <span id="datatableCounter">0</span>
                                     Selected
                                 </span>
-                                <a class="btn btn-outline-danger btn-sm" href="javascript:;">
+                                <a class="btn btn-outline-danger btn-sm" href="javascript:;" onclick="deleteProducts()">
                                     <i class="bi-trash"></i> Delete
                                 </a>
                             </div>
@@ -1126,7 +1126,39 @@
             });
         });
     </script>
-
+    <script>
+        function deleteProducts() {
+            var products = document.querySelectorAll('.product-checkbox:checked');
+            if (products.length === 0) {
+                alert('Выберите хотя бы один продукт для удаления');
+                return;
+            }
+            if (confirm('Вы уверены, что хотите удалить выбранные продукты?')) {
+                var formData = new FormData();
+                products.forEach(product => {
+                    formData.append('products[]', product.value);
+                });
+                fetch('<?php echo route("admin.products.destroy") ?>', {
+                        method: 'POST',
+                        body: formData,
+                        headers: {
+                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                        }
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            location.reload();
+                        } else {
+                            alert('Произошла ошибка при удалении продуктов');
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Ошибка:', error);
+                    });
+            }
+        }
+    </script>
     <!-- JS Plugins Init. -->
     <script>
         (function() {
