@@ -1138,7 +1138,7 @@
                 products.forEach(product => {
                     formData.append('products[]', product.value);
                 });
-                fetch('<?php echo route("admin.products.destroy") ?>', {
+                fetch('<?php echo route("admin.products.delete") ?>', {
                         method: 'POST',
                         body: formData,
                         headers: {

@@ -7,6 +7,13 @@ use App\Models\Product;
 
 class ProductController extends Controller
 {
+    public function delete(Request $request)
+    {
+        $products = $request->input('products');
+        Product::whereIn('id', $products)->delete();
+        return response()->json(['success' => 'Products deleted successfully']);
+    }
+
     public function store(Request $request)
     {
         $validated = $request->validate([
