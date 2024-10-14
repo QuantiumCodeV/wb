@@ -65,7 +65,7 @@ class ProductController extends Controller
             'custom_field_value' => 'nullable|array',
         ]);
 
-        $images = $product->images;
+        $images = [];
         if ($request->hasFile('images')) {
             foreach ($request->file('images') as $image) {
                 $path = $image->store('images', 'public');
