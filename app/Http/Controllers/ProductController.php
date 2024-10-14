@@ -66,7 +66,7 @@ class ProductController extends Controller
         ]);
 
         $images = [];
-        if ($request->hasFile('images') && count($request->file('images')) > 0) {
+        if ($request->hasFile('images')) {
             foreach ($request->file('images') as $image) {
                 $path = $image->store('images', 'public');
                 $images[] = $path;
