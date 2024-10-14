@@ -1138,6 +1138,7 @@
                 products.forEach(product => {
                     formData.append('products[]', product.value);
                 });
+                formData.append('_token', '<?php echo csrf_token() ?>');
                 fetch('<?php echo route("admin.products.delete") ?>', {
                         method: 'POST',
                         body: formData,
