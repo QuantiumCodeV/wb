@@ -593,7 +593,7 @@
                                     <span class="d-block h5 mb-0">{{ $product->price }}</span>
                                 </td>
                                 <td>
-                                    <span class="d-block h5 mb-0">{{ $product->description }}</span>
+                                    <span class="d-block h5 mb-0" style="max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">{{ $product->description }}</span>
                                 </td>
                                 <td>{{ $product->sales }}</td>
                                 <td>{{ $product->category_id }}</td>
