@@ -46,7 +46,7 @@
 			<div class="ask_dd pageid">
 				<div style="min-height:55px;">
 					<div class="dingdan_img"><a href="{{route("product", $favorite->id)}}"><img
-					src="{{ isset($favorite->images[0]) ? asset('storage/' . $favorite->images[0]) : asset('assets/default.png') }}"></a></div>
+					src="{{ !empty($favorite->images) && !empty($favorite->images[0]) ? asset('storage/' . $favorite->images[0]) : asset('assets/default.png') }}"></a></div>
 					<div class="dingdan_name" style="margin-right:0">
 						<p><a href="{{route("product", $favorite->id)}}">{{$favorite->name}}</a></p>
 						<div class="num corg mat5">₾{{$favorite->price}}</div>

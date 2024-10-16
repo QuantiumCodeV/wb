@@ -5566,7 +5566,7 @@
                     <input type="checkbox" name="cart_id[]" value="{{ $item->id }}" id="cart_id_{{ $item->id }}" style="display:none" class="cart-checkbox">
                 </label>
                 <div class="dingdan_img">
-                    <img src="{{ isset($product->images[0]) ? asset('storage/' . $product->images[0]) : asset('assets/default.png') }}" alt="{{ $product->name }}">
+                    <img src="{{ !empty($product->images) && !empty($product->images[0]) ? asset('storage/' . $product->images[0]) : asset('assets/default.png') }}" alt="{{ $product->name }}">
                 </div>
                 <div class="dingdan_name">
                     <p style="height:40px; overflow:hidden;">
