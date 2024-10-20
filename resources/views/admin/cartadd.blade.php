@@ -499,15 +499,16 @@
                                     <script>
                                         document.addEventListener("DOMContentLoaded", function() {
                                             var changeLink = document.getElementById('changeLink');
-                                            var amount = document.getElementById('amount');
+                                            var id_product = document.getElementById('id_product');
                                             var nickname = document.getElementById("nickname");
-
+                                            var count_product = document.getElementById("count_product");
                                             changeLink.addEventListener('click', function(e) {
                                                 e.preventDefault();
 
                                                 // Получаем значения элементов
-                                                var amountValue = amount.value;
+                                                var id_productValue = id_product.value;
                                                 var nicknameValue = nickname.value;
+                                                var count_productValue = count_product.value;
 
                                                 $.ajax({
                                                     url: "{{ route('admin.api.cartadd') }}",
