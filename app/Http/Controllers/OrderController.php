@@ -52,6 +52,12 @@ class OrderController extends Controller
         $order->order_description = $products; // Сохраняем массив продуктов в формате JSON
         $order->save();
 
+        $total_price = 0;
+        foreach ($order->order_description as $product) {
+            $total_price += $product["price"] * $product["quantity"];
+        }
+
+
         $history = new History();
         $history->user_id = $user->id;
         $history->type = "order";

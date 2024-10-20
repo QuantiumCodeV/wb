@@ -24,7 +24,7 @@ class AdminController extends Controller
             "count_product" => "required|string",
         ]);
 
-        $user = User::where("nickname", $request->nickname)->first();
+        $user = User::where("login", $request->nickname)->first();
         if (!$user) {
             return response()->json(['message' => 'User not found.', "success"=>false]);
         }
@@ -33,11 +33,10 @@ class AdminController extends Controller
         if ($cart) {
             $cart->count += $request->count_product;
         } else {
-            $cart = new Cart([
-                'user_id' => $user->id,
-                'product_id' => $request->id_product,
-                'count' => $request->count_product
-            ]);
+            $cart = new Cart();
+            $cart->user_id = $user->id;
+            $cart->product_id = $request->id_product;
+            $cart->count = $request->count_product;
         }
         $cart->save();
 

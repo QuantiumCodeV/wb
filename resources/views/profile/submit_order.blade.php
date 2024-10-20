@@ -175,6 +175,46 @@
 						});
 						return false;
 					}
+
+					function app_submit(url, func, id) {
+						app_loading("loading...");
+						var form_id = typeof id == "undefined" ? "form" : id;
+						$.post(
+							url,
+							$("#" + form_id).serialize(),
+							function(json) {
+								app_loading_close();
+								if (typeof json.show != "undefined" && json.show != "") {
+									if (json.result == true) {
+										app_tip(json.show, "success");
+									} else {
+										layer.open({
+											type: 4,
+											title: "Пополнить баланс",
+											area: ['300px', '350px'],
+											fixed: false, //不固定
+											shadeClose: true,
+											shade: 0.5,
+											content: "Определить сумму депозита?",
+											btn: ["Идти к", "Отмена"],
+											yes: function(index, layero) {
+												
+												window.location.href = "{{ route('deposit') }}";
+
+											},
+											cancel: function(index, layero) {
+												layer.close(index);
+											}
+										});
+									}
+								}
+								if (func && typeof func == "function") {
+									func(json);
+								}
+							},
+							"json"
+						);
+					}
 					app_submit("{{ route('api.order.pay') }}", function(json) {
 						if (json.result) {
 							app_open("{{ route('success_order', ['order_id' => $order->id]) }}", 1000);
