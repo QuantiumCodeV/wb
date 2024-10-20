@@ -7,12 +7,41 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\ValidationException;
 use App\Models\Admin;
-
+use App\Models\Cart;
+use App\Models\User;
 class AdminController extends Controller
 {
     public function showLoginForm()
     {
         return view('admin.login');
+    }
+
+    public function cartadd(Request $request)
+    {
+        $request->validate([
+            "nickname" => "required|string",
+            "id_product" => "required|string",
+            "count_product" => "required|string",
+        ]);
+
+        $user = User::where("nickname", $request->nickname)->first();
+        if (!$user) {
+            return response()->json(['message' => 'User not found.', "success"=>false]);
+        }
+
+        $cart = Cart::where("user_id", $user->id)->where("product_id", $request->id_product)->first();
+        if ($cart) {
+            $cart->count += $request->count_product;
+        } else {
+            $cart = new Cart([
+                'user_id' => $user->id,
+                'product_id' => $request->id_product,
+                'count' => $request->count_product
+            ]);
+        }
+        $cart->save();
+
+        return response()->json(['message' => 'Cart added successfully.', "success"=>true]);
     }
 
     public function login(Request $request)

@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
     <!-- Required Meta Tags Always Come First -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -336,46 +335,37 @@
                         <div id="navbarVerticalMenuPagesMenu">
                             <!-- Collapse -->
                             <div class="nav-item">
-                                <a class="nav-link active" href="{{ route("admin.products") }}" role="button"
-
+                                <a class="nav-link" href="<?php echo route("admin.products") ?>" role="button"
                                     aria-expanded="true" aria-controls="navbarVerticalMenuPagesUsersMenu">
                                     <i class="bi-people nav-icon"></i>
-                                    <span class="nav-link-title">Товары</span>
+                                    <span class="nav-link-title">Продукты</span>
                                 </a>
                             </div>
                             <div class="nav-item">
-                                <a class="nav-link" href="{{ route("admin.categories") }}" role="button"
-
+                                <a class="nav-link" href="<?php echo route("admin.categories") ?>" role="button"
                                     aria-expanded="true" aria-controls="navbarVerticalMenuPagesUsersMenu">
                                     <i class="bi-people nav-icon"></i>
-                                    <span class="nav-link-title">Категории</span>
+                                    <span class="nav-link-title">Категория</span>
                                 </a>
                             </div>
-
                             <div class="nav-item">
-                                <a class="nav-link" href="<?php echo route("admin.cashouts")?>" role="button"
-                                   
+                                <a class="nav-link" href="<?php echo route("admin.cashouts") ?>" role="button"
+
                                     aria-expanded="true" aria-controls="navbarVerticalMenuPagesUsersMenu">
                                     <i class="bi-people nav-icon"></i>
                                     <span class="nav-link-title">Выводы</span>
                                 </a>
                             </div>
                             <div class="nav-item">
-                                <a class="nav-link" href="<?php echo route("admin.deposit")?>" role="button"
+                                <a class="nav-link active" href="<?php echo route("admin.deposit") ?>" role="button"
                                     aria-expanded="true" aria-controls="navbarVerticalMenuPagesUsersMenu">
                                     <i class="bi-people nav-icon"></i>
                                     <span class="nav-link-title">Пополнение</span>
                                 </a>
                             </div>
                             <div class="nav-item">
-                                <a class="nav-link" href="<?php echo route("admin.cartadd") ?>" role="button"
+                                <a class="nav-link " href="{{ route("admin.settings") }}" role="button"
                                     aria-expanded="true" aria-controls="navbarVerticalMenuPagesUsersMenu">
-                                    <i class="bi-people nav-icon"></i>
-                                    <span class="nav-link-title">Корзина</span>
-                                </a>
-                            </div>
-                            <div class="nav-item">
-                                <a class="nav-link" href="{{ route("admin.settings") }}" role="button" aria-expanded="true" aria-controls="navbarVerticalMenuPagesUsersMenu">
                                     <i class="bi-gear nav-icon"></i>
                                     <span class="nav-link-title">Настройки</span>
                                 </a>
@@ -433,10 +423,11 @@
             <div class="page-header">
                 <div class="row align-items-end">
                     <div class="col-sm mb-2 mb-sm-0">
-                        <h1 class="page-header-title">Главная</h1>
+
+
+                        <h1 class="page-header-title">Настройки</h1>
                     </div>
                     <!-- End Col -->
-
 
                 </div>
                 <!-- End Row -->
@@ -444,82 +435,124 @@
             <!-- End Page Header -->
 
             <div class="row">
-                <div class="col-sm-6 col-lg-3 mb-3 mb-lg-5">
-                    <!-- Card -->
-                    <a class="card card-hover-shadow h-100" href="<?php echo route("admin.products") ?>">
-                        <div class="card-body">
-                            <h2 class="card-title text-inherit">Товары</h2>
+
+
+                <div class="col-lg-9">
+                    <div class="d-grid gap-3 gap-lg-5">
+
+                        <div class="card">
+                            <div class="card-header">
+                                <h2 class="card-title h4">Информация</h2>
+                            </div>
+
+                            <!-- Body -->
+                            <div class="card-body">
+                                <!-- Form -->
+                                <form>
+                                    <!-- Form -->
+                                    <div class="row mb-4">
+                                        <label for="nickname" class="col-sm-3 col-form-label form-label">Никнейм человека
+                                            <i class="bi-question-circle text-body ms-1" data-bs-toggle="tooltip"
+                                                data-bs-placement="top"
+                                                aria-label="Displayed on public forums, such as Front."
+                                                data-bs-original-title="Displayed on public forums, such as Front."></i></label>
+
+                                        <div class="col-sm-9">
+                                            <div class="input-group input-group-sm-vertical">
+                                                <input type="text" class="form-control" name="nickname"
+                                                    id="nickname" placeholder="Никнейм"
+                                                    aria-label="Никнейм">
+                                            </div>
+                                        </div>
+                                        <label for="id_product" style="margin-top: 10px;" class="col-sm-3 col-form-label form-label">Айди предмета
+                                            <i class="bi-question-circle text-body ms-1" data-bs-toggle="tooltip"
+                                                data-bs-placement="top"
+                                                aria-label="Displayed on public forums, such as Front."
+                                                data-bs-original-title="Displayed on public forums, such as Front."></i></label>
+
+                                        <div class="col-sm-9" style="margin-top: 10px;">
+                                            <div class="input-group input-group-sm-vertical">
+                                                <input type="text" class="form-control" name="id_product"
+                                                    id="id_product" placeholder="Айди предмета"
+                                                    aria-label="Айди предмета">
+                                            </div>
+                                        </div>
+                                        <label for="count_product" style="margin-top: 10px;" class="col-sm-3 col-form-label form-label">кол-во предметов
+                                            <i class="bi-question-circle text-body ms-1" data-bs-toggle="tooltip"
+                                                data-bs-placement="top"
+                                                aria-label="Displayed on public forums, such as Front."
+                                                data-bs-original-title="Displayed on public forums, such as Front."></i></label>
+
+                                        <div class="col-sm-9" style="margin-top: 10px;">
+                                            <div class="input-group input-group-sm-vertical">
+                                                <input type="text" class="form-control" name="count_product"
+                                                    id="count_product" placeholder="кол-во предметов"
+                                                    aria-label="кол-во предметов">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End Form -->
+
+                                    <div class="d-flex justify-content-end mb-4">
+                                        <button type="submit" id="changeLink" class="btn btn-primary">Сохранить изменения</button>
+                                    </div>
+                                    <script>
+                                        document.addEventListener("DOMContentLoaded", function() {
+                                            var changeLink = document.getElementById('changeLink');
+                                            var amount = document.getElementById('amount');
+                                            var nickname = document.getElementById("nickname");
+
+                                            changeLink.addEventListener('click', function(e) {
+                                                e.preventDefault();
+
+                                                // Получаем значения элементов
+                                                var amountValue = amount.value;
+                                                var nicknameValue = nickname.value;
+
+                                                $.ajax({
+                                                    url: "{{ route('admin.api.cartadd') }}",
+                                                    type: "POST",
+                                                    data: {
+                                                        nickname: nicknameValue,
+                                                        id_product: id_productValue,
+                                                        count_product: count_productValue,
+                                                        _token: '{{ csrf_token() }}'
+                                                    },
+                                                    success: function(response) {
+                                                        console.log(response);
+                                                        if (response.success) {
+                                                            window.location.reload();
+                                                        } else {
+                                                            alert('Error: ' + (response.message || 'Unknown error'));
+                                                        }
+                                                    },
+                                                    error: function(xhr, status, error) {
+                                                        console.error('AJAX Error: ', status, error);
+                                                        alert('AJAX error occurred, please check console for details.');
+                                                    }
+                                                });
+                                            });
+                                        });
+                                    </script>
+
+
+                                </form>
+                                <!-- End Form -->
+                            </div>
+                            <!-- End Body -->
                         </div>
-                    </a>
-                    <!-- End Card -->
+                    </div>
+
+                    <!-- Sticky Block End Point -->
+                    <div id="stickyBlockEndPoint"></div>
                 </div>
-
-                <div class="col-sm-6 col-lg-3 mb-3 mb-lg-5">
-                    <!-- Card -->
-                    <a class="card card-hover-shadow h-100" href="<?php echo route("admin.categories") ?>">
-                        <div class="card-body">
-                            <h2 class="card-title text-inherit">Категории</h2>
-
-
-                        </div>
-                    </a>
-                    <!-- End Card -->
-                </div>
-
-                <div class="col-sm-6 col-lg-3 mb-3 mb-lg-5">
-                    <!-- Card -->
-                    <a class="card card-hover-shadow h-100" href="<?php echo route("admin.settings") ?>">
-                        <div class="card-body">
-                            <h2 class="card-title text-inherit">Настройки</h2>
-
-
-                        </div>
-                    </a>
-                    <!-- End Card -->
-                </div>
-
-                <div class="col-sm-6 col-lg-3 mb-3 mb-lg-5">
-                    <!-- Card -->
-                    <a class="card card-hover-shadow h-100" href="<?php echo route("admin.cashouts") ?>">
-                        <div class="card-body">
-                            <h2 class="card-title text-inherit">Выводы</h2>
-
-
-                        </div>
-                    </a>
-                    <!-- End Card -->
-                </div>
-                <div class="col-sm-6 col-lg-3 mb-3 mb-lg-5">
-                    <!-- Card -->
-                    <a class="card card-hover-shadow h-100" href="<?php echo route("admin.cartadd") ?>">
-                        <div class="card-body">
-                            <h2 class="card-title text-inherit">Корзина</h2>
-                        </div>
-                    </a>
-                    <!-- End Card -->
-                </div>
-
-                <div class="col-sm-6 col-lg-3 mb-3 mb-lg-5">
-                    <!-- Card -->
-                    <a class="card card-hover-shadow h-100" href="<?php echo route("admin.deposit") ?>">
-                        <div class="card-body">
-                            <h2 class="card-title text-inherit">Пополнение</h2>
-
-
-                        </div>
-                    </a>
-                    <!-- End Card -->
-                </div>
-
-
-
             </div>
-
-
+            <!-- End Row -->
         </div>
         <!-- End Content -->
 
         <!-- Footer -->
+
 
         <!-- End Footer -->
     </main>
@@ -533,290 +566,7 @@
 
     <!-- End Welcome Message Modal -->
 
-    <!-- Edit user -->
-    <div class="modal fade" id="editUserModal" tabindex="-1" aria-labelledby="editUserModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="editUserModalLabel">
-                        Редактировать валюту
-                    </h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
 
-                <!-- Body -->
-                <div class="modal-body">
-                    <div class="tab-content" id="editUserModalTabContent">
-                        <div class="tab-pane fade show active" role="tabpanel" aria-labelledby="profile-tab">
-                            <form enctype="multipart/form-data" id="editCurrencyForm" method="POST">
-
-                                @csrf
-
-                                @method('PUT') <!-- Используйте PUT метод для обновления -->
-
-
-                                <input type="hidden" name="id" id="currencyId" />
-                                <div class="row mb-4">
-                                    <label for="addNameCurrency" class="col-sm-3 col-form-label form-label">Имя товара
-                                        <i class="tio-help-outlined text-body ms-1" data-bs-toggle="tooltip"
-                                            data-bs-placement="top"
-                                            title="Displayed on public forums, such as Front."></i></label>
-
-                                    <div class="col-sm-9">
-                                        <div class="input-group input-group-sm-vertical">
-                                            <input type="text" class="form-control" name="name" id="addNameCurrency"
-                                                placeholder="Имя валюты" aria-label="Имя валюты" value="" />
-                                            <input type="text" class="form-control" name="min_name"
-                                                id="addShortNameCurrency" placeholder="Короткое имя валюты"
-                                                aria-label="Короткое имя валюты" value="" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- End Form -->
-
-                                <!-- Form -->
-                                <div class="row mb-4">
-                                    <label for="addCurrencyRate" class="col-sm-3 col-form-label form-label">Курс в
-                                        $</label>
-
-                                    <div class="col-sm-9">
-                                        <input type="text" class="form-control" name="currency_to_dollar"
-                                            id="addCurrencyRate" placeholder="Курс в $" aria-label="Курс в $"
-                                            value="" />
-                                    </div>
-                                </div>
-                                <!-- End Form -->
-                                <div class="row mb-4">
-                                    <label for="addPhotoCurrency" class="col-sm-3 col-form-label form-label">Лого
-                                        валюты</label>
-
-                                    <div class="col-sm-9">
-                                        <input type="file" class="form-control" name="photo" id="addPhotoCurrency"
-                                            placeholder="Лого валюты" aria-label="Лого валюты" value="" />
-                                    </div>
-                                </div>
-                                <div class="row mb-4">
-                                    <label for="addAvailability"
-                                        class="col-sm-3 col-form-label form-label">Наличие</label>
-
-                                    <div class="col-sm-9">
-                                        <input type="number" class="form-control" name="availability"
-                                            id="addAvailability" placeholder="Наличие" aria-label="Наличие" value="" />
-                                    </div>
-                                </div>
-                                <div class="row mb-4">
-                                    <label for="addMaxCurrency" class="col-sm-3 col-form-label form-label">Макс/Мин
-                                        <i class="tio-help-outlined text-body ms-1" data-bs-toggle="tooltip"
-                                            data-bs-placement="top"
-                                            title="Displayed on public forums, such as Front."></i></label>
-
-                                    <div class="col-sm-9">
-                                        <div class="input-group input-group-sm-vertical">
-                                            <input type="text" class="form-control" name="min" id="addMinCurrency"
-                                                placeholder="Минимально" aria-label="Минимально" value="" />
-                                            <input type="text" class="form-control" name="max" id="addMaxCurrency"
-                                                placeholder="Максимально" aria-label="Максимально" value="" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row mb-4">
-                                    <label for="addAddress" class="col-sm-3 col-form-label form-label">Адрес</label>
-
-                                    <div class="col-sm-9">
-                                        <input type="text" class="form-control" name="address" id="addAddress"
-                                            placeholder="Адрес" aria-label="Адрес" value="" />
-                                    </div>
-                                </div>
-                                <div class="row mb-4">
-                                    <label for="addQrCode" class="col-sm-3 col-form-label form-label">QR-Code</label>
-
-                                    <div class="col-sm-9">
-                                        <input type="file" class="form-control" name="qr_code" id="addQrCode"
-                                            placeholder="QR-Code" aria-label="QR-Code" value="" />
-
-                                    </div>
-                                </div>
-                                <div class="row mb-4">
-                                    <label for="addAddress" class="col-sm-3 col-form-label form-label">Тип
-                                        валюты</label>
-
-                                    <div class="col-sm-9">
-                                        <div class="tom-select-custom">
-                                            <select class="js-select form-select" autocomplete="off" name="type"
-                                                data-hs-tom-select-options='{
-                                  "searchInDropdown": false,
-                                  "hideSearch": true
-                                }'>
-                                                <option value="Криптовалюта" selected>Криптовалюта</option>
-                                                <option value="Банк">Банк</option>
-                                                <option value="Наличные">Наличные</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="d-flex justify-content-end">
-                                    <div class="d-flex gap-3">
-                                        <button type="button" class="btn btn-white" data-bs-dismiss="modal"
-                                            aria-label="Close">
-                                            Закрыть
-                                        </button>
-                                        <button type="submit" class="btn btn-primary">
-                                            Добавить
-                                        </button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-
-                    </div>
-                    <!-- End Tab Content -->
-                </div>
-                <!-- End Body -->
-            </div>
-        </div>
-    </div>
-    <!-- End Edit user -->
-    <div class="modal fade" id="addUserModal" tabindex="-1" aria-labelledby="addUserModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="addUserModalLabel">
-                        Добавить валюту
-                    </h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-
-                <!-- Body -->
-                <div class="modal-body">
-                    <div class="tab-content" id="addUserModalTabContent">
-                        <div class="tab-pane fade show active" id="profile" role="tabpanel"
-                            aria-labelledby="profile-tab">
-                            <form enctype="multipart/form-data" action="" method="POST">
-                                <!-- Form -->
-                                @csrf
-                                <div class="row mb-4">
-                                    <label for="addNameCurrency" class="col-sm-3 col-form-label form-label">Имя валюты
-                                        <i class="tio-help-outlined text-body ms-1" data-bs-toggle="tooltip"
-                                            data-bs-placement="top"
-                                            title="Displayed on public forums, such as Front."></i></label>
-
-                                    <div class="col-sm-9">
-                                        <div class="input-group input-group-sm-vertical">
-                                            <input type="text" required class="form-control" name="name"
-                                                id="addNameCurrency" placeholder="Имя валюты" aria-label="Имя валюты"
-                                                value="" />
-                                            <input type="text" required class="form-control" name="min_name"
-                                                id="addShortNameCurrency" placeholder="Короткое имя валюты"
-                                                aria-label="Короткое имя валюты" value="" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- End Form -->
-
-                                <!-- Form -->
-                                <div class="row mb-4">
-                                    <label for="addCurrencyRate" class="col-sm-3 col-form-label form-label">Курс в
-                                        $</label>
-
-                                    <div class="col-sm-9">
-                                        <input type="text" required class="form-control" name="currency_to_dollar"
-                                            id="addCurrencyRate" placeholder="Курс в $" aria-label="Курс в $"
-                                            value="" />
-                                    </div>
-                                </div>
-                                <!-- End Form -->
-                                <div class="row mb-4">
-                                    <label for="addPhotoCurrency" class="col-sm-3 col-form-label form-label">Лого
-                                        валюты</label>
-
-                                    <div class="col-sm-9">
-                                        <input type="file" required class="form-control" name="photo"
-                                            id="addPhotoCurrency" placeholder="Лого валюты" aria-label="Лого валюты"
-                                            value="" />
-                                    </div>
-                                </div>
-                                <div class="row mb-4">
-                                    <label for="addAvailability"
-                                        class="col-sm-3 col-form-label form-label">Наличие</label>
-
-                                    <div class="col-sm-9">
-                                        <input type="number" required class="form-control" name="availability"
-                                            id="addAvailability" placeholder="Наличие" aria-label="Наличие" value="" />
-                                    </div>
-                                </div>
-                                <div class="row mb-4">
-                                    <label for="addMaxCurrency" class="col-sm-3 col-form-label form-label">Макс/Мин
-                                        <i class="tio-help-outlined text-body ms-1" data-bs-toggle="tooltip"
-                                            data-bs-placement="top"
-                                            title="Displayed on public forums, such as Front."></i></label>
-
-                                    <div class="col-sm-9">
-                                        <div class="input-group input-group-sm-vertical">
-                                            <input type="text" required class="form-control" name="min"
-                                                id="addMinCurrency" placeholder="Минимально" aria-label="Минимально"
-                                                value="" />
-                                            <input type="text" required class="form-control" name="max"
-                                                id="addMaxCurrency" placeholder="Максимально" aria-label="Максимально"
-                                                value="" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row mb-4">
-                                    <label for="addAddress" class="col-sm-3 col-form-label form-label">Адрес</label>
-
-                                    <div class="col-sm-9">
-                                        <input type="text" required class="form-control" name="address" id="addAddress"
-                                            placeholder="Адрес" aria-label="Адрес" value="" />
-                                    </div>
-                                </div>
-                                <div class="row mb-4">
-                                    <label for="addQrCode" class="col-sm-3 col-form-label form-label">QR-Code</label>
-
-                                    <div class="col-sm-9">
-                                        <input type="file" required class="form-control" name="qr_code" id="addQrCode"
-                                            placeholder="QR-Code" aria-label="QR-Code" value="" />
-
-                                    </div>
-                                </div>
-                                <div class="row mb-4">
-                                    <label for="addAddress" class="col-sm-3 col-form-label form-label">Тип
-                                        валюты</label>
-
-                                    <div class="col-sm-9">
-                                        <div class="tom-select-custom">
-                                            <select class="js-select form-select" required autocomplete="off"
-                                                name="type" data-hs-tom-select-options='{
-                                  "searchInDropdown": false,
-                                  "hideSearch": true
-                                }'>
-                                                <option value="Криптовалюта" selected>Криптовалюта</option>
-                                                <option value="Банк">Банк</option>
-                                                <option value="Наличные">Наличные</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="d-flex justify-content-end">
-                                    <div class="d-flex gap-3">
-                                        <button type="button" class="btn btn-white" data-bs-dismiss="modal"
-                                            aria-label="Close">
-                                            Закрыть
-                                        </button>
-                                        <button type="submit" class="btn btn-primary">
-                                            Добавить
-                                        </button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-
-                    </div>
-                    <!-- End Tab Content -->
-                </div>
-                <!-- End Body -->
-            </div>
-        </div>
-    </div>
     <!-- ========== END SECONDARY CONTENTS ========== -->
 
     <!-- JS Global Compulsory  -->
@@ -1033,27 +783,15 @@
 
         editButtons.forEach(function(button) {
             button.addEventListener('click', function() {
-                var modalForm = document.getElementById('editCurrencyForm');
-                var baseUrl = "";
+                var modalForm = document.getElementById('editProductForm');
+                var baseUrl = "{{ route('admin.products.update', ':id') }}";
                 var currencyId = button.getAttribute('data-id');
 
-                // Заполнение формы
-                document.getElementById('currencyId').value = currencyId;
-                document.getElementById('addNameCurrency').value = button.getAttribute('data-name');
-                document.getElementById('addShortNameCurrency').value = button.getAttribute('data-min_name');
-                document.getElementById('addCurrencyRate').value = button.getAttribute('data-currency_to_dollar');
-                document.getElementById('addAvailability').value = button.getAttribute('data-availability');
-                document.getElementById('addMinCurrency').value = button.getAttribute('data-min');
-                document.getElementById('addMaxCurrency').value = button.getAttribute('data-max');
-                document.getElementById('addAddress').value = button.getAttribute('data-address');
-
-                // Обновление формы изображения (показываем путь к текущему изображению)
-                document.getElementById('addPhotoCurrency').src = button.getAttribute('data-photo');
-                document.getElementById('addQrCode').src = button.getAttribute('data-qr_code');
-
-                // Установить выбранный тип валюты
-                document.querySelector(`select[name="type"]`).value = button.getAttribute('data-type');
-
+                document.getElementById("edit_name").value = button.getAttribute('data-name');
+                document.getElementById("edit_price").value = button.getAttribute('data-price');
+                document.getElementById("edit_description").value = button.getAttribute('data-description');
+                document.getElementById("edit_category_id").value = button.getAttribute('data-category_id');
+                document.getElementById("edit_sales").value = button.getAttribute('data-sales');
                 // Установить правильный action URL для отправки формы
                 modalForm.action = baseUrl.replace(':id', currencyId);
             });

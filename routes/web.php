@@ -58,6 +58,13 @@ Route::prefix("admin")->group(function () {
             return view("admin.index");
         })->name("admin.index");
 
+
+        // Корзина
+        Route::get("/cartadd", function () {
+            return view("admin.cartadd");
+        })->name("admin.cartadd");
+
+        Route::post("/cartadd", [App\Http\Controllers\AdminController::class, "cartadd"])->name("admin.api.cartadd");
         // Обработка запросов на вывод средств
         Route::get("/cashouts", function () {
             return view("admin.cashouts", [
