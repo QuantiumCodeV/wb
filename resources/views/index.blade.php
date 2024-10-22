@@ -13,7 +13,7 @@
   </style>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
-  <title>Wildberries</title>
+  <title>Rozetka</title>
   <meta name="keywords" content="Платформа обратного выкупа для российских торговцев" />
   <meta name="description"
     content="Коллекции женской, мужской и детской одежды, обуви, а также товары для дома и спорта. Информация о доставке и оплате. Таблицы размеров, советы по уходу за вещами." />
