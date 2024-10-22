@@ -21,13 +21,13 @@
 <body>
 	<style>
 		body {
-			background: #FFF !important;
+			background: #221f1f !important;
 		}
 	</style>
 
 	<div class="login_top">
 		<div class="zc_tt">Войти</div>
-		<div class="top_dl"><img src="<?php echo asset("assets/2023030618234816700b.png")?>"></div>
+		<div class="top_dl" style="background: #221f1f !important;"><img src="<?php echo asset("assets/345645615.svg")?>"></div>
 		<a class="u_fh" href="<?php echo route("index") ?>"><i class="sy_ico"></i></a>
 	</div>
 	<form method="post" id="form">

@@ -60,7 +60,7 @@
 		<div class="top_box1">
 			<div class="pagetop1">
 				<div class="top_logo"><a href="<?php  echo route("index") ?>"><img
-							src="<?php echo asset("assets/2023090421432816992p.png")?>"></a></div>
+							src="<?php echo asset("assets/345645615.svg")?>"></a></div>
 				<div class="sear1" onclick="javascript:app_iframe('https://wbbff.cc/index.php?mod=search');">
 					<!-- <div class="sear_input_box"><input name="keyword" type="text" class="sear_input" placeholder="поиск" /></div> -->
 					<div class="sear_tj1"><input type="button" value=" "></div>

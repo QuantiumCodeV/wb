@@ -526,7 +526,7 @@
 
     /*.pagetop1{background:#fff; color:#333;  border-bottom:1px #eee solid; padding:8px 15px; position:relative;}*/
     .pagetop1 {
-        background: linear-gradient(to right, #cb11ab 0, #481173 100%) no-repeat;
+        background: #221f1f !important;
         padding: 8px 15px;
         position: relative;
         box-shadow: 0 0 10px rgba(0, 0, 0, .15)
@@ -792,7 +792,7 @@
     }
 
     .pagetop {
-        background: #fafafa;
+        background: #221f1f;
         border-bottom: 1px #f4f4f4 solid;
         text-align: center;
         height: 44px;
@@ -899,7 +899,7 @@
         border-radius: 4px;
         position: relative;
         display: inline-block;
-        background: #cb11ab;
+        background: #221f1f !important;
         margin: 12px 10px 0;
     }
 
@@ -1217,7 +1217,7 @@
 
     .prodata_sel {
         color: #fff;
-        background: linear-gradient(to right, #cb11ab 0, #481173 100%);
+        background: linear-gradient(to right, #221f1f 0, #481173 100%);
     }
 
     .gw {
@@ -1333,7 +1333,7 @@
     }
 
     .loginbtn {
-        background: linear-gradient(to right, #cb11ab 0, #481173 100%);
+        background: linear-gradient(to right, #221f1f 0, #481173 100%);
         border-radius: 20px;
         height: 40px;
         line-height: 40px;
@@ -3810,7 +3810,7 @@
     }
 
     .quan_dh {
-        background: linear-gradient(to right, #cb11ab 0, #481173 100%);
+        background: linear-gradient(to right, #221f1f 0, #481173 100%);
         width: 100px;
         height: 30px;
         line-height: 30px;
@@ -3861,7 +3861,7 @@
     }
 
     .add_tjbtn {
-        background: linear-gradient(to right, #cb11ab 0, #481173 100%);
+        background: linear-gradient(to right, #221f1f 0, #481173 100%);
         height: 50px;
         line-height: 50px;
         width: 120px;
@@ -3888,7 +3888,7 @@
     }
 
     a.tjbtn {
-        background: linear-gradient(to right, #cb11ab 0, #481173 100%);
+        background: linear-gradient(to right, #221f1f 0, #481173 100%);
         border-radius: 20px;
         height: 40px;
         line-height: 40px;
