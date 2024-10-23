@@ -22,11 +22,11 @@
 
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
-	<title>Успешно отправлен заказ - Wildberries</title>
+	<title>Успешно отправлен заказ - Rozetka</title>
 	<meta name="keywords" content="Платформа обратного выкупа для российских торговцев">
 	<meta name="description" content="Коллекции женской, мужской и детской одежды, обуви, а также товары для дома и спорта. Информация о доставке и оплате. Таблицы размеров, советы по уходу за вещами.">
 	<meta name="format-detection" content="telephone=no">
-	<link rel="shortcut icon" type="image/ico" href="https://wbbff.cc/favicon.ico">
+	<link rel="shortcut icon" type="image/ico" href="<?php echo asset("assets/favicon.ico") ?>">
 	<link type="text/css" rel="stylesheet" href="<?php echo asset("assets/style_002.css") ?>">
 	<link type="text/css" rel="stylesheet" href="<?php echo asset("assets/style.css") ?>">
 
@@ -73,7 +73,7 @@
 				</div>
 				<div class="yhq_sel">
 					<span class="fl c666">Общая сумма:</span>
-					<span class="fr">₾ {{ number_format(collect($order->order_description)->sum(fn($item) => $item['quantity'] * $item['price']), 2) }}</span>
+					<span class="fr">₴ {{ number_format(collect($order->order_description)->sum(fn($item) => $item['quantity'] * $item['price']), 2) }}</span>
 					<div class="clear"></div>
 				</div>
 				<div class="yhq_sel">

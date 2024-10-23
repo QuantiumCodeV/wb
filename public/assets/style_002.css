@@ -192,7 +192,7 @@ textarea{font-size:16px; line-height:24px;border:1px #cecece solid; border-top:1
 .cd1 a{background:var(--image-path7) no-repeat scroll -123px -95px / 200px 200px; display:block; width:20px; height:22px;}
 .cd2{padding:0 10px; position:absolute; right:4px; top:10px;}
 .cd2 a{background:var(--image-path7) no-repeat scroll -68px -61px / 200px 200px; display:block; width:20px; height:22px;}
-.pagetop{background:#221f1f; border-bottom:1px #f4f4f4 solid; text-align:center; height:44px; line-height:44px; color:#333; width:100%; font-family:'微软雅黑'; font-size:16px; position:relative;}
+.pagetop{background:#221f1f; border-bottom:1px #f4f4f4 solid; text-align:center; height:44px; line-height:44px; color:#fff; width:100%; font-family:'微软雅黑'; font-size:16px; position:relative;}
 .pagetop a{color:#ff5500;}
 .fh{ top:12px; position:absolute; left:8px;}
 .fh a{ background:var(--image-path7) no-repeat scroll -105px -28px / 200px 200px; display:block; width:20px; height:22px;}

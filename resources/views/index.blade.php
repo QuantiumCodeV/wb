@@ -789,7 +789,7 @@
       text-align: center;
       height: 44px;
       line-height: 44px;
-      color: #333;
+      color: #fff;
       width: 100%;
       font-family: '微软雅黑';
       font-size: 16px;
@@ -5647,7 +5647,7 @@
         <p>
         <a href="{{ route('product', $product->id) }}" title="{{ $product->name }}">{{ $product->name }}</a>
         </p>
-        <span>₾{{ $product->price }}</span>
+        <span>₴{{ $product->price }}</span>
       </div>
       </div>
       </li>

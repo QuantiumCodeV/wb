@@ -11,11 +11,11 @@
 	</style>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
-	<title>Адреса доставки - Wildberries</title>
-	<meta name="keywords" content="Платформа обратного выкупа для российских торговцев">
-	<meta name="description" content="Коллекции женской, мужской и детской одежды, обуви, а также товары для дома и спорта. Информация о доставке и оплате. Таблицы размеров, советы по уходу за вещами.">
+	<title>Адреса доставки - Rozetka</title>
+	<meta name="keywords" content="Платформа зворотного викупу для російських торговців">
+	<meta name="description" content="Колекції жіночого, чоловічого та дитячого одягу, взуття, а також товари для дому та спорту. Інформація про доставку та оплату. Таблиці розмірів, поради щодо догляду за речами.">
 	<meta name="format-detection" content="telephone=no">
-	<link rel="shortcut icon" type="image/ico" href="https://wbbff.cc/favicon.ico">
+	<link rel="shortcut icon" type="image/ico" href="<?php echo asset("assets/favicon.ico") ?>">
 	<link type="text/css" rel="stylesheet" href="<?php echo asset("assets/style.css") ?>">
 	<script type="text/javascript" src="<?php echo asset("assets/jquery.js") ?>"></script>
 	<script type="text/javascript" src="<?php echo asset("assets/global.js") ?>"></script>
@@ -31,10 +31,10 @@
 		<!-- 
 <div class="top_menu" id="top_menu">
 	<ul>
-	<li><a href="<?php echo route("index") ?>"><i class="top_tb1"></i><span>Главная</span></a></li>
+	<li><a href="<?php echo route("index") ?>"><i class="top_tb1"></i><span>Головна</span></a></li>
 	<li><a href="https://wbbff.cc/index.php/category/list"><i class="top_tb2"></i><span>Каталог</span></a></li>
-	<li><a href="<?php echo route("cart") ?>"><i class="top_tb3"></i><span>Корзина</span></a></li>
-	<li><a href="<?php echo route("profile") ?>"><i class="top_tb4"></i><span>Профиль</span></a></li>
+	<li><a href="<?php echo route("cart") ?>"><i class="top_tb3"></i><span>Кошик</span></a></li>
+	<li><a href="<?php echo route("profile") ?>"><i class="top_tb4"></i><span>Профіль</span></a></li>
 	</ul>
 	<div class="clear"></div>
 </div> -->
@@ -49,14 +49,14 @@
 				<div class="clear"></div>
 				<div class="mat5">
 					@if($point->is_default)
-					<span class="cred">[по умолчанию]</span>
+					<span class="cred">[за замовчуванням]</span>
 					@endif
 					<span class="c999">{{ $point->address }}</span>
 				</div>
 				<div class="xian"></div>
 				<div class="fr mat10">
-					<a href="{{ route('user.address.edit', $point->id) }}" class="edit_btn mar10">изменить</a>
-					<a href="{{ route('user.address.delete', $point->id) }}" onclick="return app_delinfo(this, 'Удалить этот адрес')" class="edit_btn">удалить</a>
+					<a href="{{ route('user.address.edit', $point->id) }}" class="edit_btn mar10">змінити</a>
+					<a href="{{ route('user.address.delete', $point->id) }}" onclick="return app_delinfo(this, 'Видалити цю адресу')" class="edit_btn">видалити</a>
 					<div class="clear"></div>
 				</div>
 				<div class="clear"></div>
@@ -65,14 +65,14 @@
 		@endforeach
 		<div class="fenye mab10"></div>
 	</div>
-	<div class="fb_btn1"><a href="{{ route("delivery.add") }}">Добавить новый адрес</a></div>
+	<div class="fb_btn1"><a href="{{ route("delivery.add") }}">Додати нову адресу</a></div>
 	<link rel="stylesheet" href="<?php echo asset("assets/weui.min.css") ?>">
 	<link rel="stylesheet" href="<?php echo asset("assets/jquery-weui.min.css") ?>">
 	<script src="<?php echo asset("assets/jquery-weui.js") ?>"></script>
 	<script type="text/javascript" src="<?php echo asset("assets/layer.js") ?>"></script>
 	<script type="text/javascript" src="<?php echo asset("assets/app.js") ?>"></script>
 	<script type="text/javascript">
-		//顶部菜单点击
+		//клік верхнього меню
 		function top_menu() {
 			if ($("#top_menu").is(":hidden")) {
 				$("#top_menu").show();
@@ -88,13 +88,13 @@
 	<script>
 		function confirm_huigou(order_id) {
 			layer.open({
-				content: "Определить выкуп этого Заказ？",
-				btn: ["OK", "Отмена"],
+				content: "Визначити викуп цього Замовлення？",
+				btn: ["OK", "Скасувати"],
 				shadeClose: false,
 				yes: function() {
 
 					/*layer.open({
-						content: '你点了确认',
+						content: 'Ви натиснули підтвердити',
 						time: 1
 					});*/
 					$.ajax({

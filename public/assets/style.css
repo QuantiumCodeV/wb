@@ -1,5 +1,5 @@
 /*公共样式表部分开始*/
-a{color:#333;text-decoration:none;}
+a{color:#fff;text-decoration:none;}
 a:hover{text-decoration:none; -webkit-tap-highlight-color:rgba(0,0,0,0); -webkit-tap-highlight-color: transparent;}
 ol,ul,li,dl,dd,dt{list-style:none;}
 h1,h2,h3{font-size:14px;}
@@ -90,7 +90,7 @@ input:-webkit-autofill,input:-webkit-autofill:hover,input:-webkit-autofill:focus
 
 /*head Start*/
 body {font-size:14px; font-family:"微软雅黑",Arial, Helvetica, sans-serif; color:#333; line-height:20px; background:#f9f9f9;max-width:640px; min-width:300px; margin:0 auto; }
-.pagetop{background:#221f1f; border-bottom:1px #ddd  solid;  box-shadow:0 0 8px rgba(0,0,0,.15); text-align:center; height:45px; line-height:45px; color:#333; width:100%; font-family:'微软雅黑'; font-size:16px; position:relative; z-index:98}
+.pagetop{background:#221f1f; border-bottom:1px #ddd  solid;  box-shadow:0 0 8px rgba(0,0,0,.15); text-align:center; height:45px; line-height:45px; color:#fff; width:100%; font-family:'微软雅黑'; font-size:16px; position:relative; z-index:98}
 .pagetop a{color:#221f1f !important;}
 .fh{ top:12px; position:absolute; left:10px;}
 .fh a{ background:var(--image-path2) no-repeat scroll -105px -28px / 200px 200px; display:block; width:20px; height:22px;}
@@ -621,7 +621,7 @@ a.u_fh{ height:25px; display:block; position:absolute; left:10px; top:10px; widt
 .user_tt a{ position:absolute; right:10px; top:20px; display:block; width:20px; height:20px;}
 .user_tt a i{background: url(../images/sz.png) no-repeat; display:block; width:20px; height:20px; background-size:20px auto}
 .fenhong_box{
-  background: linear-gradient(#f75927, #f82a2a);
+  background: #00a046;
   color:#fff; font-size:15px;padding:15px 20px; text-align:center}
 .fh_money{font-size:34px;}
 .tx_ul{background:#fff;}

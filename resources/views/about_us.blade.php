@@ -9,10 +9,10 @@
 }</style>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
-	<title>насчет нас - Wildberries</title>
-	<meta name="keywords" content="Платформа обратного выкупа для российских торговцев">
+	<title>про нас - Rozetka</title>
+	<meta name="keywords" content="Платформа зворотного викупу для російських торговців">
 	<meta name="description"
-		content="Коллекции женской, мужской и детской одежды, обуви, а также товары для дома и спорта. Информация о доставке и оплате. Таблицы размеров, советы по уходу за вещами.">
+		content="Колекції жіночого, чоловічого та дитячого одягу, взуття, а також товари для дому та спорту. Інформація про доставку та оплату. Таблиці розмірів, поради щодо догляду за речами.">
 	<meta name="format-detection" content="telephone=no">
 	<link rel="shortcut icon" type="image/ico" href="<?php echo asset("assets/favicon.ico")?>">
 	<link type="text/css" rel="stylesheet" href="<?php echo asset("assets/style_002.css")?>">
@@ -32,44 +32,44 @@
 	<div class="pagetop">
 		<!-- <div class="fh"><a href="https://wbbff.cc/index.php/article/list-15"></a></div> -->
 		<div class="fh"><a href="javascript:history.back(-1)"></a></div>
-		<div>насчет нас</div>
+		<div>про нас</div>
 		<!-- <div class="cd"><a href="javascript:top_menu();"></a></div> -->
 
 		<div class="top_menu" id="top_menu">
 			<ul>
-				<li><a href="<?php  echo route("index") ?>"><i class="top_tb1"></i><span>Главная</span></a></li>
+				<li><a href="<?php  echo route("index") ?>"><i class="top_tb1"></i><span>Головна</span></a></li>
 				<li><a href="https://wbbff.cc/index.php/category"><i class="top_tb2"></i><span>Каталог</span></a></li>
-				<li><a href="<?php  echo route("cart") ?>"><i class="top_tb3"></i><span>Корзина</span></a></li>
-				<li><a href="<?php  echo route("profile") ?>"><i class="top_tb4"></i><span>Профиль</span></a></li>
+				<li><a href="<?php  echo route("cart") ?>"><i class="top_tb3"></i><span>Кошик</span></a></li>
+				<li><a href="<?php  echo route("profile") ?>"><i class="top_tb4"></i><span>Профіль</span></a></li>
 			</ul>
 			<div class="clear"></div>
 		</div>
 	</div>
 	<div class="content">
 		<div class="dingdan_info1">
-			<!-- 		<div class="mat10 font18 c333 aleft">насчет нас</div>
-		<div class="mat10 font12 c999 fl">时间：2020-10-17 17:22</div> -->
+			<!-- 		<div class="mat10 font18 c333 aleft">про нас</div>
+		<div class="mat10 font12 c999 fl">час：2020-10-17 17:22</div> -->
 
 			<!-- <div class="clear"></div> -->
-			<!-- <div class="mat10 font12 c999 fr">Просмотрено 371979 человек</div> -->
+			<!-- <div class="mat10 font12 c999 fr">Переглянуто 371979 людей</div> -->
 			<!-- <div class="xian"></div> -->
 			<div class="danye_main mat20">
-				<p>Наша цель изменить жизнь людей,
-					сделав простым доступ к огромному количеству качественных и недорогих
-					товаров, предоставляя лучший сервис.</p>
-				<p>Наши клиенты – в центре всего, что мы делаем,</p>
-				<p>Доверие - главное. Мы строим долгосрочные отношения,</p>
-				<p>Во всём, чем занимаемся, стремимся быть экспертами,</p>
-				<p>Открыты для предложений и улучшений.</p>
-				<p>Прозрачность - основа совместного бизнеса,</p>
-				<p>Работаем, соблюдая этику бизнеса,</p>
-				<p>Уважаем другие мнения и интересы,</p>
-				<p>Выполняем обязательства и берем ответственность за свои решения,</p>
-				<p>Нетерпимы к коррупции.</p>
-				<p>wildberries - территория личной и коллективной самореализации,</p>
-				<p>Мы - одна команда,</p>
-				<p>Уважаем мнение и интересы людей,</p>
-				<p>Ценим свободу, смелость и ответственность.</p>
+				<p>Наша мета змінити життя людей,
+					зробивши простим доступ до величезної кількості якісних і недорогих
+					товарів, надаючи найкращий сервіс.</p>
+				<p>Наші клієнти – в центрі всього, що ми робимо,</p>
+				<p>Довіра - головне. Ми будуємо довгострокові відносини,</p>
+				<p>У всьому, чим займаємося, прагнемо бути експертами,</p>
+				<p>Відкриті для пропозицій та покращень.</p>
+				<p>Прозорість - основа спільного бізнесу,</p>
+				<p>Працюємо, дотримуючись етики бізнесу,</p>
+				<p>Поважаємо інші думки та інтереси,</p>
+				<p>Виконуємо зобов'язання і беремо відповідальність за свої рішення,</p>
+				<p>Нетерпимі до корупції.</p>
+				<p>Rozetka - територія особистої та колективної самореалізації,</p>
+				<p>Ми - одна команда,</p>
+				<p>Поважаємо думку та інтереси людей,</p>
+				<p>Цінуємо свободу, сміливість і відповідальність.</p>
 				<p><span style="white-space-collapse: preserve;"> </span></p>
 				<p><br></p>
 			</div>
@@ -91,7 +91,7 @@
 		$(function () {
 			$("img.js_imgload").scrollLoading();
 		});
-		//顶部菜单点击
+		//клік верхнього меню
 		function top_menu() {
 			if ($("#top_menu").is(":hidden")) {
 				$("#top_menu").show();
