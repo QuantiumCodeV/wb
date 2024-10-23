@@ -15,24 +15,24 @@ class CashoutsController extends Controller
 
     public function store(Request $request)
     {
-        // Валидация входных данных
+        // Валідація вхідних даних
         $request->validate([
             'cashout_money' => 'required|numeric',
-            'userbank_id' => 'required|exists:payments,id', // Проверка на существование bank_id в таблице payments
+            'userbank_id' => 'required|exists:payments,id', // Перевірка на існування bank_id в таблиці payments
         ]);
 
-        // Получение текущего пользователя
+        // Отримання поточного користувача
         $user = Auth::user();
 
-        // Проверка баланса пользователя
+        // Перевірка балансу користувача
         if ($user->balance < $request->cashout_money) {
             return response()->json([
                 'result' => false,
-                'show' => 'Недостаточно средств на счете'
+                'show' => 'Недостатньо коштів на рахунку'
             ]);
         }
 
-        // Создание запроса на вывод средств
+        // Створення запиту на виведення коштів
         Cashouts::create([
             'user_id' => $user->id,
             'amount' => $request->cashout_money,
@@ -40,7 +40,7 @@ class CashoutsController extends Controller
             'userbank' => $request->userbank_id
         ]);
 
-        // Обновление баланса пользователя
+        // Оновлення балансу користувача
         $user->balance -= $request->cashout_money;
         $user->save();
 
@@ -59,7 +59,7 @@ class CashoutsController extends Controller
         $history->type = "cashout";
         $history->status = "success";
         $history->amount = Cashouts::find($request->id)->amount;
-        $history->description = "Вывод средств на карту #" . $request->id;
+        $history->description = "Виведення коштів на карту #" . $request->id;
         $history->save();
 
         return response()->json(['success' => true]);
@@ -67,14 +67,14 @@ class CashoutsController extends Controller
 
     public function delete(Request $request)
     {
-        Cashouts::find($request->id)->delete();
-
+        $cashout = Cashouts::find($request->id)->delete();
+        
         $history = new History();
-        $history->user_id = $user->id;
+        $history->user_id = $cashout->user_id;
         $history->type = "cashout";
         $history->status = "canceled";
         $history->amount = Cashouts::find($request->id)->amount;
-        $history->description = "Отмена вывода средств на карту #" . $request->id;
+        $history->description = "Скасування виведення коштів на карту #" . $request->id;
         $history->save();
 
         return response()->json(['success' => true]);

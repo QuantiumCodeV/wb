@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Auth;
-use Hash;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use App\Models\User;
@@ -35,14 +35,14 @@ class UserController extends Controller
 
             return response()->json([
 
-                'message' => 'User registered and logged in successfully',
+                'message' => 'Користувач зареєстрований та увійшов успішно',
 
                 'user' => Auth::user()
 
             ], 201);
         }
 
-        return response()->json(['message' => 'User registered successfully'], 201);
+        return response()->json(['message' => 'Користувач успішно зареєстрований'], 201);
     }
 
     public function login(Request $request)
@@ -58,20 +58,20 @@ class UserController extends Controller
 
         $user = User::where('login', $request->input('login'))->first();
         if (!$user || !Hash::check($request->input('password'), $user->password)) {
-            return response()->json(['error' => 'Invalid credentials'], 401);
+            return response()->json(['error' => 'Невірні облікові дані'], 401);
         }
         Auth::login($user);
         if (Auth::check()) {
 
             return response()->json([
 
-                'message' => 'User logged in successfully',
+                'message' => 'Користувач успішно увійшов',
 
                 'user' => Auth::user()
 
             ], 201);
         }
-        return response()->json(['message' => 'Login successful'], 200);
+        return response()->json(['message' => 'Вхід успішний'], 200);
     }
 
     public function logout()
@@ -93,12 +93,12 @@ class UserController extends Controller
 
         $user = Auth::user();
         if (!Hash::check($request->input('current_password'), $user->password)) {
-            return response()->json(['error' => 'Current password is incorrect'], 400);
+            return response()->json(['error' => 'Поточний пароль невірний'], 400);
         }
         $user->password = Hash::make($request->input('new_password'));
         $user->save();
 
-        return response()->json(['message' => 'Password changed successfully'], 200);
+        return response()->json(['message' => 'Пароль успішно змінено'], 200);
     }
 
     public function addBalance(Request $request)
@@ -114,7 +114,7 @@ class UserController extends Controller
 
         $user = User::where('login', $request->input('nickname'))->first();
         if ($user->balance + $request->input('amount') < 0) {
-            return response()->json(['error' => 'Insufficient balance'], 400);
+            return response()->json(['error' => 'Недостатньо коштів'], 400);
         }
 
         $user->balance += $request->input('amount');
@@ -125,9 +125,9 @@ class UserController extends Controller
         $history->type = "balance";
         $history->status = "success";
         $history->amount = $request->input('amount');
-        $history->description = "Пополнение баланса на " . $request->input('amount');
+        $history->description = "Поповнення балансу на " . $request->input('amount');
         $history->save();
 
-        return response()->json(["success"=>true,'message' => 'Balance added successfully'], 200);
+        return response()->json(["success"=>true,'message' => 'Баланс успішно поповнено'], 200);
     }
 }

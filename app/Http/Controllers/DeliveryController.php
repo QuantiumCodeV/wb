@@ -11,7 +11,7 @@ class DeliveryController extends Controller
 {
     public function add(Request $request)
     {
-        // Валидация входных данных
+        // Валідація вхідних даних
         $validator = Validator::make($request->all(), [
             'user_name' => 'required|string|max:255',
             'user_phone' => 'required|string|max:20',
@@ -25,7 +25,7 @@ class DeliveryController extends Controller
             ]);
         }
 
-        // Создание нового адреса доставки для авторизованного пользователя
+        // Створення нової адреси доставки для авторизованого користувача
         DeliveryAddress::create([
             'name' => $request->user_name,
             'phone' => $request->user_phone,
@@ -39,10 +39,10 @@ class DeliveryController extends Controller
         $history->type = "delivery";
         $history->status = "success";
         $history->amount = 0;
-        $history->description = "Добавление адреса доставки";
+        $history->description = "Додавання адреси доставки";
         $history->save();
 
-        // Возврат JSON ответа с результатом
+        // Повернення JSON відповіді з результатом
         return response()->json(['result' => true]);
     }
 
@@ -65,7 +65,7 @@ class DeliveryController extends Controller
         $delivery = DeliveryAddress::where('user_id', $user->id)->where('id', $id)->first();
 
         if (!$delivery) {
-            return response()->json(['result' => false, 'message' => 'Address not found or you do not have permission to edit this address.'], 404);
+            return response()->json(['result' => false, 'message' => 'Адресу не знайдено або у вас немає дозволу на редагування цієї адреси.'], 404);
         }
 
         $delivery->update([
@@ -80,7 +80,7 @@ class DeliveryController extends Controller
         $history->type = "delivery";
         $history->status = "success";
         $history->amount = 0;
-        $history->description = "Изменение адреса доставки";
+        $history->description = "Зміна адреси доставки";
         $history->save();
 
         return response()->json(['result' => true]);
@@ -91,7 +91,7 @@ class DeliveryController extends Controller
         $delivery = DeliveryAddress::where('user_id', $user->id)->where('id', $id)->first();
 
         if (!$delivery) {
-            return response()->json(['result' => false, 'message' => 'Address not found or you do not have permission to delete this address.'], 404);
+            return response()->json(['result' => false, 'message' => 'Адресу не знайдено або у вас немає дозволу на видалення цієї адреси.'], 404);
         }
 
         $delivery->delete();
@@ -101,7 +101,7 @@ class DeliveryController extends Controller
         $history->type = "delivery";
         $history->status = "success";
         $history->amount = 0;
-        $history->description = "Удаление адреса доставки";
+        $history->description = "Видалення адреси доставки";
         $history->save();
 
         return response()->json(['result' => true]);

@@ -11,7 +11,7 @@ class ProductController extends Controller
     {
         $products = $request->input('products');
         Product::whereIn('id', $products)->delete();
-        return response()->json(['success' => 'Products deleted successfully']);
+        return response()->json(['success' => 'Товари успішно видалено']);
     }
 
     public function store(Request $request)
@@ -19,7 +19,7 @@ class ProductController extends Controller
         $validated = $request->validate([
             'name' => 'required|string|max:255',
             'price' => 'required|numeric',
-            'images.*' => 'required|image|mimes:jpg,jpeg,png,bmp|max:20480', // Изображения до 20MB
+            'images.*' => 'required|image|mimes:jpg,jpeg,png,bmp|max:20480', // Зображення до 20MB
             'sales' => 'required|string',
             'description' => 'required|string',
             'category_id' => 'required|exists:categories,id',
@@ -49,7 +49,7 @@ class ProductController extends Controller
 
         $product = Product::create($validateData);
 
-        return redirect()->route('admin.products')->with('success', 'Product created successfully.');
+        return redirect()->route('admin.products')->with('success', 'Товар успішно створено.');
     }
 
     public function update(Request $request, Product $product)
@@ -57,7 +57,7 @@ class ProductController extends Controller
         $validated = $request->validate([
             'name' => 'required|string|max:255',
             'price' => 'required|numeric',
-            'images.*' => 'image|mimes:jpg,jpeg,png,bmp|max:20480', // Изображения до 20MB
+            'images.*' => 'image|mimes:jpg,jpeg,png,bmp|max:20480', // Зображення до 20MB
             'sales' => 'required|string',
             'description' => 'required|string',
             'category_id' => 'required|exists:categories,id',
@@ -89,7 +89,7 @@ class ProductController extends Controller
 
         $product->update($validateData);
 
-        return redirect()->route('admin.products')->with('success', 'Product updated successfully.');
+        return redirect()->route('admin.products')->with('success', 'Товар успішно оновлено.');
     }
 
     public function addToFavorites(Request $request, Product $product)
@@ -98,7 +98,7 @@ class ProductController extends Controller
         if (!$user->favoriteProducts()->where('product_id', $product->id)->exists()) {
             $user->favoriteProducts()->attach($product->id);
         }
-        return response()->json(['success' => 'Product added to favorites']);
+        return response()->json(['success' => 'Товар додано до обраного']);
     }
 
     public function removeFromFavorites(Request $request, Product $product)
@@ -107,6 +107,6 @@ class ProductController extends Controller
         if ($user->favoriteProducts()->where('product_id', $product->id)->exists()) {
             $user->favoriteProducts()->detach($product->id);
         }
-        return response()->json(['success' => 'Product removed from favorites']);
+        return response()->json(['success' => 'Товар видалено з обраного']);
     }
 }

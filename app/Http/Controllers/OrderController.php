@@ -10,46 +10,46 @@ class OrderController extends Controller
 {
     public function store(Request $request)
     {
-        // Валидация входных данных
+        // Валідація вхідних даних
         $request->validate([
-            'cart_id' => 'required|array', // Массив идентификаторов корзины
-            'cart_num' => 'required|array' // Массив количеств продуктов
+            'cart_id' => 'required|array', // Масив ідентифікаторів кошика
+            'cart_num' => 'required|array' // Масив кількостей продуктів
         ]);
 
         $user = auth()->user();
-        // Получение последних значений cart_id и cart_num
+        // Отримання останніх значень cart_id та cart_num
         $filteredCartId = array_filter($request->cart_id);
         $filteredCartNum = array_filter($request->cart_num);
 
-        // Проверка, что у нас есть элементы для обработки
+        // Перевірка, чи є у нас елементи для обробки
         if (empty($filteredCartId) || empty($filteredCartNum)) {
-            return response()->json(['message' => 'Нет выбранных товаров для оформления заказа.'], 400);
+            return response()->json(['message' => 'Немає вибраних товарів для оформлення замовлення.'], 400);
         }
 
-        // Обновление request с последними значениями
+        // Оновлення request з останніми значеннями
         $request->merge([
             'cart_id' => array_values($filteredCartId),
             'cart_num' => array_values($filteredCartNum)
         ]);
 
-        // Создание массива продуктов из данных запроса
+        // Створення масиву продуктів з даних запиту
         $products = [];
         for ($i = 0; $i < count($request->cart_id); $i++) {
             $cart = Cart::find($request->cart_id[$i]);
             $products[] = [
                 'product_id' => $cart->product_id,
                 'quantity' => $request->cart_num[$i],
-                // Предполагаем, что у вас есть метод для получения цены продукта по его id
+                // Припускаємо, що у вас є метод для отримання ціни продукту за його id
                 'price' => $this->getProductPrice($cart->product_id)
             ];
         }
 
-        // Создание нового заказа
+        // Створення нового замовлення
         $order = new Order();
         $order->user_id = $user->id;
         $order->method_pay = "default";
         $order->status = "created";
-        $order->order_description = $products; // Сохраняем массив продуктов в формате JSON
+        $order->order_description = $products; // Зберігаємо масив продуктів у форматі JSON
         $order->save();
 
         $total_price = 0;
@@ -63,13 +63,13 @@ class OrderController extends Controller
         $history->type = "order";
         $history->status = "success";
         $history->amount = $total_price;
-        $history->description = "Создание заказа #" . $order->id;
+        $history->description = "Створення замовлення #" . $order->id;
         $history->save();
 
         return response()->json(['result' => true, "order_id" => $order->id], 201);
     }
 
-    // Предполагаем, что у вас есть метод для получения цены продукта по его id
+    // Припускаємо, що у вас є метод для отримання ціни продукту за його id
     private function getProductPrice($productId)
     {
         $product = \App\Models\Product::find($productId);
@@ -88,17 +88,17 @@ class OrderController extends Controller
 
         $order = Order::find($request->order_id);
         if (!$order) {
-            return response()->json(['result' => false, "show" => "Заказ не найден"], 200);
+            return response()->json(['result' => false, "show" => "Замовлення не знайдено"], 200);
         }
         if ($user->id != $order->user_id) {
-            return response()->json(['result' => false, "show" => "Вы не можете оплатить этот заказ"], 200);
+            return response()->json(['result' => false, "show" => "Ви не можете оплатити це замовлення"], 200);
         }
         $total_price = 0;
         foreach ($order->order_description as $product) {
             $total_price += $product["price"] * $product["quantity"];
         }
         if ($user->balance < $total_price) {
-            return response()->json(['result' => false, "show" => "Недостаточно средств на балансе"], 200);
+            return response()->json(['result' => false, "show" => "Недостатньо коштів на балансі"], 200);
         }
         $user->balance -= $total_price;
         $user->save();
@@ -111,7 +111,7 @@ class OrderController extends Controller
         $history->type = "order";
         $history->status = "success";
         $history->amount = $total_price;
-        $history->description = "Оплата заказа #" . $order->id;
+        $history->description = "Оплата замовлення #" . $order->id;
         $history->save();
 
         return response()->json(['result' => true], 200);

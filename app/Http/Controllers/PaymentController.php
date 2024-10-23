@@ -25,7 +25,7 @@ class PaymentController extends Controller
 
         return response()->json([
             'success' => true,
-            'message' => 'Payment method added successfully',
+            'message' => 'Спосіб оплати успішно додано',
         ]);
     }
 
@@ -35,7 +35,7 @@ class PaymentController extends Controller
         $payment->delete();
         return response()->json([
             'success' => true,
-            'message' => 'Payment method deleted successfully',
+            'message' => 'Спосіб оплати успішно видалено',
         ]);
     }
 }
