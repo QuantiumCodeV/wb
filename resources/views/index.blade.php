@@ -5601,23 +5601,20 @@
             ">
           <div class="swiper-slide swiper-slide-next" style="width: 602px; margin-right: 20px" role="group"
             aria-label="3 / 5" data-swiper-slide-index="2">
-            <img src="<?php echo asset("assets/2024062519435317140u.png")?>" />
+            <img src="<?php echo asset("assets/2024062519435317140u.jpeg")?>" />
           </div>
           <div class="swiper-slide" style="width: 602px; margin-right: 20px" role="group" aria-label="4 / 5"
             data-swiper-slide-index="3">
-            <img src="<?php echo asset("assets/2024062519442717131n.png")?>" />
+            <img src="<?php echo asset("assets/2024062519442717131n.jpeg")?>" />
           </div>
-          <div class="swiper-slide" style="width: 602px; margin-right: 20px" role="group" aria-label="5 / 5"
-            data-swiper-slide-index="4">
-            <img src="<?php echo asset("assets/2024062519443917124e.png")?>" />
-          </div>
+          
           <div class="swiper-slide swiper-slide-prev" style="width: 602px; margin-right: 20px" role="group"
             aria-label="1 / 5" data-swiper-slide-index="0">
-            <img src="<?php echo asset("assets/2024062519431817146u.png")?>" />
+            <img src="<?php echo asset("assets/2024062519431817146u.jpeg")?>" />
           </div>
           <div class="swiper-slide swiper-slide-active" style="width: 602px; margin-right: 20px" role="group"
             aria-label="2 / 5" data-swiper-slide-index="1">
-            <img src="<?php echo asset("assets/2024062519433217161v.png")?>" />
+            <img src="<?php echo asset("assets/2024062519433217161v.jpeg")?>" />
           </div>
         </div>
         <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
