@@ -221,5 +221,9 @@
 	</script>
 
 </body>
-
+<style>
+	a {
+		color: black;
+	}
+</style>
 </html>
