@@ -360,6 +360,7 @@
                                     <span class="nav-link-title">Выводы</span>
                                 </a>
                             </div>
+
                             <div class="nav-item">
                                 <a class="nav-link" href="<?php echo route("admin.deposit")?>" role="button"
                                     aria-expanded="true" aria-controls="navbarVerticalMenuPagesUsersMenu">

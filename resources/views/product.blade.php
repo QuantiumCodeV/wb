@@ -5927,7 +5927,7 @@
                     product_id: "<?php echo $product->id ?>"
                 },
                 success: function(json) {
-                    if (json.success == "Product added to favorites") {
+                    if (json.success == "Товар додано до обраного") {
                         $(".sc i").addClass('sel');
                     } else {
                         $.alert(json.message);

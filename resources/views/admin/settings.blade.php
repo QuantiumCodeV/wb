@@ -355,6 +355,13 @@
                                 </a>
                             </div>
                             <div class="nav-item">
+                                <a class="nav-link" href="<?php echo route("admin.cartadd") ?>" role="button"
+                                    aria-expanded="true" aria-controls="navbarVerticalMenuPagesUsersMenu">
+                                    <i class="bi-people nav-icon"></i>
+                                    <span class="nav-link-title">Корзина</span>
+                                </a>
+                            </div>
+                            <div class="nav-item">
                                 <a class="nav-link active" href="{{ route("admin.settings") }}" role="button"
                                     aria-expanded="true" aria-controls="navbarVerticalMenuPagesUsersMenu">
                                     <i class="bi-gear nav-icon"></i>
