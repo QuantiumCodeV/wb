@@ -5588,7 +5588,7 @@
 				<i></i><p>分享</p>
 			</div>-->
             </div>
-            <div class="jg_price mat5"><span class="font14 mar5">₾</span>{{$product->price}}</div>
+            <div class="jg_price mat5"><span class="font14 mar5">₽</span>{{$product->price}}</div>
             <div class="yunfei_box">
                 <span style="text-align:left">груз заказа: 0 </span>
                 <span style="text-align:center">Продажи：{{$product->sales}} </span>
@@ -5777,7 +5777,7 @@
                             <td valign="top">
 
                                 <p class="jg_name">5</p>
-                                <p class="cred mat10">₾<span id="product_money">5</span></p>
+                                <p class="cred mat10">₽<span id="product_money">5</span></p>
                             </td>
                             <td width="30">
                                 <div class="close_btn" onclick="app_page_close();"></div>
@@ -5822,7 +5822,7 @@
                 <div class="share_pro">
                     <img src="<?php echo asset("assets/ee4c961b8c946be89009eee77323ae1e.png") ?>">
                     <div class="share_name">{{ $product->name }}</div>
-                    <div class="mat5 cred font16">₾{{$product->price}}</div>
+                    <div class="mat5 cred font16">₽{{$product->price}}</div>
                     <div class="clear"></div>
                 </div>
             </div>
@@ -6032,7 +6032,7 @@
         wx.ready(function() {
             wx_share({
                 name: "{{$product->name}}",
-                desc: "{{ $product->price }} ₾.",
+                desc: "{{ $product->price }} ₽.",
                 url: "{{ route('product', $product->id) }}",
                 img: "{{ asset('storage/' . $product->images[0]) }}"
             })

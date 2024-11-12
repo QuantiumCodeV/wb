@@ -44,7 +44,7 @@
 			<div class="zc_box2 mat10">
 				<div class="zc_list">
 					<div class="zc_name">баланс</div>
-					<div class="zc_text"><span class="num strong corg">{{ Auth::user()->balance }}</span> ₾.</div>
+					<div class="zc_text"><span class="num strong corg">{{ Auth::user()->balance }}</span> ₽.</div>
 				</div>
 				<div class="zc_list">
 					<div class="zc_name">количество</div>

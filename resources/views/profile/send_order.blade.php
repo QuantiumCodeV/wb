@@ -52,7 +52,7 @@ page_loading();
 				<p style="height:40px; overflow:hidden;"><a href="https://wbbff.cc/index.php/product/214" title="Wanb / Проектор Wanbo T2 Max New (белый)">Wanb / Проектор Wanbo T2 Max New (белый)</a></p>
 				<p class="c888 font12"></p>
 				<div class="order_r">
-					<p class="num fl corg font14">₾ 19980</p>
+					<p class="num fl corg font14">₽ 19980</p>
 					<p class="fr">×1</p>
 					<div class="clear"></div>
 				</div>
@@ -64,12 +64,12 @@ page_loading();
 	<div class="yhq_box">
 		<div class="yhq_sel">
 			<span class="fl c666">сумма заказа:</span>
-			<span class="fr">₾ <span id="order_product_money">19980.0</span></span>
+			<span class="fr">₽ <span id="order_product_money">19980.0</span></span>
 			<div class="clear"></div>
 		</div>
 		<div class="yhq_sel">
 			<span class="fl c666">груз заказа:</span>
-			<span class="fr">₾ <span id="order_wl_money">0.0</span></span>
+			<span class="fr">₽ <span id="order_wl_money">0.0</span></span>
 			<div class="clear"></div>
 		</div>
 <!-- 		<div class="yhq_sel">
@@ -83,7 +83,7 @@ page_loading();
 		</div> -->
 				<div class="yhq_sel" style="border-bottom:0">
 			<span class="fl c666">Общая сумма:</span>
-			<span class="fr corg font16">₾ <span class="order_money">19980.0</span></span>
+			<span class="fr corg font16">₽ <span class="order_money">19980.0</span></span>
 			<div class="clear"></div>
 		</div>
 	</div>
@@ -101,7 +101,7 @@ page_loading();
 	</div>
 	<div style="margin-bottom:60px;"></div>
 	<div class="add_tj">
-		<div class="fl mal10 c666">Всего：<span class="corg font16">₾ <span class="order_money">19980.0</span></span></div>
+		<div class="fl mal10 c666">Всего：<span class="corg font16">₽ <span class="order_money">19980.0</span></span></div>
 		<div class="add_tjbtn">
 			<input type="hidden" name="address_id" value="833">
 			<input type="hidden" name="pe_token" value="75236c7c5fdf7ebfe3441c02863d0cb8">

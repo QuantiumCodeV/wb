@@ -50,7 +50,7 @@
 	<div class="fenhong_box">
 		<div class="zh_jb"><i></i></div>
 		<div class="">баланс</div>
-		<div class="fh_money"><span class="font20">₾</span>0.0</div>
+		<div class="fh_money"><span class="font20">₽</span>0.0</div>
 	</div>
 	<div class="tx_ul">
 		<ul>
@@ -69,7 +69,7 @@
 							<p class="font12">{{ $history->created_at }}</p>
 						</div>
 						<div class="jf_right">
-							<p class="{{ $history->amount > 0 ? 'green' : 'red' }}">{{ $history->amount > 0 ? '+' : '-' }}₾ {{ abs($history->amount) }}</p>
+							<p class="{{ $history->amount > 0 ? 'green' : 'red' }}">{{ $history->amount > 0 ? '+' : '-' }}₽ {{ abs($history->amount) }}</p>
 							<p class="font12">{{ $history->status }}</p>
 						</div>
 					</li>
