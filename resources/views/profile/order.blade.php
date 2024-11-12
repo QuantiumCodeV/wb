@@ -68,7 +68,7 @@
 					<p class="c888 font12"></p>
 				</div>
 				<div class="dingdan_jg">
-					₾{{ $productInfo->price }}
+					₽{{ $productInfo->price }}
 					<div class="c999 font12">×{{ $product['quantity'] }}</div>
 					<div class="font12"><span class="corg"></span></div>
 				</div>
@@ -76,7 +76,7 @@
 			<div class="xuxian2"></div>
 			<div class="yingfu">
 				<div class="order_yf fr">
-					Всего：₾ <span class="font16 mar5">{{ $order->total_price }}</span> (Включая фрахт ₾{{ $order->shipping_cost }})
+					Всего：₽ <span class="font16 mar5">{{ $order->total_price }}</span> (Включая фрахт ₽{{ $order->shipping_cost }})
 				</div>
 				<div class="clear"></div>
 				<div class="fr" style="padding:8px 10px 10px;">
