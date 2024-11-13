@@ -75,7 +75,7 @@
 					<span class="fl c666">Общая сумма:</span>
 					<span class="fr">₽ {{ number_format(collect($order->order_description)->sum(fn($item) => $item['quantity'] * $item['price']), 2) }}</span>
 					<div class="clear"></div>
-				</div>
+				</div>s
 				<div class="yhq_sel">
 					<span class="fl c666">способ оплаты:</span>
 					<span class="fr r_jt" style="position:relative;">
